@@ -1,0 +1,198 @@
+@media screen and (max-width: 768px) {
+	.header-logo-style{
+		width: 70%;
+	}
+	.footer-text{
+		font-size: 12px;
+		font-family: "Montserrat";
+	}
+	.footer-line{
+		width: 0;
+	}
+	.header-link{
+		font-size: 10px;
+	}
+	.stuff{
+		font-size: 10px;
+	}
+	.invite-text{
+		font-size: 15px
+	}
+	.footer-logo{
+		width: 70%
+	}
+	.button{
+		padding: 1px 3px;
+		border-radius: 44px;
+		background: #193763;
+		width: auto;
+		margin-top: 10%;
+	}
+	.form-paragrath{
+		font-size: 13px;
+
+	}
+	.form-list{
+		font-size: 12px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 11px;
+	}
+	.welcome{
+		width: 100%;
+		padding: 5%;
+	}
+	.form-input{
+		text-align: center;
+		width: 70%;
+		border-radius: 15px;
+		padding: 1%;
+		padding-left: 3%;
+		font-size: 70%;
+	}
+}
+@media screen and (min-width: 768px) {
+	.footer-line{
+		width: auto;
+	}
+	.footer-logo{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 425px) {
+	.form-paragrath{
+		font-size: 16px;
+		max-width: 100%;
+	}
+	.footer{
+		text-align: center;
+	}
+	.form-list{
+		max-width: 100%;
+		font-size: 14px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 11px;
+	}
+	.form-icons{
+		width: 10px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.invite-block{
+		width: 103%;
+		background: url(img/left_invite.png) no-repeat center;
+		background-size: cover;
+	}
+	.pos788{
+		padding-right: 25%;
+	}
+	.form-button{
+		width: auto;
+		padding: 6px 33px;
+		font-size: 10px;
+	}
+	.form-checkbox-text{
+		font-size: 10px;
+		display: flex;
+		padding: 1%;
+	}
+	.p-write{
+		font-size: 11px;
+		padding-bottom: 5%;
+	}
+	.form-checkbox{
+		width: 12px;
+		height: 12px;
+		padding: 0.375px;
+	}
+	.form-bg{
+		margin-top: 5%;
+	}
+	.form-input{
+		width: 70%;
+		border-radius: 15px;
+		padding: 1%;
+	}
+	.company{
+		width: 130%;
+	}
+}
+@media screen and (width: 1024px){
+
+	.invite-block{
+		background: url(img/left_invite.png) no-repeat center;
+		background-size: 100%;
+	}
+}
+@media screen and (width: 768px){
+
+	.invite-block{
+		background: url(img/left_invite.png) no-repeat center;
+		background-size: 70%;
+	}
+}
+@media screen and (min-width:2560px){
+	.welcome-text{
+		font-size: 28px;	
+	}
+}
+@media screen and (min-width:1600px){
+	.welcome-text{
+		font-size: 20px;	
+	}
+	.form-pad-left{
+		padding-top: 2%;
+		padding-left: 15%;
+	}
+	.form-pad-right{
+		padding-right: 15%;
+	}
+}
+@media screen and (max-width:768px){
+	.power-item{
+    font-size: 14px;
+	}
+	.power-img{
+	  text-align: center;
+	}
+	.moment-text{
+		font-size: 7px;
+	}
+	.moment-box{
+		width: 60%;
+	}
+	.welcome-text{
+		font-size: 7px;
+		
+	}
+	.welcome-item{
+		text-align: left;
+	}
+}
+@media screen and (width:1024px){
+	.moment-text{
+		font-size: 10px;
+	}
+	.moment-box{
+		width: 60%;
+	}
+	.welcome-text{
+		font-size: 10px;
+		
+	}
+	.welcome-item{
+		text-align: left;
+	}
+}
+
+@media screen and (max-width:1440px){
+	.header-link{
+		font-size: 13px;
+	}
+}
+@media screen and (max-width:1024px){
+	.header-link{
+		font-size: 8px;
+	}
+}
