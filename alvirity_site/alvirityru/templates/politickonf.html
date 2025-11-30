@@ -1,0 +1,30 @@
+{% load i18n %}
+<section class="pol-block">
+  <div class="d-flex bd-highlight mb-3 pol-title">
+    <div class="p-2 bd-highlight d-flex align-items-center">{% trans "Политика конфиденциальности" %}</div>
+    <div class="ml-auto p-2 bd-highlight d-flex align-items-center"><a><img class="cross-close-pol" src="/static/assets/cross-mop.svg" alt=""></a></div>
+  </div>
+  <div class="pol-txt" style="text-align: start;">
+    
+   </div>
+</section>
+<div class="modal fade" tabindex="-1" role="dialog"  id="form-ok" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <span>{% if name_lang == 'ru-RU' or name_lang == 'ru' %}Спасибо за обращение.{% else %}Thank you for contacting us.{% endif %}</span><br>
+        <span>{% trans "Наш менеджер свяжется с Вами." %}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog"  id="form-error" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <span>{% trans "Ошибка отправки." %}</span>
+      </div>
+    </div>
+  </div>
+</div>

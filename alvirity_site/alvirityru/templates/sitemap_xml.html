@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>{{host}}</loc>
+        <lastmod>{{pages_index.lastmod|date:"Y-m-d"}}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    {% for u in services %}
+    <url>
+        <loc>{{host}}service/{{u.alias}}/</loc>
+        <lastmod>{{u.lastmod|date:"Y-m-d"}}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    {% endfor %}
+    {% for u in items %}
+    <url>
+        <loc>{{host}}product/{{u.alias}}/</loc>
+        <lastmod>{{u.lastmod|date:"Y-m-d"}}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    {% endfor %}
+    {% for u in pages %}
+    <url>
+        <loc>{{host}}{{u.alias}}/</loc>
+        <lastmod>{{u.lastmod|date:"Y-m-d"}}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.1</priority>
+    </url>
+    {% endfor %}
+    {% for u in poditems %}
+    <url>
+        <loc>{{host}}blog/{{u.alias}}/</loc>
+        <lastmod>{{u.lastmod|date:"Y-m-d"}}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    {% endfor %}
+    {% for u in post %}
+    <url>
+        <loc>{{host}}blog/{{u.alias}}/</loc>
+        <lastmod>{{u.lastmod|date:"Y-m-d"}}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    {% endfor %}
+    {% for u in project %}
+    <url>
+        <loc>{{host}}proekty/{{u.alias}}/</loc>
+        <lastmod>{{u.lastmod|date:"Y-m-d"}}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    {% endfor %}
+    {% for u in uslugi %}
+    <url>
+    <loc>{{host}}uslugi/{{u.alias}}/</loc>
+        <lastmod>{{u.lastmod|date:"Y-m-d"}}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    {% endfor %}
+</urlset>

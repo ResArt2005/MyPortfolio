@@ -1,0 +1,797 @@
+{% extends '__base2.html' %} {% block content %}
+{% load i18n %}
+<a name="#top" rel="nofollow"></a>
+{% include './header.html' %}
+<div>
+
+
+
+  <div id='intro' class='block bounded' >
+
+
+
+    <div class='center own-center d-flex align-items-center' style='flex: 0.45'>
+
+
+
+      <div>
+
+
+
+        <h1 class="p1">{% trans "ИНТЕРНЕТ ПРОЕКТЫ" %}</h1>
+
+
+
+        <p class="p2">{% trans "От идеи до реализации" %}<br><br>
+
+
+
+          {% trans "Разрабатываем и реализовываем для Вас самые смелые решения программного обеспечения в индустрии информационных технологий" %}</p>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+    <div id='b1-img' class='bgFill'></div>
+
+
+
+  </div>
+
+
+
+  <div id='projects' class='block bounded center own-center' >
+    <div class="title" > {% trans "Открой для себя наши коллекции" %}</div>
+    <div class="owl-carousel owl-theme projects-slider"><!---->
+      {% for p in pr %}
+      <a href="/proekty/{{p.alias}}/" >
+        <div class="center own-center projects-slider-item-mob" {% if p.images %}style='background-image: url("{{p.images.url}}");' {% endif %}>
+            <p class="d-flex align-items-center justify-content-center">{{ p.name }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+
+
+  <div id='services' class='block bounded own-center'>
+
+
+
+    <div class='title'>{% trans "Самые популярные услуги" %}</div>
+
+
+
+    <div class='flex-uslugi flexH'>
+
+
+
+      {% for s in services %}
+
+
+
+      <div class='svc bgFill us-slides' {% if s.img_page %}style='background-image: url("{{s.img_page.url}}")' {% endif%}>
+
+
+
+        <a href="/{{s.alias}}/">
+
+
+
+          <div class='fill center own-center mob-radio-us'>
+
+
+
+            <p class="uslugi-text">{{s.name}}</p>
+
+
+
+          </div>
+
+
+
+        </a>
+
+
+
+      </div>
+
+
+
+      {% endfor %}
+
+
+
+    </div>
+
+
+
+    <div class='break'></div>
+
+
+
+    <a href="/uslugi/" class="mob-hide">
+
+
+
+      <div class='i badge center own-center' style='margin-top: -2vmin'>
+
+
+
+        <p>{% trans "Подробнее"%}</p>
+
+
+
+      </div>
+
+
+
+    </a>
+
+
+
+  </div>
+
+
+
+  <a href="https://dolinatlt.ru/alvirity" rel="nofollow" target="_blank">
+
+
+
+    <div class='bounded own-center mob-jd-block'>
+
+
+
+      <div class='own-center mob-jd' style='margin: auto'>
+
+
+
+        <div class='bgCont mob-jd-pic' style='background-image: url("static/assets/ptnr1x.png")'>
+
+
+
+        </div>
+
+
+
+        <div class='center own-center ref mob-jd-txt'>
+
+
+
+          <p>{% trans 'Резидент технопарка в сфере высоких технологий "Жигулевская долина"' %}</p>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </a>
+
+
+
+
+
+
+
+  <div class='bounded own-center block slider-height' id="team">
+
+
+
+    <div class="title">{% trans "Мнение наших экспертов" %}</div>
+
+
+
+    <div class="owl-carousel owl-theme empoyee-slider">
+
+
+
+      {% for t in ts %}
+
+
+
+      <div class='mbr team-fill' {% if t.photo %}style='background-image: url("{{t.photo.url}}")' {% endif %}>
+
+
+
+        <div class="PC-hide" style="padding-top: 47vw;">
+
+
+
+          <div class="PC-hide PC-hide mob-hide mob-style-info own-center">
+
+
+
+            <p class="team-title">{{t.fio}}</p>
+
+
+
+            <p class="team-prof">{{t.who}}</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <div class='fill center own-center mob-hide'>
+
+
+
+          <div>
+
+
+
+            <p class="team-title">{{t.fio}}</p><br>
+
+
+
+            <p class="team-prof">{{t.who}}</p><br>
+
+
+
+            <div class="team-text">{{t.desc|safe}}</div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      {% endfor %}
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <div id='partners' class='block bounded own-center'>
+
+
+
+    <div class='title'>{% trans "Наши партнёры" %}</div>
+
+
+
+    <div class="break"></div>
+
+
+
+    <div class='own-center part-mob-ners'>
+
+
+
+      {% for p in part %}
+
+
+
+      <a href='{{p.link}}' rel="nofollow" target="_blank">
+
+
+
+        <div class='ptnr bgCont center own-center' style='cursor: pointer; {% if p.images %} background-image: url("{{p.images.url}}") {% endif %}'>
+
+
+
+          <p>{{p.name}}</p>
+
+
+
+        </div>
+
+
+
+      </a>
+
+
+
+      {% endfor %}
+
+
+
+    </div>
+
+
+
+  </div>
+
+  <div id='offer' class="own-center bounded bgFill hands" style='background-image: url("/static/assets/hands.png");'>
+
+    <!-- <div>
+
+      <a href="#messageForm"><input class="text badgeXL" type="button" value="ПОЛУЧИТЬ ПОДРОБНОЕ КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ"></a>
+
+    </div> -->
+
+    <a href="#messageForm" rel="nofollow"> 
+
+      <div class="newButt">
+
+        <span>{% trans "ПОЛУЧИТЬ ПОДРОБНОЕ КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ" %}</span>
+
+      </div>
+
+    </a>
+
+  </div>
+
+  <div id='contacts' class='block bounded own-center' style="background-color: rgb(0,0,0,0);">
+
+    <div class='frameX form-style'>
+
+
+
+      <div>
+
+
+
+        <a name="messageForm" rel="nofollow"></a>
+
+
+
+        <form method="post" id="messageForm">
+
+
+
+          <span class="title-form">{% trans "Форма обратной связи" %}</span>
+
+
+
+          <input class='input-index-style fxB' type="name" id="name" name="name" placeholder='{% trans "Ваше имя"%}' required>
+
+
+
+          <input class='input-index-style fxB' type="tel" id="phone" name="phone" placeholder='{% trans "Ваш телефон" %}' required
+            >
+
+
+
+          <input class='input-index-style fxB' type="email" id="email" name="email" placeholder='{% trans "Электронная почта" %}'
+            >
+
+
+
+          <textarea class='input-index-style fxB' type="text" id="message" name="message"
+            placeholder='{% trans "Ваше сообщение" %}'></textarea>
+            <input type="hidden" id="nameform" value="Главная">
+
+
+          <div class='pol-tb'>
+
+
+
+            <p class="text-for-checkbox"> <input type="checkbox" required name="checkbox-politic"> {% trans 'Я ознакомлен с' %} <span
+                class="polityk-conf">{% trans "политикой конфиденциальности." %}</span></p>
+
+
+
+          </div>
+
+
+
+          <!--g-recaptcha -->
+
+        <div class="newButt sendButt" id="customButton">
+          <span>{% trans "Отправить" %}</span>
+        </div>
+        <button type='submit' class='d-none' id='msgSubmit'></button>
+
+          <script>
+
+            document.getElementById('customButton').addEventListener('click', function () {
+
+              // Триггерим событие click для кнопки msgSubmit
+
+              document.getElementById('msgSubmit').click();
+
+            });
+
+          </script>
+
+        </form>
+
+
+
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+
+  <div class='break'></div>
+
+  <div class="connectblock" style="text-align: center;">
+
+    <span class='title-form'>{% trans "Свяжитесь с нами" %}</span>
+
+
+
+    <div class='own-center' style='width: 100%; margin: 3vmin 0'>
+
+
+
+      <div class='fxcard fxA'>
+
+
+
+        <div class='fxicon bgCont' style='background-image: url("/static/assets/fx1.svg")'></div>
+
+
+
+        <p>
+
+
+
+          <span class="title-com">{% trans "Связь с руководством:" %}</span><br>
+
+
+
+          <a href="tel:+79277888882" rel="nofollow">
+
+
+
+            <span class='ref'>+7 (927) 788-88-82</span>
+
+
+
+          </a><br>
+
+
+
+          <a href="https://t.me/+79277888882" rel="nofollow">
+
+
+
+            <span class='ref'>t.me/asvorobyov</span>
+
+
+
+          </a><br>
+
+
+
+          <a href="https://wa.me/79277888882" rel="nofollow">
+
+
+
+            <span class='ref'>wa.me/79277888882</span>
+
+
+
+          </a>
+
+
+
+        </p>
+
+
+
+      </div>
+
+
+
+      <div class='fxcard fxB'>
+
+
+
+        <div class='fxicon bgCont bgCont-spec' style='background-image: url("/static/assets/fx2.svg")'></div>
+
+
+
+        <p>
+
+
+
+          <span class="title-com"> {% trans "Мы в соцсетях:" %}</span><br>
+
+
+
+          <a href="https://vk.com/alvirity" rel="nofollow">
+
+
+
+            <span class='ref'>vk.com/alvirity</span><br>
+
+
+
+          </a>
+
+
+
+          <a href="https://t.me/generatorofthefuture" rel="nofollow">
+
+
+
+            <span class='ref' style="white-space: nowrap">t.me/generatorofthefuture</span>
+
+
+
+          </a>
+
+          <a href="https://t.me/Alvirity_AI_BOT" rel="nofollow">
+
+            <span class="ref">t.me/Alvirity_AI_BOT</span>
+
+          </a>
+
+          <a href="https://t.me/zhiguli_ai" class="d-block" rel="nofollow">
+
+            <span class="ref">t.me/zhiguli_ai</span>
+
+          </a>
+
+        </p>
+
+
+
+      </div>
+
+
+
+      <div class='fxcard fxA'>
+
+
+
+        <div class='fxicon bgCont' style='background-image: url("/static/assets/fx3.svg")'></div>
+
+
+
+        <p>
+
+
+
+          <span class="title-com">E-mail:</span><br>
+
+
+
+          <a href="mailto: AVorobyovS@ya.ru" rel="nofollow">
+
+
+
+            <span class='ref'>AVorobyovS@ya.ru</span>
+
+
+
+          </a>
+
+
+
+        </p>
+
+
+
+      </div>
+
+      <div class="break"></div>
+
+      <div class='fxcard fxcard-dop fxB'>
+
+
+
+        <div class='fxicon bgCont' style='background-image: url("/static/assets/fx4.svg")'></div>
+
+
+
+        <p>
+
+
+
+          <span class="title-com">{% trans "Главный офис:" %}</span><br>
+
+
+
+          <a href="https://goo.gl/maps/qCFrD4rxLQt4912z9" rel="nofollow">
+
+
+
+            <span class='ref'> {% trans "г. Тольятти, ул. Южное шоссе, д. 163А к. 2.4, офис А316" %}</span>
+
+
+
+          </a>
+
+
+
+        </p>
+
+
+
+      </div>
+
+
+
+      <div class='fxcard fxcard-dop fxB'>
+
+
+
+        <div class='fxicon bgCont' style='background-image: url("/static/assets/fx4.svg")'></div>
+
+
+
+        <p>
+
+
+
+          <span class="title-com">{% trans "AR/VR лаборатория:" %}</span><br>
+
+
+
+          <a href="https://goo.gl/maps/qCFrD4rxLQt4912z9" rel="nofollow">
+
+
+
+            <span class='ref'>{% trans "г. Тольятти, ул. Южное шоссе, д. 161 к. 2.1, офис С137" %}</span>
+
+
+
+          </a>
+
+
+
+        </p>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </div>
+
+</div>
+
+{% include './politickonf.html' %}
+
+
+
+<div id='p3cred' class='container-fluid' style="background:none; padding: 40px 0;">
+
+
+
+  <div class="row">
+
+
+
+    <div class="col-md-12 col-12" id="logoDevFrame">
+
+
+
+      <a href="https://alvirity.ru/" rel="nofollow" id='logoDev'>
+
+
+
+        <img src="static/images/logoDev.png" width="100%">
+
+
+
+      </a>
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+{% include './mob-footer.html' %}
+
+
+
+{% endblock %}
+
+
+
+{% block scripts %}
+
+
+
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+
+
+<script>
+
+
+
+
+
+
+
+  $("#scrldown").on("click", function () {
+
+
+
+
+
+
+
+    var get_id = $(this).attr("messageForm");
+
+
+
+    var target = $("#" + get_id).offset();
+
+
+
+
+
+
+
+    $("html, body").animate({ scrollTop: target }, 800);
+
+
+
+
+
+
+
+  });
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+{% endblock %}

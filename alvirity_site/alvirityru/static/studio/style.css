@@ -1,0 +1,457 @@
+/* Global embedded entities */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap');
+
+/* Global meta-entities */
+::-webkit-scrollbar { width: 0; height: 0; background: #0000 }
+:root {
+	--accent: #b39; /* d14 , , b39, d53ac4 */
+	--accentBright: #f4c; /* d14 , , f4c */
+	--accentSub: crimson;
+	--tagH: auto;
+	--tagW: 28vmin;
+	--tagM: 2vmin 0;
+	--tagT: scaleY(0);
+	--cardBg: #fff;
+	--cardC: #000;
+}
+html {
+	font: var(--fontMain);
+	color: #fff; line-height: 1.5;
+	scroll-padding-top: 20vmin;
+	margin: 0; z-index: -10;
+	transition: font 0.5s;
+	background: linear-gradient(180deg,
+		rgba(0,0,0,1) 0%, rgba(13,0,11,1) 5%,
+		rgba(95,20,90,1) 30%, rgba(70,30,100,1) 65%,
+		rgba(20,7,51,1) 90%, rgba(0,0,0,1) 100%);
+}
+body {
+	overscroll-behavior-x: none;
+	overflow-x: hidden;
+	width: 100vw; margin: 0;
+	display: flex; flex-wrap: wrap;
+	justify-content: center;
+	animation: 1.5s fadeOut forwards
+}
+
+/* Global meta-classes */
+.nil { pointer-events: none }
+.nosel {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	user-drag: none; 
+	-webkit-user-drag: none;
+}
+.bounded {
+	overflow: hidden;
+	overscroll-behavior-x: none;
+	overscroll-behavior-y: none;
+}
+.break { float: left; width: 100%; height: 1px; margin: 0; display: block }
+.center { display: flex; flex-wrap: wrap; justify-content: center }
+.fill { width: 100%; height: 100%; margin: 0 }
+.text {
+	font: inherit; color: inherit;
+	text-decoration: none;
+}
+.tag {
+	height: var(--tagH); width: var(--tagW);
+	margin: var(--tagM); padding: 1vmin;
+	font: var(--fontMain); border-radius: 2vmin;
+	overflow: hidden; text-overflow: clip;
+	transform: var(--tagT); transform-origin: 0% 0%;
+	transition: height 0.25s linear, width 0.25s linear,
+	background 0.25s linear, color 0.25s linear, transform 0.25s linear;
+}
+.bgFill {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.bgCont {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.inputForm {
+	border: none; outline: none;
+	border-bottom: 1px solid #000;
+}
+.ref {
+	transition: color 0.15s;
+	font: inherit; color: inherit;
+	text-decoration: none; cursor: pointer;
+}
+.ref:hover { color: var(--accentBright) }
+
+.card {
+	font: var(--fontSub); color: var(--cardC);
+	word-wrap: break-word;
+	/*width: 90vmin; height: 70vmin;*/
+	background: var(--cardBg);
+	margin: 0 10%;
+	border-radius: 5vmin;
+	display: flex; flex-wrap: wrap;
+	overflow: hidden;
+	overscroll-behavior-x: none;
+	overscroll-behavior-y: none;
+	justify-content: center;
+	transform: scale(0.7);
+	
+	z-index: 5; opacity: 0; visibility: hidden;
+	animation: fadeOut 1s linear 2s forwards;
+	width: 80%; height: auto; transform: rotate(0) scale(1);
+	margin-bottom: 100px;
+}
+/*.card:hover { width: 80%; height: auto; transform: rotate(0) scale(1) }*/
+.cardPic {
+	width: 90%; height: 60vmin;
+	margin: 5vmin 5%;
+	background-color: #0006;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.cardTitle {
+	font: var(--fontTitle); font-weight: 200;
+	text-align: center; width: 70%;
+	margin: 0 15% 5% 15%; padding-bottom: 3vmin;
+	border-bottom: 1px solid var(--cardC)
+}
+.cardDesc { width: 90%; margin: 0 5% }
+.cardRef {
+	background: var(--accent);
+	color: #fff; border-radius: 5vmin;
+	text-decoration: none;
+	font: var(--fontSub); font-weight: 200;
+	padding: 2.5vmin; margin: 5vmin;
+	border: 1px solid #0000;
+	transition: background 0.3s, color 0.3s, border 0.3s
+}
+.cardRef:hover { background: #fff; color: #000; border: 1px solid #000 }
+
+/* Local entities */
+#display_main {
+	margin: 0; display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.button {
+	font: var(--fontSub);
+	font-weight: 200; color: #fff;
+	padding: 0.3em 0.8em; margin: 3vmin;
+	border-radius: 5vmin;
+	background: var(--accent);
+	border: 1px solid #0000; cursor: pointer;
+	transition: background 0.3s, color 0.3s, border 0.3s
+}
+.button:hover {
+	background: #000;
+	border: 1px solid #fff
+}
+#backToTop {
+	font: 100 5vmin 'Raleway';
+	background: #0006; color: #fffa;
+	position: fixed; z-index: 1;
+	bottom: 5vh; right: 5vw;
+	border: 1px solid #fff0;
+	border-radius: 50%;
+	display: flex; justify-content: center;
+	width: 2em; height: 2em;
+	transition: background 0.5s, border 0.5s, opacity 0.5s;
+}
+#backToTop:hover {
+	background: #000;
+	border: 1px solid #fff
+}
+
+.topbar {
+	position: fixed; text-align: center;
+	background: #000d; width: 100vw;
+	max-height: 12vmin; z-index: 2;
+	box-shadow: 0 1vmin 2vmin #0006;
+	backdrop-filter: blur(1vmin);
+	transition: max-height 0s
+}
+.top {
+	height: 1.5em; font-size: var(--topFontSize);
+	padding: 1vmin 2vmin; border-radius: 5vmin;
+	min-width: var(--topEmWidth);
+	margin: var(--topEmMargin);
+	background: var(--topEmColor);
+	transition: background 0.15s, font-size 0.5s, width 0.7s, margin 0.7s
+}
+.top:hover { background: #fff2 }
+#topSpacer {
+	font-size: var(--topFontSize);
+	height: 12vmin; width: var(--topSpacerWidth);
+	overflow: hidden; text-overflow: clip;
+}
+#logo {
+	background-color: #fff0;
+	background-image: url('/static/studio/assets/logo/logo.svg');
+	width: 25vmin; height: 9vmin;
+	position: absolute; left: 0;
+	margin: 1vmin 0 0 2vmin;
+	transition: background-image 0.5s
+}
+#logo:hover { background-image: url('/static/studio/assets/logo/logoX.svg') }
+
+.sector {
+	display: flex; flex-wrap: wrap;
+	justify-content: center;
+	width: 100vw; margin: 5vh 0;
+	background: #3330;
+}
+.block {
+	display: flex; flex-wrap: wrap;
+	margin: var(--blockMargin);
+	word-wrap: break-word;
+	border-radius: 5vmin;
+	width: var(--blockWidth);
+	transition: margin 0.7s, width 0.7s
+}
+.boxA { margin: auto }
+.boxB {
+	background: #fff; color: #000;
+	transition: transform 0.8s, box-shadow 0.8s
+}
+.bLeft:hover {
+	transform: rotate3d(0, 5, -1, 7deg);
+	box-shadow: -1vmin 1vmin 0 #888
+}
+.bRight:hover {
+	transform: rotate3d(0, 5, -1, -7deg);
+	box-shadow: 1vmin 1vmin 0 #888
+}
+
+.title {
+	font: var(--fontTitle);
+	width: 100%; margin: 0 5vmin;
+	transition: font 0.5s, transform 1s
+}
+.boxA:hover .title { transform: translateX(3vmin) }
+.titleSub {
+	font: var(--fontSub);
+	width: 100%; margin: 0 5vmin 5% 5vmin;
+	transition: font 0.5s, transform 1s
+}
+.boxA:hover .titleSub { transform: translateX(-3vmin) }
+.titleDesc {
+	font: var(--fontMain);
+	width: 100%; margin: 0 5vmin;
+	transition: font 0.5s, text-shadow 1s
+}
+
+.cell {
+	width: 40%; margin: 0 5%;
+	color: #000; background: #eee0;
+	line-height: 1.2em
+}
+.cell_icon {
+	min-width: 20vmin; min-height: 20vmin;
+	max-width: 20vmin; max-height: 20vmin;
+	background-color: #ddd0;
+}
+.portraitFrame {
+	max-width: 26vmin; max-height: 38vmin;
+	border-radius: 5vmin;
+	margin: 5vmin;
+}
+.portrait {
+	width: 26vmin; height: 38vmin;
+	background-color: #fff1; margin: 0;
+	border-radius: 5vmin;
+	transition: opacity 0.3s
+}
+.portraitFrame:hover .portrait { opacity: 0 }
+.portraitFrame:hover .tag { background: #000; color: #fff; transform: scaleY(1) }
+
+.ptnrFrame {
+	height: 25vmin; width: 65vmin;
+	margin: 2vmin 4vmin;
+	background: var(--accent);  color: #fff;
+	border: 5vmin solid var(--accent);
+	border-radius: 3vmin;
+	transition: 0.3s
+}
+.ptnr {
+	height: 25vmin; width: 65vmin;
+	border: 5vmin solid #fff;
+	border-radius: 3vmin;
+	background-color: #fff;
+	transform: translate(-5vmin, -5vmin);
+	margin: 0; transition: 0.3s
+}
+.ptnrFrame:hover {
+	border: 1vmin solid #0000;
+	margin: 6vmin 8vmin;
+	transform: translate(3vmin, 3vmin) rotate(5deg)
+}
+.ptnrFrame:hover .ptnr {
+	border: 1vmin solid #0000;
+	transform: translate(-5vmin, -5vmin) rotate(-10deg)
+}
+.ptnrHint {
+	background-image: url('/static/studio/assets/icon/arrow.svg');
+	position: sticky; right: 0; bottom: 0;
+	width: 5vmin; height: 5vmin;
+	transform: translate(57vmin, -7.5vmin) rotate(180deg)
+}
+
+#contacts {
+	background: #000; width: 94%;
+	border: 1px solid #519;
+	border-radius: 5vmin;
+}
+.contact {
+	width: 8vmin; height: 8vmin;
+	border-radius: 50%;
+	margin: 0.5vmin;
+	background-color: #555;
+	transition: background-image 0.15s
+}
+#cont1 { background-image: url('/static/studio/assets/icon/contact1.png') }
+#cont1:hover { background-image: url('/static/studio/assets/icon/contact1x.png') }
+#cont2 { background-image: url('/static/studio/assets/icon/contact2.png') }
+#cont2:hover { background-image: url('/static/studio/assets/icon/contact2x.png') }
+#cont3 { background-image: url('/static/studio/assets/icon/contact3.png') }
+#cont3:hover { background-image: url('/static/studio/assets/icon/contact3x.png') }
+#cont4 { background-image: url('/static/studio/assets/icon/contact4.png') }
+#cont4:hover { background-image: url('/static/studio/assets/icon/contact4x.png') }
+
+.bgBubble {
+	position: fixed; border-radius: 50%;
+	transform: scale(0);
+	animation: expand30 0.7s ease-out forwards,
+		expand100 0.35s ease-out forwards
+}
+#bbl {
+	background: #101010; z-index: 3;
+	width: 160vmax; height: 160vmax;
+	top: calc(50vh - 80vmax);
+	left: calc(50vw - 80vmax);
+	animation-delay: 1.2s, 1.8s
+}
+#bbl1 {
+	background: #191919; z-index: 3;
+	width: 100vmax; height: 100vmax;
+	top: calc(100vh - 50vmax);
+	left: calc(0vw - 20vmax);
+	animation-delay: 1s, 1.7s
+}
+#bbl2 {
+	background: #202020; z-index: 4;
+	width: 100vmin; height: 100vmin;
+	top: calc(100vh - 60vmin);
+	left: calc(100vw - 60vmin);
+	animation-delay: 0s, 1.2s
+}
+#bbl3 {
+	background: #262626; z-index: 4;
+	width: 80vmin; height: 80vmin;
+	top: calc(50vh - 40vmin);
+	left: calc(0vw - 30vmin);
+	animation-delay: 0.2s, 1.3s
+}
+#bbl4 {
+	background: #232323; z-index: 3;
+	width: 140vmin; height: 140vmin;
+	top: calc(0vh - 60vmin);
+	left: calc(75vw - 70vmin);
+	animation-delay: 0.4s, 1.4s
+}
+#bbl5 {
+	background: #292929; z-index: 4;
+	width: 60vmin; height: 60vmin;
+	top: calc(70vh - 30vmin);
+	left: calc(40vw - 30vmin);
+	animation-delay: 0.6s, 1.5s
+}
+#bbl6 {
+	background: #282828; z-index: 3;
+	width: 40vmin; height: 40vmin;
+	top: calc(0vh - 10vmin);
+	left: calc(65vw - 20vmin);
+	animation-delay: 0.8s, 1.6s
+}
+
+#projectsTopbar {
+	position: absolute; top: 5vmin; left: 0; z-index: 5;
+	width: 100vw; height: 1em;
+	font: var(--fontSub); font-size: 8vmin;
+	text-align: center;
+	opacity: 0; visibility: hidden;
+	animation: fadeOut 1s linear 2s forwards
+}
+#scid {
+	position: fixed; z-index: 4;
+	top: 10vh; right: 5vmin;
+	height: 80vh; width: 1px;
+	background: #555;
+	opacity: 0; visibility: hidden;
+	animation: fadeOut 1s linear 2s forwards
+}
+#scroll_indicator { width: 1px; margin: 0; background: #fff }
+
+#s4b2img {
+	width: 100%;
+	/*width: 60vmin;*/
+	height: 36vmin;
+	/*margin: 0 0 5% 5%;*/
+	border-radius: 5vmin;
+	border: 2px solid #000;
+	background-image: url('/static/studio/assets/img/teamPhoto.jpg')
+}
+#s1 { text-align: left }
+#s2 { text-align: right }
+#s3 { text-align: left }
+#s4 { text-align: right }
+
+/* Desktop version */
+@media screen and (min-width: 1080px) {
+	#s1 .boxA {order: 2}
+	#s1 .boxB {order: 1}
+	
+	#s2 .boxA {order: 1}
+	#s2 .boxB {order: 2}
+	
+	#s3 .boxA {order: 2}
+	#s3 .boxB {order: 1}
+	
+	#s4 .boxA {order: 1}
+	#s4 .boxB {order: 2}
+}
+/* Mobile version 550 / 1080 */
+@media screen and (max-width: 1080px) {
+	#s1 .boxA {order: 1}
+	#s1 .boxB {order: 2}
+	
+	#s2 .boxA {order: 1}
+	#s2 .boxB {order: 2}
+	
+	#s3 .boxA {order: 1}
+	#s3 .boxB {order: 2}
+	
+	#s4 .boxA {order: 1}
+	#s4 .boxB {order: 2}
+}
+/* Low viewport (pc&mob) version */
+@media screen and (max-width: 1300px) {
+	.topbar:hover { max-height: 70vh }
+}
+
+/* Animations */
+@keyframes fadeOut { 0%{opacity: 0; visibility: hidden} 100%{opacity: 1; visibility: visible} }
+@keyframes fadeIn { 0%{opacity: 1; visibility: visible} 100%{opacity: 0; visibility: hidden} }
+@keyframes expand { 0% { transform: scale(0) } 100% { transform: scale(1) } }
+@keyframes expand30 { 0% { transform: scale(0) } 100% { transform: scale(0.3) } }
+@keyframes expand100 { 100% { transform: scale(1) } }
+@keyframes topbarA { 0%{max-height: 9vmin} 100%{max-height: 100vh} }
+@keyframes topbarB { 0%{max-height: 100vh} 100%{max-height: 9vmin} }

@@ -1,0 +1,19 @@
+{% extends '__base2.html' %}
+{% load static %}
+{% block content %}
+{% load i18n %}
+<header class="header">
+      {% include './header.html' %}
+</header>
+<div class="container py-3 mt-4 section-about">
+  <div class="my-5" style="text-align: center;    margin-top: 50px;    margin-bottom: 50px;">
+      <h3>{% trans "Данной страницы не существует" %}</h3>
+      <a href="/">{% trans "Вернуться на главную" %}</a>
+  </div>
+</div>
+<script>
+  window.onload = function () {
+    yaCounter83365348.reachGoal('404error');
+  }
+</script>
+{% endblock %}

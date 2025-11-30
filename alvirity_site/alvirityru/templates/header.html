@@ -1,0 +1,58 @@
+{% load i18n %}
+	<div id='bg' class='fill bgFill' style='z-index: -1; position: fixed; background-image: url("/static/assets/bg.svg")'>
+	</div>
+	<header class="mob-hide">
+		<div class='' style='flex: 0.75; background: #000; padding: 1vmin;'>
+			<p class="d-flex justify-content-end" style='margin: auto 11vw auto 11vw; font-size: 2vmin; font-weight: 200;'>
+				<!--<a href="/avr/">
+					<span class='ref'>{% trans "АльВиРити AR/VR" %}</span>
+				</a>-->
+        		<a href="{{lang}}" rel="nofollow">
+					<span class='ref'>{% trans "English Version" %}</span>
+				</a>
+			</p>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="logo-block col">
+					<a href="/">
+					<img class="logo" src="/static/assets/logo.svg" alt="logo">
+					</a>
+				</div>
+				<div class="header-elements col-3">
+					<div id="topmenu" class="own-center">
+						<span  class="">{% trans "МЕНЮ" %}</span>
+						<div class="container-fluid">
+							<div class="row">
+								<a class="ref col" href="/order/" >{% trans "Коммерческое предложение" %}</a>
+								<a class="ref col" href="/team/" >{% trans "Команда" %}</a>
+								<a class="ref col" href="/uslugi/" >{% trans "Услуги" %}</a>
+								<a class="ref col" href="/proekty/" >{% trans "Проекты" %}</a>
+								<a class="ref col" href="/contacts/" >{% trans "Контакты" %}</a>
+								<a class="ref col" href="/blog/" >{% trans "Блог" %}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header-elements col" style="text-align:center;">
+					<div class="phone-number own-center">+7 (927) 788-88-82</div>
+					<a href="tel:+79277888882" rel="nofollow">
+						<div class='badge btn-number' style="margin-top: 3vmin; font-size: 3vmin;	font-weight: 400;">{% trans "Позвонить" %}</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="header-ots"></div>
+	<header class="header-mob PC-hide container-fluid">
+		<div class="row">
+			<div class="col logo-mob-block">
+				<a href="/">
+					<img class="logo-mob" src="/static/assets/logo.svg" alt="logo">
+				</a>
+			</div>
+			<div class="col tel-block">
+				<span class="tel-mob"><a href="tel:+79277888882" rel="nofollow">+ 7 (927) 788 - 88 - 82</a></span>
+			</div>
+		</div>
+	</header>

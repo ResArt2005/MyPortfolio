@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html id='html' lang='ru' dir='ltr'>
+
+
+
+<head id='core'>
+
+  <meta charset="utf-8">
+
+  <link rel="icon" href="/static/icon.ico" type="image/ico" />
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title>
+
+    {% if data.seo_title %}
+
+    {{ data.seo_title }}
+
+    {% elif templated_title %}{{templated_title }}{% endif %}
+
+  </title>
+
+  <meta name="description" content="{% if data.seo_description %}{{ data.seo_description }}{% elif templated_description %}{{ templated_description }}{% endif %}" />
+
+  <link rel="canonical" href="//{{ canonical }}" />
+
+  <meta name="keywords" content="{% if data.seo_keywords%}{{data.seo_keywords}}{%elif templated_keywords%}{{templated_keywords}}{%endif%}" />
+
+  <meta property="og:site_name" content="https://alvirity.ru/" />
+
+  <meta property="og:locale" content="ru_RU" />
+
+  <meta property="og:type" content="article" />
+
+  <meta property="og:url" content="https://alvirity.ru{{og_url}}" />
+
+  <meta property="og:image" content="https://alvirity.ru/static/icon.ico" />
+
+  <meta property="og:title" content="{% if data.og_title %}{{ data.og_title }}{% endif %}" />
+
+  <meta property="og:description" content="{% if data.og_description %}{{ data.og_description }}{% endif %}" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="/static/jquery-3.3.1.min.js"></script>
+
+  <script src="/static/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+
+  <script src="/static/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
+
+  <script src="/static/bootstrap/bootstrap.min.js"></script>
+
+  <script src="/static/bootstrap/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="/static/bootstrap/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/static/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
+
+  <link rel="stylesheet" href="/static/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
+
+  <link rel="icon" type="image/x-icon" href="/static/avr/assets/fav_v3-2.ico">
+
+  <link rel="stylesheet" href="/static/avr/style.css">
+
+</head>
+
+
+
+<body id='body' class='nosel' onload="init(); slide('bs', 1, 10); slide('bx', 'R', 10); slide('mbr', 'R', 9)">
+
+
+
+  <div id='bg' class='bgFill'></div>
+
+  <!-- <div style='height: calc(8vmin + 1.5vh); width: 100%; margin: 0;'></div> -->
+
+  <div id='header' class='center'>
+
+    <a id='logo' class='bgCont' style='display: block' href='/' rel="nofollow"></a>
+
+    <div id='head1' class='center bounded'>
+
+      <a class='ref center' rel="nofollow" href='tel:+79277888882' >
+
+        <p>+7 (927) 788-88-82</p>
+
+      </a>
+
+      <a class='ref center' rel="nofollow" href='https://vk.com/alvirity' style='border-left: 0.5vmin solid #5bd7; background: #3687'>
+
+        <p id='title0'>{% trans "Оставить заявку" %}</p>
+
+      </a>
+
+    </div>
+
+  </div>
+
+  <a name="top" rel="nofollow" id="top"></a>
+
+  <div class='sec center bgFill' style="height: 130vmin; background-image: url('/static/avr/assets/topBg.webp')">
+
+    <div id='logo' class='bgCont' style='width: 50vmin; height: 12vmin; margin: 5vmin auto; margin-top: 13vmin'></div>
+
+    <div class='break'></div>
+
+    <h1 id='pgph1'>{% trans "Разработаем и реализуем для Вас самые смелые решения в приложениях для" %}
+
+      <span style='color: #5bd'>{% trans "виртуальной" %}</span> {% trans "и" %} <span style='color: #d5c'>{% trans "дополненной" %}</span> {% trans "реальности" %}
+
+    </h1>
+
+  </div>
+
+
+
+  <div class='sec center'>
+
+    <div class='scr title center'>
+
+      <p id='title1'>{% trans "НАШИ УСЛУГИ" %}</p>
+
+    </div>
+
+    <div id='b-a1' class='scr b i center'>
+
+      <div id='b-a2' class='center bounded'>
+
+        <div id='b-a3' class='fillZ center bgFill'>
+
+          <p style='opacity: 0.7'>VR</p>
+
+        </div>
+
+        <div id='b-a3X' class='fill center i bgCont'>
+
+          <p id='pgph2'>{% trans "VR (virtual reality) — созданная техническими средствами искусственная модель мира, с которым взаимодействует пользователь, используя шлем виртуальной реальности и устройство ввода" %}</p>
+
+        </div>
+
+      </div>
+
+      <div id='b-a4' class='center bounded'>
+
+        <div id='b-a5' class='fillZ center bgFill'>
+
+          <p style='opacity: 0.7'>AR</p>
+
+        </div>
+
+        <div id='b-a5X' class='fill center i bgCont'>
+
+          <p id='pgph3'>{% trans "AR (augmented reality) — окружающий мир дополняется образами и информацией созданной техническими средствами, с которыми пользователь взаимодействует, используя очки или камеру смартфона" %}</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class='sec center'>
+
+    <div class='scr title center'>
+
+      <p id='title2'>{% trans "КАК МЫ РАБОТАЕМ" %}</p>
+
+    </div>
+
+    <div id='b-b1' class='scr b i center'>
+
+      <div class='BS bgCont' id='bs1'>
+
+        <p id='pgph4' /> 1. {% trans "Мы обрабатываем вашу заявку" %}
+
+      </div>
+
+      <div class='BS bgCont' id='bs2'>
+
+        <p id='pgph5' /> 2. {% trans "Обсуждаем с Вами проект и прописываем ТЗ на основании поставленных задач" %}
+
+      </div>
+
+      <div class='BS bgCont' id='bs3'>
+
+        <p id='pgph6' />3. {% trans "Подписываем с Вами договор" %}
+
+      </div>
+
+      <div class='BS bgCont' id='bs4'>
+
+        <p id='pgph7' />4. {% trans "Отрисовываем прототип и дизайн проекта" %}
+
+      </div>
+
+      <div class='BS bgCont' id='bs5'>
+
+        <p id='pgph8' />5. {% trans "Создаем 3D контент" %}
+
+      </div>
+
+      <div class='BS bgCont' id='bs6'>
+
+        <p id='pgph9' />6. {% trans "Разрабатываем клиентскую и серверную часть проекта" %}
+
+      </div>
+
+      <div class='BS bgCont' id='bs7'>
+
+        <p id='pgph10' />7. {% trans "Создаем приложение" %}
+
+      </div>
+
+      <div class='BS bgCont' id='bs8'>
+
+        <p id='pgph11' />8. {% trans "Тестируем приложение" %}
+
+      </div>
+
+      <div class='BS bgCont' id='bs9'>
+
+        <p id='pgph12' />9. {% trans "Публикация приложения в магазины" %}
+
+      </div>
+
+      <div class='BS bgCont' id='bs10'>
+
+        <p id='pgph13' />10. {% trans "Осуществляем поддержку приложения после его реализации" %}
+
+      </div>
+
+      <div id='b-b1X1' class='i center' onclick="slide('bx', 'L'); slide('bs', 'L')">
+
+        <p>＜</p>
+
+      </div>
+
+      <div id='b-b1X2' class='i center' onclick="slide('bx', 'R'); slide('bs', 'R')">
+
+        <p>＞</p>
+
+      </div>
+
+      <div id='b-b1X3' class='i center'>
+
+        <div class='BX' id='bx1' onclick="slide('bx', 1); slide('bs', 1)"></div>
+
+        <div class='BX' id='bx2' onclick="slide('bx', 2); slide('bs', 2)"></div>
+
+        <div class='BX' id='bx3' onclick="slide('bx', 3); slide('bs', 3)"></div>
+
+        <div class='BX' id='bx4' onclick="slide('bx', 4); slide('bs', 4)"></div>
+
+        <div class='BX' id='bx5' onclick="slide('bx', 5); slide('bs', 5)"></div>
+
+        <div class='BX' id='bx6' onclick="slide('bx', 6); slide('bs', 6)"></div>
+
+        <div class='BX' id='bx7' onclick="slide('bx', 7); slide('bs', 7)"></div>
+
+        <div class='BX' id='bx8' onclick="slide('bx', 8); slide('bs', 8)"></div>
+
+        <div class='BX' id='bx9' onclick="slide('bx', 9); slide('bs', 9)"></div>
+
+        <div class='BX' id='bx10' onclick="slide('bx', 10); slide('bs', 10)"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class='sec center'>
+
+    <div class='scr title center'>
+
+      <p id='title3'>{% trans "КОМАНДА" %}</p>
+
+    </div>
+
+    <div id='b-cL' class='center' onclick="slide('mbr', 'L')">
+
+      <p>＜</p>
+
+    </div>
+
+    <div id='b-cR' class='center' onclick="slide('mbr', 'R')">
+
+      <p>＞</p>
+
+    </div>
+
+    <div class='scr b center tmbr' id='mbr1'>
+
+      <div class='mbrP' style="background-image: url('/static/avr/assets/mbr1.jpg')"></div>
+
+      <div class='b-c1X1 center'>
+
+        <p id='name1'>{% trans "Воробьев Алексей" %}<br>
+
+          <span style="font-size: 2vmin">({% trans "Руководитель Компании" %})</span>
+
+        </p>
+
+      </div>
+
+      <div class='b-c1X2 center'> <a class='mbrS tg' target='_blank' rel="nofollow" href='https://t.me/asvorobyov'></a>
+
+        <a class='mbrS vk' target='_blank' rel="nofollow" href='https://vk.com/id199536216'></a> <a class='mbrS web' target='_blank' href='https://asvorobyov.ru'></a>
+
+      </div>
+
+    </div>
+
+    <div class='scr b center tmbr' id='mbr2'>
+
+      <div class='mbrP' style="background-image: url('/static/avr/assets/mbr2.jpg')"></div>
+
+      <div class='b-c1X1 center'>
+
+        <p id='name2'>{% trans "Бутрим Иван" %}<br>
+
+          <span style="font-size: 2vmin">({% trans "Дизайнер" %})</span>
+
+        </p>
+
+      </div>
+
+      <div class='b-c1X2 center'> <a class='mbrS tg' rel="nofollow" target='_blank' href='https://t.me/Str7ker'></a> <a class='mbrS vk' rel="nofollow" target='_blank' href='https://vk.com/id57200107'></a> </div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+  <div class='sec center'>
+
+    <div class='scr title center'>
+
+      <p id='title4'>{% trans "ИСПОЛЬЗУЕМЫЕ" %}<br>{% trans "НАМИ ТЕХНОЛОГИИ" %}</p>
+
+    </div>
+
+    <div id='b-d1' class='scr b i center bounded'>
+
+      <a class='center b-d1X' target='_blank' href='https://unity.com' rel="nofollow">
+
+        <div class='_F bgCont' style="background-image: url('/static/avr/assets/tech1.svg')"></div>
+
+      </a>
+
+      <a class='center b-d1X' target='_blank' href='https://store.steampowered.com/steamvr' rel="nofollow">
+
+        <div class='_F bgCont' style="background-image: url('/static/avr/assets/tech2.svg')"></div>
+
+      </a>
+
+      <a class='center b-d1X' target='_blank' href='https://www.oculus.com/gear-vr/' rel="nofollow">
+
+        <div class='_F bgCont' style="background-image: url('/static/avr/assets/tech3.svg')"></div>
+
+      </a>
+
+      <a class='center b-d1X' target='_blank' href='https://developer.vuforia.com' rel="nofollow">
+
+        <div class='_F bgCont' style="background-image: url('/static/avr/assets/tech4.svg')"></div>
+
+      </a>
+
+      <a class='center b-d1X' target='_blank' href='https://www.blender.org' rel="nofollow">
+
+        <div class='_F bgCont' style="background-image: url('/static/avr/assets/tech5.png')"></div>
+
+      </a>
+
+      <div class='center b-d1X'></div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class='sec center'>
+
+    <div class='scr title center'>
+
+      <p id='title5'>{% trans "ПАРТНЕРЫ" %}</p>
+
+    </div>
+
+    <div id='b-e1' class='scr i bounded'>
+
+      <div class='b-e2 b bounded' style='border-right: 5vw solid var(--pinkX)'>
+
+        <a class='b-eX center ref' rel="nofollow" style="margin-top: 10vmin; background-image: url('/static/avr/assets/ptnr1.svg')" target='_blank' href='https://dolinatlt.ru/'>
+
+          <p>LINK</p>
+
+        </a>
+
+        <a class='b-eX center ref' rel="nofollow" style="background-image: url('/static/avr/assets/ptnr4.svg')" target='_blank' href='https://www.samregion.ru/'>
+
+          <p>LINK</p>
+
+        </a>
+
+        <a class='b-eX center ref' rel="nofollow" style="background-image: url('/static/avr/assets/ptnr2.svg')" target='_blank' href='https://tlt.tpprf.ru/ru/'>
+
+          <p>LINK</p>
+
+        </a>
+
+      <a class='b-eX center ref' rel="nofollow" style="background-image: url('/static/avr/assets/ptnr6.svg')" target='_blank' href='https://www.tltsu.ru/'>
+
+          <p>LINK</p>
+
+        </a>
+
+
+      </div>
+
+
+      <div class='b-e2' style='left: -15%; background: #3688'></div>
+
+      <div class='b-e2' style='left: 95%; background: #8378'></div>
+
+    </div>
+
+  </div>
+
+
+
+  <div id='footer' class='bgFill'>
+
+    <div id='foo1' class='center'>
+
+      <div id='foo2' class='bounded'>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1185.066926261
+
+					5597!2d49.215724!3d53.555378!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416877278714ac9b%3A
+
+					0x208feb7df3308608!2z0K7QttC90L7QtSDRiC4sIDE2Mywg0KLQvtC70YzRj9GC0YLQuCwg0KH
+
+					QsNC80LDRgNGB0LrQsNGPINC-0LHQuy4sIDQ0NTAyNA!5e0!3m2!1sru!2sru!4v166767670956
+
+					4!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </div>
+
+      <div id='foo3'>
+
+        <div id='foo4' class='i center'>
+
+          <p style='margin: auto; text-align: center' id='fooP1'>{% trans "Резидент технопарка в сфере высоких технологий «Жигулёвская долина»" %}</p>
+
+          <div id='foo5'></div>
+
+          <p style="margin: auto; text-align: center; font: 400 2.3vmin 'Montserrat'" id='fooP2'>{% trans "КОНТАКТЫ" %}</p>
+
+        </div>
+
+        <div id='foo6'>
+
+          <span style='font-weight: 400' id='fooP3'>{% trans "Телефон:" %}</span><br>
+
+          <a class='ref' rel="nofollow" href='tel:+79277888882'>+ 7 (927) 788-88-82</a><br>
+
+          <span style='font-weight: 400'>E-mail:</span><br>
+
+          <a class='ref' rel="nofollow" href='mailto: AVorobyovS@ya.ru'>AVorobyovS@ya.ru</a><br>
+
+          <span style='font-weight: 400' id='fooP4'>{% trans "Адрес:" %}</span><br>
+
+          <a class='ref' rel="nofollow" href='https://goo.gl/maps/qCFrD4rxLQt4912z9' target='_blank' id='fooP5'>{% trans "г. Тольятти, ш. Южное, зд 163а, к 2/4, офис А316" %}</a>
+
+          <div id='contacts' style='margin: 1.5vmin 0 0 0; width: 100%; height: 8vmin'>
+
+            <a class='social bgCont vk' rel="nofollow" href='https://vk.com/alvirity' target='_blank'></a>
+
+            <a class='social bgCont tg' rel="nofollow" href='https://t.me/+79277888882' target='_blank'></a>
+
+            <a class='social bgCont wa' rel="nofollow" href='https://wa.me/79277888882' target='_blank'></a>
+
+            <a class='social bgCont vi' rel="nofollow" href='viber://chat?number=%2B79277888882/' target='_blank'></a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id='p3cred' class='container-fluid' style="background:none; padding: 40px 0;">
+
+      <div class="row">
+
+        <div class="col-md-12 col-12" id="logoDevFrame1">
+
+          <a href="https://alvirity.ru/" id='logoDev1' rel="nofollow">
+
+            <img src="/static/images/logoDev.png" width="100%">
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id='foo10' class='bgCont'></div><!-- onclick='scroll_top()' -->
+
+  </div>
+
+  <div class="qr_block" style="width: 100vw; height: 100vh;">
+
+    <div style="width: 100vw; height: 100vh;" class="d-flex align-items-center">
+
+      <div class="qr_sector">
+
+        <img src="/static/avr/assets/qrcode.png" alt="qr-cosw" class="qr_img">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id='panelR' class='b i center bounded' style='z-index: 3'>
+
+    <div id='panelRColor' class='center'>
+
+      <p id='title6'>{% trans "ИНФО" %} &<br>{% trans "ПРОЕКТЫ" %}</p>
+
+    </div>
+
+    <div id='panelRBoard' class='bounded'>
+
+      <div class='panelRT center'>
+
+        <p id='PRText1'>{% trans "Реализованные проекты" %}</p>
+
+      </div>
+
+      <div id='PRText2' class='panelRP'>1. {% trans 'Симулятор аппаратно-программного комплекса в виртуальной реальности для обучения сотрудников на предприятии для завода "КуйбышевАзот".' %}' <br><br>
+
+        2. <span class="open_qr" style="color: var(--pink); cursor: pointer;">{% trans "Видео-визитка в дополненной реальности." %}</span> <br><br>
+
+        3. <a class="nohover-a" href="https://wizcard.ru/" rel="nofollow" style="color: var(--pink); cursor: pointer;">{% trans "WizcARd — это инновационный сервис, который позволяет создавать интерактивные проекты в цифровой и в дополненной реальности:" %}</a> <br><br>
+
+       {% trans " Другое: кастомные решения с учетом индивидуальных предпочтений клиента." %}</div>
+
+      <div class='panelRT center'>
+
+        <p id='PRText3'>{% trans "Текущие проекты" %}</p>
+
+      </div>
+
+      <!-- <div id='PRText4' class='panelRP'>Виртуальный зоопарк - на стадии поиска инвесторов.</div> -->
+
+      <a id='PRText6' rel="nofollow" class='panelRP nohover-a' style="color: var(--pink); cursor: pointer;"  href="https://armirage.ru/" >{% trans "AR-приложение «Мираж» с интеллектуальными персонажами на интерактивных локациях." %}</a>
+
+      <div id='PRText6' class='panelRP'>{% trans "Симулятор конструирования и управления беспилотными летательными аппаратами в виртуальной реальности." %}</div>
+
+      <!--<div class='panelRT center'>
+
+        <p id='PRText5'>Другие проекты</p>
+
+      </div> -->
+
+    </div>
+
+  </div>
+
+  <a class='lang center' rel="nofollow" href='{{lang}}'><p id='lang'>{% trans "RU" %}</p></a>
+
+
+
+  <script src="/static/avr/main.js"></script>
+
+</body>
+</html>

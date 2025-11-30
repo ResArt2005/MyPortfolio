@@ -1,0 +1,611 @@
+
+
+.uslugi-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.gap20{
+    gap: 20px;
+   
+}
+
+.gap10{
+    gap: 10px;
+   
+}
+
+.gap5{
+    gap: 5px;
+}
+
+.core-info{
+    border-radius: 40px;
+    border-left: 8px solid #5511AA;
+    background: #000000B2;
+    padding: 40px;
+    justify-content: space-between;
+}
+
+.info-block{
+    max-width: inherit;
+    gap: 20px;
+}
+
+.core-info img{
+    border-radius: 10px;
+    height: 15vw;
+    width: auto;
+}
+
+.title-name{
+    color: rgba(189, 113, 235, 1);
+    font-size: 2vw;
+    font-weight: 600;
+}
+.title-name h1{
+    font-weight: 600;
+}
+
+.block-desk{
+    font-size: 1vw;
+    color: white;
+}
+
+.block-price{
+    background: rgba(0, 0, 0, 0.44);
+    border: 1px solid rgba(85, 17, 170, 1);
+    gap: 10px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}
+
+.price-title{
+    color: white;
+    font-size: 1vw;
+    font-weight: 700;
+}
+
+.price-info{
+    font-weight: 700px;
+    font-size: 2vw;
+    color: rgba(143, 54, 255, 1);
+}
+
+
+.num-block{
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border: 1px solid rgba(189, 113, 235, 1);
+    border-radius: 5px;
+    color: rgba(189, 113, 235, 1);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    #logoDevFrame {
+      margin: auto;
+      border-radius: 2vmin;
+      flex: 0 0 46vmin;
+      height: 10vmin;
+      padding: 0;
+      background: linear-gradient(170deg, #613 0%, #316 100%);
+      box-shadow: -1vmin 1vmin 3vmin #3169, 1vmin -1vmin 3vmin #6139;
+    }
+  
+    #logoDevFrame:hover {
+      animation: alvirityDev 2s linear infinite
+    }
+
+    .carousel-item.active{
+      display:flex;
+    }
+
+    .carousel-item .desk-info{
+      white-space: pre-line;
+    }
+
+    .carousel-item-next,  .carousel-item-right{
+      display:flex;
+    }
+
+    .slide-image{
+      padding:15px;
+      height:10vw;
+      position:relative;
+    }
+    
+    .block-slider{
+      padding:2vw 4vw ;
+    }
+
+
+    .carousel-indicators{
+      bottom:-1.2vw;
+      gap:10px;
+    }
+
+
+    .carousel-indicators button{
+      background:rgba(255, 255, 255, 0.5);
+      border-radius:50%;
+      height:20px;
+      width:20px;
+    }
+    .carousel-indicators button.active{
+      background:white;
+    }
+    .carousel-control-next{
+      width: 2vw;
+      right: -3vw;
+      background: none;
+      border: none;
+    }
+
+    .carousel-control-next:hover path, .carousel-control-prev:hover path{
+      fill-opacity:1;
+    }
+
+    .carousel-control-next svg{
+      transform: rotate(180deg);
+    }
+
+    .carousel-control-prev{
+      width: 2vw;
+      left: -3vw;
+      background: none;
+      border: none;
+    }
+
+    .slide-image img{
+      max-height: 100%;
+      max-width: 100%;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+    }
+
+    @media (max-width:991px){
+      .block-slider{
+        padding:12vw 8vw;
+        padding-top:20vw;
+        position:relative
+      }
+
+      .carousel-control-next, .carousel-control-prev{
+        height: 20px;
+        top: 8vw;
+      }
+      .carousel-control-next{
+        right: 40px;
+      }
+      .carousel-control-prev{
+        left: 40px;
+      }
+      .carousel-inner, .carousel{
+        position:static;
+      }
+      .carousel-indicators{
+        bottom: 1vw;
+      }
+      .slide-image img{
+        max-height:95%;
+      }
+    }
+
+    .slide-image{
+      min-height:225px;
+    }
+  
+    @keyframes alvirityDev {
+  
+      0%,
+      100% {
+        box-shadow: none
+      }
+  
+      20% {
+        box-shadow: 0 -1vmin 3vmin #603
+      }
+  
+      40% {
+        box-shadow: 1vmin 0 3vmin #606
+      }
+  
+      60% {
+        box-shadow: 0 1vmin 3vmin #306;
+        filter: brightness(1.7)
+      }
+  
+      80% {
+        box-shadow: -1vmin 0 3vmin #606
+      }
+    }
+  
+    #logoDev {
+      width: calc(100% - 0.5vmin);
+      height: calc(100% - 0.5vmin);
+      background-color: #111;
+      border-radius: 2vmin;
+      display: block;
+  
+    }
+    
+
+@media (max-width:992px){
+    .uslugi-body{
+        padding: 50px 7px;
+    }
+    .core-info{
+        flex-direction: column-reverse;
+        padding: 30px;
+        gap: 10px;
+    }
+
+    .core-info img {
+        height: auto;
+        width: 100%;
+    }
+
+    .title-name , .price-info, h1{
+        font-size: 20px;
+        line-height: 21px;
+    }
+
+    .price-info{
+        text-align: center;
+    }
+
+    .block-desk{
+        font-size: 16px;
+        line-height: 19.5px;
+    }
+    .price-title{
+        font-size: 14px;
+    }
+    .block-price{
+        width: 100%;
+        align-items: center;
+    }
+
+    .info-block{
+        padding: 0;
+        gap: 10px;
+    }
+
+    .block-uslugi{
+        padding: 30px;
+    }
+
+    .block-title{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .gridblock{
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+
+    .block-uslugi .col-12 {
+        padding: 0;
+    }
+}
+
+.plan-container{
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.5rem!important;
+    overflow-x: auto;
+}
+
+.plan-block{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    background-color: rgba(0, 0, 0, 0.44);
+    border-radius: 25px;
+    padding: 20px 20px 20px 25px;
+    border-left: 8px solid  #5511AA;
+    min-width: 400px;
+}
+
+.plan-number{
+    border: 1px solid rgba(189, 113, 235, 1);
+    color: rgba(189, 113, 235, 1);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 24px;
+    width: fit-content;
+}
+
+.tarif-container{
+    gap: 1.5rem;
+}
+
+.tarif-block{
+    width: calc(30vw - 10px);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.44);
+    border-radius: 25px;
+    padding: 20px 20px 20px 25px;
+    border-left: 8px solid  #5511AA;
+    justify-content: space-between;
+}
+
+.tarif-block .block-price{
+    width: 100%;
+}
+
+.tarif-title{
+    width: 100%;
+    font-weight: 600;
+    font-size: 35px;
+    text-align: center;
+    color: rgba(189, 113, 235, 1);
+}
+.uslugbut1{
+    width: 100%;
+    margin-top: 1vmin;
+    padding: 3vmin 4vmin;
+}
+.uslugbut1::before,.uslugbut1::after {
+    border-radius: 2.2rem;
+}
+.uslugbut2{
+    width: 100%;
+    margin-top: 0;
+}
+
+
+.team-fill{
+    position: relative;
+}
+
+.team-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 30px;
+    background: rgba(85, 17, 170, 0.8);
+    padding: 20px;
+    height: auto!important;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.team-title{
+    font-weight: 700!important;
+    font-size: 20px!important;
+    text-align: center;
+    color: white;
+    margin: 0!important;
+}
+
+.team-prof{
+    font-weight: 500!important;
+    font-size: 18px!important;
+    text-align: center;
+    color: white;
+    margin: 0!important;
+}
+#projects .owl-carousel{
+    display: flex;
+    gap: 10px;
+}
+
+
+
+    
+
+@media (min-width:992px){
+
+
+    #team .owl-carousel{
+        height: 22vw;
+    }
+
+    #projects .owl-carousel{
+        height: calc(12vw + 22vmin);
+    }
+    #projects .own-center{
+        height: 20vmin;
+    }
+    .porfolio-desc{
+        height: calc(10vw + 4vmin - 10px)!important;
+    }
+    
+    .porfolio-desc .desk-info{
+        -webkit-line-clamp: 4;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-align: left;
+        border-radius: 0;
+    }
+    .porfolio-desc .desk-title{
+        color: rgba(189, 113, 235, 1);
+        font-size: 1vw;
+        line-height: 1.1vw;
+        text-align: left;
+    }
+
+    .porfolio-desc .desk-info p{
+        font-size: 0.8vw;
+        line-height: 1vw;
+        font-weight: 600;
+    }
+
+    .slider-customcenter .owl-stage-outer{
+        display: flex;
+        justify-content: center;
+    }
+    .porfolio-desc .uslugbut1  {
+        font-size: 1vw;
+        padding: 1vmin 4vmin;
+    }
+}
+    .porfolio-desc{
+        background: rgba(0, 0, 0, 0.44);
+        border: 1px solid  rgba(85, 17, 170, 1);
+        border-radius: 20px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        padding-bottom: 30px;
+        position: relative;
+    }
+    .porfolio-desc div{
+        height: auto;
+    }
+
+    .porfolio-desc .desk-info{
+        max-height: 60%;
+        color: white;
+    }
+
+    .porfolio-desc div{
+        border-radius: 0;
+    }
+
+    .porfolio-desc{
+        border-radius: 1rem 1rem 1.5rem 1.5rem!important;
+    }
+
+    .porfolio-desc .uslugbut1  {
+        margin-top: 0!important;
+        position: absolute!important;
+        left: 3%!important;
+        bottom: -9px!important;
+        width: 94%;
+    }
+
+    #contacts{
+        margin: 0;
+    }
+
+    #projects{
+        margin-top: 1vw;
+    }
+
+    #team {
+        margin-top: 1vw;
+    }
+
+    .porfolio-desc .uslugbut1{
+        animation: vertical-movement2 2s infinite ease-in-out;
+    }
+
+@media (max-width:991px){
+    .plan-block{
+        min-width: 300px;
+    }
+
+    .tarif-block{
+        width: 100%;
+        display: none;
+        padding-bottom: 50px;
+    }
+    #carouseltarif{
+        position: relative;
+        padding: 0;
+    }
+    
+    .porfolio-desc .desk-info{
+        -webkit-line-clamp: 5;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        padding-bottom: 0;
+    }
+
+    .form-style{
+        width: 97vw;
+    }
+    #team .owl-carousel{
+        height: 95vw;
+        margin-top: 2vw;
+    }
+
+    #projects .owl-carousel{
+        margin-top: 2vw;
+        height: 90vw;
+    }
+    #projects .own-center{
+        height: 30vmin;
+    }
+    .porfolio-desc{
+        height: calc(85vw - 30vmin - 10px)!important;
+    }
+    #projects{
+        height: auto;
+    }
+    .porfolio-desc .desk-title{
+        font-size: 18px;
+        text-align: left;
+    }
+    .porfolio-desc .desk-info p{
+        font-size: 16px;
+        line-height: 18px;
+        text-align: left;
+        padding-bottom: 0!important;
+    }
+    .porfolio-desc{
+        padding: 5px;
+    }
+    .porfolio-desc div{
+        padding: 5px 5px;
+    }
+    .porfolio-desc{
+        gap: 0;
+    }
+
+    .porfolio-desc .uslugbut1{
+        bottom: 15px!important;
+    }
+    .porfolio-desc .desk-title{
+        color: rgba(189, 113, 235, 1);
+        font-size: 4vw;
+        line-height: 4.1vw;
+    }
+
+    .porfolio-desc .desk-info p{
+        font-size: 3.6vw;
+        line-height: 3.8vw;
+        font-weight: 600;
+    }
+
+    .porfolio-desc .uslugbut1  {
+        font-size: 4vw;
+        padding: 3vmin 4vmin;
+    }
+
+    .title-name h1{
+        font-size: 24px;
+        text-align: center;
+    }
+    .tarif-title{
+        font-size: 20px;
+    }
+
+}

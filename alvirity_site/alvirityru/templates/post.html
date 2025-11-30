@@ -1,0 +1,67 @@
+{% extends '__base2.html' %} {% block content %} {% load i18n %}
+<div id='bg' class='fill bgFill' style='z-index: -1; position: fixed; background-image: url("/static/assets/bg.svg")'></div>
+
+{% include './header.html' %}
+
+<div id='page1'>
+  <div id='intro' style="display:none"></div>
+  <div class="d-flex justify-content-center">
+    <div class="about-page__banner blog-title">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="contacts-page__title-post">{% if data.seo_h1 %}{{data.seo_h1}}{% else %}{{data.name}}{% endif %}</h1>
+        </div>
+      </div>
+      <div class="products-page__anchor-post">
+        <div class="container-fluid">
+          <ul class="products-page__anchor-list-post row" style="list-style-type:none;">
+            <li class="products-page__anchor-item">
+              <a class="products-page__anchor-link" href="/">{% trans "Главная" %}</a>
+              <span>>></span>
+            </li>
+            <li class="products-page__anchor-item">
+              <a class="products-page__anchor-link" href="/{{url}}/">{% trans "Блог" %}</a>
+              <span>>></span>
+            </li>
+            <li class="products-page__anchor-item">
+              <a class="products-page__anchor-link" href="/{{url}}/{{data.alias}}/">{{data.name}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="post-img container-fluid">
+    <div class="row">
+      <div class="pattern-page__main-wrapper col-12">
+        <div class="pattern-page__main-img">
+          {% if data.images %}
+          <img class="post-img-item" src="{{data.images.url}}" alt="{{data.name}}" title="{{data.name}}" style="width:100%;">
+          {% endif %}
+        </div>
+        <div class="pattern-page__main-content-post">
+          <article>
+            {{data.content | safe }}
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id='p3cred' class='container-fluid' style="background:none; padding: 40px 0;">
+    <div class="row">
+      <div class="col-md-12 col-12" id="logoDevFrame">
+        <a href="https://alvirity.ru/" rel="nofollow" id='logoDev'>
+          <img src="/static/images/logoDev.png" width="100%">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% include './mob-footer.html' %}
+{% endblock %}
+{% block scripts %}
+<script src="/static/js/main.js"></script>
+<script src="/static/js/lang.js"></script>
+
+
+{% endblock %}

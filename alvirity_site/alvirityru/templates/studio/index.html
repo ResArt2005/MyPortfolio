@@ -1,0 +1,247 @@
+<!DOCTYPE html> {% load i18n %}
+<html id='html' lang="ru" dir="ltr">
+	<head id='core'> <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/static/studio/assets/fav_v3-2.ico">
+		<title id="title">Alvirity</title>
+		<link rel="stylesheet" href="/static/studio/style.css">
+		<script src="/static/studio/js/jquery-1.12.4.min.js"></script>
+		<script src="/static/studio/js/bootstrap.min.js"></script>
+		<script src="/static/studio/script.js"></script>
+	</head>
+	<body id='body' class='nosel' onload='init(); langs(); assetsInit()'>
+		<script type="text/javascript" src="/static/studio/main.js"></script>
+		<script type="text/javascript" src="/static/studio/assets.js"></script>
+		
+		<div id='display_main'>
+			<!-- BackToTop button -->
+			<div id='backToTop' onclick='scroll_top()'><p style='margin-top: 0.5em'>^</p></div>
+			
+			<!-- Top bar -->
+			<div id='topbar' class='topbar center bounded' >
+				<a id='logo' class='bgCont' style='display: block' rel="nofollow" href='https://alvirity.com'></a>
+				<div id='topSpacer'> <!-- onclick="a8ss('topbar', 'topbarA 0.5s forwards', 'topbarB 0.2s forwards')" -->
+					<p style='margin: 2.6vmin' id='topMenu'><!--text--></p>
+				</div>
+				<a class='top ref' rel="nofollow" id='top1' href='https://alvirity.com' target='_blank'><!--text--></a>
+				<a class='top ref' rel="nofollow" id='top2' href='#s2'><!--text--></a>
+				<a class='top ref' rel="nofollow" id='top3' href='#s3'><!--text--></a>
+				<a class='top ref' rel="nofollow" id='top4' href='#s4'><!--text--></a>
+				<a class='top ref'  rel="nofollow"  id='top5' href='#contacts'><!--text--></a>
+				<div class='top' style='line-height: 1.5em; height: 3em; background: #000; border-radius: 2vmin'>
+					<a href="tel:+79277888882" class='ref' rel="nofollow">+7 (927) 788-88-82</a> <br>
+					<a href="mailto: AVorobyovS@ya.ru" class='ref' rel="nofollow">AVorobyovS@ya.ru</a>
+				</div>
+				<div class='top' onclick='langs()'
+					style='position: absolute; top: 1.6vmin; right: 2%; min-width: 2em; max-width: 2em; background: #0000'>
+					<x id='language' class='ref' style='font-size: 4vmin; padding: 0.6em'>RU</x>
+				</div>
+			</div>
+			
+			<!-- Content -->
+			<div class='break' style='height: 10vmin'></div>
+			
+			<div class='sector'>
+				<div class='block boxA' style='text-align: left; margin-left: 10%'>
+					<p class='title' id='s0t1'><!--text--></p>
+					<p class='titleSub' id='s0t2'><!--text--></p>
+					<p class='titleDesc' id='s0t3'><!--text--></p>
+				</div>
+			</div>
+			
+			<div class='sector' id='s1'>
+				<div class='block boxA'>
+					<p class='title' id='s1t1'><!--text--></p>
+					<p class='titleSub' id='s1t2'><!--text--></p>
+					<p class='titleDesc' id='s1t3'><!--text--></p>
+				</div>
+				<div class='block boxB bLeft'>
+					
+					<div class='cell'>
+						<div class='cell_icon bgFill' style="background-image: url('/static/studio/assets/icon/1.webp')"></div>
+						<p id='s1t4' class='titleSub' style="margin: 0; font: var(-fontSub)"><!--text--></p>
+						<p id='s1t5'><!--text--></p>
+					</div>
+					
+					<div class='cell'>
+						<div class='cell_icon bgFill' style="background-image: url('/static/studio/assets/icon/2.webp')"></div>
+						<p id='s1t6' class='titleSub' style="margin: 0; font: var(-fontSub)"><!--text--></p>
+						<p id='s1t7'><!--text--></p>
+					</div>
+					
+					<div class='cell'>
+						<div class='cell_icon bgFill' style="background-image: url('/static/studio/assets/icon/3.webp')"></div>
+						<p id='s1t8' class='titleSub' style="margin: 0; font: var(-fontSub)"><!--text--></p>
+						<p id='s1t9'><!--text--></p>
+					</div>
+					
+					<div class='cell'>
+						<div class='cell_icon bgFill' style="background-image: url('/static/studio/assets/icon/4.webp')"></div>
+						<p id='s1t10' class='titleSub' style="margin: 0; font: var(-fontSub)"><!--text--></p>
+						<p id='s1t11'><!--text--></p>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class='sector' id='s2'>
+				<div class='block boxA'>
+					<p class='title' id='s2t1'><!--text--></p>
+					<p class='titleSub' id='s2t2'><!--text--></p>
+					<p class='titleDesc' id='s2t3'><!--text--></p>
+				</div>
+				<div class='block boxB center bRight'>
+					<div style="width: 80%; margin-left: -10%; font: 400 4vmin 'Source Sans Pro'"><ol style='text-align: left'>
+						<li style='padding-left: 5vmin' id='s2t4'><!--text--></li><br>
+						<li style='padding-left: 5vmin' id='s2t5'><!--text--></li>
+					</ol></div>
+					<div class='break'></div>
+					<div class='button' id='s2t6' onclick="projects('show')"><!--text--></div>
+				</div>
+			</div>
+			
+			<div class='sector' id='s3'>
+				<div class='block boxA'>
+					<p class='title' id='s3t1'><!--text--></p>
+					<p class='titleSub' id='s3t2'><!--text--></p>
+					<p class='titleDesc' id='s3t3'><!--text--></p>
+				</div>
+				<div class='block boxB bLeft bounded'>
+					<form method="post" id="messageForm">
+<input type="hidden" value="{{ c.csrf_token }}" name="csrfmiddlewaretoken" /><br>
+						<input class='inputForm' type="name" id="userName" style="width:80%; margin: 1% 5%; font: var(--fontMain)" required placeholder='Placeholder*'>
+						<input class='inputForm' type="email" id="userMail" style="width:80%; margin: 1% 5%; font: var(--fontMain)" required placeholder='Placeholder*'>
+						<input class='inputForm' type="tel" id="userPhone" style="width:80%; margin: 0 5%; font: var(--fontMain)" required placeholder='Placeholder*'>
+						<div style='width: 1px; height: 3vmin'></div>
+						<input id="checkbox" type="checkbox" value="Agreed"
+							style='filter: hue-rotate(80deg) brightness(0.8) contrast(1.5); margin: 0 2% 0 5%'> 
+							<label id='userAgreement'><!--text--></label><br>
+						<input class='button g-recaptcha'
+							   data-sitekey="6LccpQgmAAAAALGcN0HJk-P4NmWGBbEN2ayfgQkw"
+							data-callback='onSubmit'
+							data-action='submit' type="button" id='userSubmit' value='Button'>
+						<p class="result"></p>
+					</form>
+				</div>
+			</div>
+			
+			<div class='sector' id='s4'>
+				<div class='block boxA'>
+					<p class='title' id='s4t1'><!--text--></p>
+					<p class='titleSub' id='s4t2'><!--text--></p>
+					<p class='titleDesc' id='s4t3'><!--text--></p>
+				</div>
+				<div class='block boxB bRight' style='text-align: left'>
+					<p class='titleSub' id='s4t4' style='margin: 3% 5%; font-weight: 400;'><!--text--></p>
+					<p class='titleDesc' id='s4t5'><!--text--></p>
+					
+				</div>
+			</div>
+			
+			<div class='sector' id='team'>
+				<p class='title' style='text-align: center' id='teamTitle'><!--text--></p>
+				<a class='portraitFrame bgFill text' id='mbr1b' rel="nofollow"> <div class='portrait bgFill' id='mbr1a'></div> <p class='tag' id='member1'></p> </a>
+				<a class='portraitFrame bgFill text' id='mbr2b' rel="nofollow"> <div class='portrait bgFill' id='mbr2a'></div> <p class='tag' id='member2'></p> </a>
+				<a class='portraitFrame bgFill text' id='mbr8b' rel="nofollow"> <div class='portrait bgFill' id='mbr8a'></div> <p class='tag' id='member8'></p> </a>
+
+				<a class='portraitFrame bgFill text' id='mbr10b'> <div class='portrait bgFill' id='mbr10a'></div> <p class='tag' id='member10'></p> </a>
+			</div>
+
+			<div class='sector' id='partners'>
+				<p class='title' style='text-align: center' id='partnersTitle'><!--text--></p>
+				<div id='partnersWheel' class='bounded' style='margin: 5vmin 0 0 0; display: flex; overscroll-behavior-x: scroll; overflow-x: scroll'>
+					<div style='display: flex'>
+						<a id='ptnr1i' class='ptnrFrame text' rel="nofollow"> <div class='ptnr bgCont' id='ptnr1'></div> <div class='ptnrHint bgCont'></div> </a>
+						<a id='ptnr2i' class='ptnrFrame text' rel="nofollow"> <div class='ptnr bgCont' id='ptnr2'></div> <div class='ptnrHint bgCont'></div> </a>
+						<a id='ptnr3i' class='ptnrFrame text' rel="nofollow"> <div class='ptnr bgCont' id='ptnr3'></div> <div class='ptnrHint bgCont'></div> </a>
+						<a id='ptnr4i' class='ptnrFrame text' rel="nofollow"> <div class='ptnr bgCont' id='ptnr4'></div> <div class='ptnrHint bgCont'></div> </a>
+						<a id='ptnr5i' class='ptnrFrame text' rel="nofollow"> <div class='ptnr bgCont' id='ptnr5'></div> <div class='ptnrHint bgCont'></div> </a>
+						
+						<a id='ptnr6i' class='ptnrFrame text' rel="nofollow"> <div class='ptnr bgCont' id='ptnr6'></div> <div class='ptnrHint bgCont'></div> </a>
+						<a id='ptnr7i' class='ptnrFrame text' rel="nofollow"> <div class='ptnr bgCont' id='ptnr7'></div> <div class='ptnrHint bgCont'></div> </a>
+						<a id='ptnr8i' class='ptnrFrame text' rel="nofollow"> <div class='ptnr bgCont' id='ptnr8'></div> <div class='ptnrHint bgCont'></div> </a>
+					</div>
+				</div>
+			</div>
+			
+			<div class='sector' id='contacts' style='margin-top: 20vmin; display: flex; align-items: center;'>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d725.2908819901667!2d49.215376336863976!3d53.
+					555482893985626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416877278714ac9b%3A0x208feb7df3308608!2z0K7Qtt
+					C90L7QtSDRiC4sIDE2Mywg0KLQvtC70YzRj9GC0YLQuCwg0KHQsNC80LDRgNGB0LrQsNGPINC-0LHQuy4sIDQ0NTAyNA!5e0!3m2!1
+					sru!2sru!4v1658329863062!5m2!1sru!2sru"
+					width="600" height="500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+					class='block boxB' style='min-height: 50vmin; margin: 3vmin'>
+				</iframe>
+				<div class='block boxA' style='border: 1px solid #fff0; border-radius: 5vmin; min-height: 50vmin; margin: 3vmin'>
+					<div style='margin: auto 0 auto 3vmin; width: 100%'>
+						<div class='button' style='margin-left: 0; text-align:center'><a id='contactsText1' rel="nofollow" class='text' target='_blank' href='https://dolinatlt.ru/residents/alvirity/'><!--text--></a></div>
+						<div class='break'></div>
+						<p style='margin-left: 5%' id='contactsText2'><!--text--></p>
+						<div class='break'></div>
+						<div class='button center' >
+							<p style='margin: 0' id='contactsText3'><!--text--></p>
+							<div class='break'></div>
+							<a id='cont1' class='contact bgFill text' rel="nofollow" target='_blank' href='https://vk.com/alvirity'></a>
+							<a id='cont2' class='contact bgFill text' rel="nofollow" target='_blank' href='https://t.me/+79277888882'></a>
+							<a id='cont3' class='contact bgFill text' rel="nofollow" target='_blank' href='https://wa.me/79277888882'></a>
+							<a id='cont4' class='contact bgFill text' rel="nofollow" target='_blank' href='viber://chat?number=%2B79277888882/'></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id='contactsText4' class='sector' style='margin: 0; margin-bottom: 5vmin; letter-spacing: 0.5vmin'></div>
+		</div>
+		
+		<div id='projects' class='center' style='width: 100vw; display: none'>
+			<div class='bgBubble' id='bbl'></div>
+			<div class='bgBubble' id='bbl1'></div>
+			<div class='bgBubble' id='bbl2'></div>
+			<div class='bgBubble' id='bbl3'></div>
+			<div class='bgBubble' id='bbl4'></div>
+			<div class='bgBubble' id='bbl5'></div>
+			<div class='bgBubble' id='bbl6'></div>
+			<div class='break' style='height: 20vmin'></div>
+			
+			<div id='projectsTopbar'>
+				<x class='ref' onclick="projects('hide')" style='position: absolute; left: 5vmin; top: -1vmin'>＜</x>
+				<x id='projectsTitle'>Our Projects</x>
+			</div>
+			<div id='scid'> <div id='scroll_indicator'></div> </div>
+			
+			<div class='card'>
+				<div class='cardPic' style="background-image: url('/static/studio/assets/img/project1.jpg')"></div>
+				<p class='cardTitle' id='post1a'><!--text--></p>
+				<p class='cardDesc' id='post1b'><!--text--></p>
+				<a class='cardRef' id='postRef1' target='_blank'></a>
+			</div>
+			
+			<div class='card'>
+				<div class='cardPic' style="background-image: url('/static/studio/assets/img/project2.jpg')"></div>
+				<p class='cardTitle' id='post2a'><!--text--></p>
+				<p class='cardDesc' id='post2b'><!--text--></p>
+				<a class='cardRef' id='postRef2' target='_blank' rel="nofollow" href='https://alvirity.ru'></a>
+			</div>
+			
+			<div class='card'>
+				<div class='cardPic' style="background-image: url('/static/studio/assets/img/project3.jpg')"></div>
+				<p class='cardTitle' id='post3a'><!--text--></p>
+				<p class='cardDesc' id='post3b'><!--text--></p>
+				<a class='cardRef' id='postRef3' target='_blank' rel="nofollow" href='https://asvorobyov.ru'></a>
+			</div>
+			
+			<!-- <div class='break' style='height: 20vmin'></div> -->
+		</div>
+		
+	</body>
+	<script>
+		document.getElementById('partnersWheel').addEventListener("wheel", (evt) => {
+			evt.preventDefault();
+			document.getElementById('partnersWheel').scrollLeft += evt.deltaY;
+		})
+	</script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+
+
+    <input type="hidden" value="{{ c.csrf_token }}" name="csrf_token" />
+</html>

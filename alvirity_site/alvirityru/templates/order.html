@@ -1,0 +1,101 @@
+{% extends '__base2.html' %} {% block content %} {% load i18n %}
+
+<div id='bg' class='fill bgFill' style='z-index: -1; position: fixed; background-image: url("/static/assets/bg.svg")'>
+</div>
+{% include './header.html' %}
+<div id='contacts' class='block bounded own-center' style="background-color: rgb(0,0,0,0);">
+
+  <div class='frameX form-style'>
+
+
+
+    <div>
+
+
+
+      <a name="messageForm" rel="nofollow"></a>
+
+
+
+      <form method="post" id="messageForm">
+
+
+
+        <h1 class="title-form" style="width: fit-content;">{% trans "Форма обратной связи" %}</h1>
+
+
+
+        <input class='input-index-style fxB' type="name" id="name" name="name" placeholder='{% trans "Ваше имя" %}' required>
+
+
+
+        <input class='input-index-style fxB' type="tel" id="phone" name="phone" placeholder='{% trans "Ваш телефон" %}' required
+          >
+
+
+
+        <input class='input-index-style fxB' type="email" id="email" name="email" placeholder='{% trans "Электронная почта" %}'
+          >
+
+        <input type="hidden" id="nameform" value="Страница отправки формы">
+
+        <textarea class='input-index-style fxB' type="text" id="message" name="message"
+          placeholder='{% trans "Ваше сообщение" %}'></textarea>
+
+
+
+        <div class='pol-tb'>
+
+
+
+          <p class="text-for-checkbox"><input type="checkbox" required name="checkbox-politic"> {% trans 'Я ознакомлен с' %} <span
+              class="polityk-conf">{% trans "политикой конфиденциальности." %}</span></p>
+       
+
+
+        </div>
+
+
+    <!--g-recaptcha -->
+
+    <div class="newButt sendButt" id="customButton">
+      <span>{% trans "Отправить" %}</span>
+    </div>
+    <button type='submit' class='d-none' id='msgSubmit'></button>
+
+    <script>
+
+      document.getElementById('customButton').addEventListener('click', function () {
+
+        // Триггерим событие click для кнопки msgSubmit
+
+        document.getElementById('msgSubmit').click();
+
+      });
+
+    </script>
+
+    </form>
+    </div>
+
+
+
+  </div>
+
+
+
+</div>
+{% include './politickonf.html' %}
+<div id="p3cred" class="container-fluid" style="background:none; padding: 40px 0;">
+  <div class="row">
+    <div class="col-md-12 col-12" id="logoDevFrame">
+      <a href="https://alvirity.ru/" rel="nofollow" id="logoDev">
+        <img src="/static/images/logoDev.png" width="100%">
+      </a>
+    </div>
+  </div>
+</div>
+{% include './mob-footer.html' %}
+{% endblock %}
+{% block scripts %}
+{% endblock %}

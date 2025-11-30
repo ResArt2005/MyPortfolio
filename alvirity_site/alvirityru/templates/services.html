@@ -1,0 +1,204 @@
+{% extends '__base2.html' %} {% block content %} {% load i18n %}
+<script src="/static/js/uslugi.js"></script>
+{% include './header.html' %}
+
+<div id='bg' class='fill bgFill' style='z-index: -1; position: fixed; background-image: url("/static/assets/bg.svg")'>
+</div>
+<section class="title_us_page d-flex align-items-center">
+  <div>
+    <h1 class="title_us_page_tl">{{data.name}}</h1><br><br>
+    <div class="title_us_page_des">{{data.short_text | safe}}</div>
+  </div>
+</section>
+<section class="PC-hide">
+  {% for s in servicesp %}
+  <section class="objs_us_page">
+    <a href="/uslugi/{{s.alias}}/" class="bxS" ></a><!-- Расположение ссылки на шаблон -->
+    <div class="obj_us_page">
+      <div class="obj-title">
+        {{s.name}}
+      </div>
+      <div class="obj_img-div">
+        {% if s.imagesm %}
+        <img class="bgFill obj_img" src="{{s.imagesm.url}}" alt="{{s.name}}" title="{{s.name}}">
+        {% endif %}
+      </div>
+      <div class="obj_cost">
+        <span class="obj_cost-st">{% trans "Стоимость от:" %}</span><br><br>
+        <span class="obj_cost-mon">{{s.price}}</span>
+      </div>
+      <div class="obj_des">
+        <div class="obj_des_text">
+          {{s.short_text | safe}}
+        </div>
+      </div>
+      <button class="obj_button">
+        {% trans "Оформить заказ" %}
+      </button>
+    </div>
+  </section>
+  {% endfor %}
+</section>
+<section class="mob-hide">
+  {% for s in servicesp %}
+  <div class="objs_us_page container-fluid">
+    <a href="/uslugi/{{s.alias}}/" class="bxS" ></a><!-- Расположение ссылки на шаблон -->
+    <div class="row">
+      <div class="col-md-3 d-flex align-items-center">
+        <img class="obj_img" src="{{s.images.url}}" alt="{{s.name}}" title="{{s.name}}">
+      </div>
+      <div class="col-md-9 d-flex flex-column justify-content-between">
+        <div class="obj-title">{{s.name}}
+        </div>
+        <div class="obj_des_text mb-3">
+          {{s.short_text | safe}}
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="obj_cost">
+            <span class="obj_cost-st">{% trans "Стоимость от:" %}</span><br><br>
+            <span class="obj_cost-mon">{{s.price}}</span>
+          </div>
+          <button class="obj_button">
+            {% trans "Оформить заказ" %}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+</section>
+
+    {% if FAQ %}
+      <div class="pattern-page__main-content container-fluid news-desc d-flex flex-column align-items-center" style="gap:15px;">
+        <div class="block-title">{% trans "Часто задаваемые вопросы" %}</div>
+        <div class="d-flex flex-column col-12 gap20" id="FAQ">
+          {% for i in FAQ %}
+          <div class="col-12 d-flex gap10 align-items-lg-center align-items-top" >
+              <div class="d-flex flex-column col-12 FAQitem">
+                  <div class="desk-title">{{ i.name }}</div>
+                  <div class="desk-info">{{ i.desc |safe }}</div>
+              </div>
+          </div>
+          {% endfor %}
+
+            
+        </div>
+      </div>
+    {% endif %}
+
+{% if pr %} <!-- надо сделать портфолио, чтобы был фильтр по проектам -->
+<div id='projects' class='block bounded center own-center'>
+  <div class="title">{% trans "Портфолио" %}</div>
+  <div class="owl-carousel owl-theme projects-slider"><!---->
+    {% for p in pr %}
+    <a href="/proekty/{{p.alias}}/" >
+      <div class="center own-center projects-slider-item-mob" {% if p.images %}style='background-image: url("{{p.images.url}}")' {% endif %}>
+        <p class="d-flex align-items-center justify-content-center">{{ p.name }}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+<section class="obj_order d-flex align-items-center">
+  <div id='contacts' class='block bounded own-center' style="background-color: rgb(0,0,0,0);">
+
+    <div class='frameX form-style'>
+
+
+
+      <div>
+
+
+
+        <a name="messageForm" rel="nofollow"></a>
+
+
+
+        <form method="post" id="messageForm">
+
+
+
+          <span class="title-form">{% trans "Форма обратной связи" %}</span>
+
+
+
+          <input class='input-index-style fxB' type="name" id="name" name="name" placeholder='{% trans "Ваше имя" %}' required>
+
+
+
+          <input class='input-index-style fxB' type="tel" id="phone" name="phone" placeholder='{% trans "Ваш телефон" %}' required
+            >
+
+            <input type="hidden" id="nameform" value="{{data.name}}">
+
+          <input class='input-index-style fxB' type="email" id="email" name="email" placeholder='{% trans "Электронная почта" %}'
+            >
+
+
+
+          <textarea class='input-index-style fxB' type="text" id="message" name="message"
+            placeholder='{% trans "Ваше сообщение" %}'></textarea>
+
+
+
+          <div class='pol-tb'>
+
+
+
+            <p class="text-for-checkbox"><input type="checkbox" required name="checkbox-politic"> {% trans "Я ознакомлен с" %} <span
+                class="polityk-conf">{% trans "политикой конфиденциальности." %}</span></p>
+
+
+          </div>
+
+
+          <!--g-recaptcha -->
+
+        <div class="newButt sendButt" id="customButton">
+          <span>{% trans "Отправить" %}</span>
+        </div>
+        <button type='submit' class='d-none' id='msgSubmit'></button>
+
+          <script>
+
+            document.getElementById('customButton').addEventListener('click', function () {
+
+              // Триггерим событие click для кнопки msgSubmit
+
+              document.getElementById('msgSubmit').click();
+
+            });
+
+          </script>
+
+        </form>
+
+
+
+      </div>
+
+
+
+    </div>
+  </div>
+</section>
+{% include './politickonf.html' %}
+<div id="p3cred" class="container-fluid" style="background:none; padding: 40px 0;">
+  <div class="row">
+    <div class="col-md-12 col-12" id="logoDevFrame">
+      <a href="https://alvirity.ru/" rel="nofollow" id="logoDev">
+        <img src="/static/images/logoDev.png" width="100%">
+      </a>
+    </div>
+  </div>
+</div>
+{% include './mob-footer.html' %}
+{% endblock %}
+{% block scripts %}
+<script src="/static/js/main.js"></script>
+<!-- <script src="/static/js/lang.js"></script> -->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+{% endblock %}

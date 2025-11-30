@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html id='html' lang='ru' dir='ltr' ontouchmove>
+  {% load i18n %}
+<head id='core'>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/static/icon.ico" type="image/ico" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>
+    {% if data.seo_title %}
+    {{ data.seo_title }}
+    {% elif templated_title %}{{templated_title }}
+    {% elif post %}
+      {{data.name}} | {% trans "студия Альвирити" %}
+    {% elif project %}
+     {% trans "Проект:" %} {{data.name}}
+    {% endif %}
+  </title>
+  <meta name="description" content='{% if data.seo_description %}{{ data.seo_description|safe }}{% elif templated_description %}{{ templated_description|safe }}{% endif %}' />
+  <link rel="canonical" href="//{{ canonical }}" />
+  <meta property="og:site_name" content="https://alvirity.ru/" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://alvirity.ru{{og_url}}" />
+  <meta property="og:image" content="https://alvirity.ru/static/icon.ico" />
+  <meta property="og:title" content="{% if data.og_title %}{{ data.og_title }}{% endif %}" />
+  <meta property="og:description" content="{% if data.og_description %}{{ data.og_description }}{% endif %}" />
+  <meta property="og:title" content="{% if data.og_title %}{{data.og_title}}{% else %}{{title_dop}}{% endif %}">
+  <meta property="og:description" content="{% if data.meta_description %}{{data.og_description}}{% else %}{{desc_dop}}{% endif %}">
+  <script src="https://www.google.com/recaptcha/api.js?hl=ru" async defer></script>
+  <script src="/static/jquery-3.3.1.min.js"></script>
+  <script src="/static/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+  <script src="/static/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
+  <script src="/static/bootstrap/bootstrap.min.js"></script>
+  <script src="/static/jquery.inputmask.min.js"></script>
+  <script src="/static/gsap.min.js"></script>
+   <script src="/static/aos/aos.js"></script>
+  <script src="/static/js/canvas.js?v={{ data.seo_title }}"></script>
+  <link rel="stylesheet" href="/static/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="/static/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="/static/css/new-style.css?v={{ data.seo_title }}">
+  <link rel="stylesheet" href="/static/css/style-mob.css?v={{ data.seo_title }}">
+  <link rel="stylesheet" href="/static/aos/aos.css">
+  {% if header_additional %}{{ header_additional | safe }}{% endif %}
+</head>
+
+
+<body id='body'>
+  {% block content %} {% endblock %}
+  <input type="hidden" value="{{ c.csrf_token }}" name="csrf_token" />
+  {% block scripts %} {% endblock %}
+  <script src="/static/js/main.js"></script>
+  <canvas id="canvas"></canvas>
+</body>
+
+</html>

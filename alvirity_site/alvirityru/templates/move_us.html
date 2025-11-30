@@ -1,0 +1,183 @@
+{% extends '__base2.html' %} {% block content %} {% load i18n %}
+<div id='bg' class='fill bgFill' style='z-index: -1; position: fixed; background-image: url("/static/assets/bg.svg")'>
+</div>
+{% include './header.html' %}
+
+
+<section class="title_us_page d-flex align-items-center">
+  <div>
+    <h1 class="title_us_page_tl">{% trans "Продвижение товаров и услуг в интернете" %}</h1><br><br>
+    <span class="title_us_page_des">{% trans "Наша эффективная стратегия продвижения обеспечивает максимальное внимание вашему бренду, товару или услуге. Мы предлагаем комплексные решения, включая оптимизацию веб-сайта, социальные медиа, контент-маркетинг и рекламные кампании, чтобы привлечь и удержать вашу целевую аудиторию. " %}</span>
+  </div>
+</section>
+
+<section class="PC-hide">
+  <section class="objs_us_page">
+    <div class="obj_us_page">
+      <div class="obj-title">
+        {% trans "SEO оптимизация" %}
+      </div>
+      <div class="obj_img-div">
+        <img class="bgFill obj_img" src="/static/assets/move1.jpeg" alt="">
+      </div>
+      <div class="obj_cost">
+        <span class="obj_cost-st">{% trans "Стоимость от:" %}</span><br><br>
+        <span class="obj_cost-mon">50.000 {% trans "рублей" %}</span>
+      </div>
+      <div class="obj_des">
+        <div class="obj_des_text">
+         {% trans "SEO-оптимизация — это комплекс мер, направленных на улучшение видимости веб-сайта в поисковых результатах. Эффективная SEO оптимизация включает в себя оптимизацию контента, работу с ключевыми словами, улучшение технических аспектов сайта и стратегии ссылочного профиля, обеспечивая повышение ранжирования и привлечение целевой аудитории." %}
+        </div>
+      </div>
+      <button class="obj_button">
+        {% trans "Оформить заказ" %}
+      </button>
+    </div>
+  </section>
+
+  <section class="objs_us_page">
+    <div class="obj_us_page">
+      <div class="obj-title">
+        {% trans "Контекстная реклама" %}
+      </div>
+      <div class="obj_img-div">
+        <img class="bgFill obj_img" src="/static/assets/move2.jpeg" alt="">
+      </div>
+      <div class="obj_cost">
+        <span class="obj_cost-st">{% trans "Стоимость от:" %}</span><br><br>
+        <span class="obj_cost-mon">50.000 {% trans "рублей" %}</span>
+      </div>
+      <div class="obj_des">
+        <div class="obj_des_text">
+          {% trans "Контекстная реклама — это форма интернет-рекламы, при которой рекламные объявления показываются пользователям в соответствии с контентом веб-страницы или ключевыми словами их поисковых запросов. Целью контекстной рекламы является точное
+          совпадение объявлений с интересами и запросами потенциальных клиентов, повышая вероятность кликов и конверсий." %}
+        </div>
+      </div>
+      <button class="obj_button">
+        {% trans "Оформить заказ" %}
+      </button>
+    </div>
+  </section>
+</section>
+
+<section class="mob-hide">
+  <section class="objs_us_page">
+    <div class="obj_us_page d-flex justify-content-center">
+      <div class="obj_img-div">
+        <img class="bgFill obj_img" src="/static/assets/move1PC.jpg" alt="seo"><!---->
+      </div>
+      <div class="obj_txt_cont">
+        <div class="obj_sector_deccription">
+          <div class="obj-title"><!---->
+            {% trans "SEO оптимизация" %}
+          </div>
+          <div class="obj_des d-flex align-items-center">
+            <div class="obj_des_text"><!---->
+              {% trans "SEO-оптимизация — это комплекс мер, направленных на улучшение видимости веб-сайта в поисковых результатах. Эффективная SEO оптимизация включает в себя оптимизацию контента, работу с ключевыми словами, улучшение технических аспектов
+              сайта и стратегии ссылочного профиля, обеспечивая повышение ранжирования и привлечение целевой аудитории." %}"
+            </div>
+          </div>
+        </div>
+        <div class="obj_sector_order d-flex justify-content-between">
+          <div class="obj_cost">
+            <span class="obj_cost-st">{% trans "Стоимость от:" %}</span><br><br>
+            <span class="obj_cost-mon">50.000 {% trans "рублей" %}</span><!---->
+          </div>
+          <button class="obj_button">
+            {% trans "Оформить заказ" %}
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="objs_us_page">
+    <div class="obj_us_page d-flex justify-content-center">
+      <div class="obj_img-div">
+        <img class="bgFill obj_img" src="/static/assets/move2PC.jpg" alt="add"><!---->
+      </div>
+      <div class="obj_txt_cont">
+        <div class="obj_sector_deccription">
+          <div class="obj-title"><!---->
+           {% trans "Контекстная реклама"%}
+          </div>
+          <div class="obj_des d-flex align-items-center">
+            <div class="obj_des_text"><!---->
+              {% trans "Контекстная реклама — это форма интернет-рекламы, при которой рекламные объявления показываются пользователям в соответствии с контентом веб-страницы или ключевыми словами их поисковых запросов. Целью контекстной рекламы является точное
+              совпадение объявлений с интересами и запросами потенциальных клиентов, повышая вероятность кликов и конверсий." %}
+            </div>
+          </div>
+        </div>
+        <div class="obj_sector_order d-flex justify-content-between">
+          <div class="obj_cost">
+            <span class="obj_cost-st">{% trans "Стоимость от:" %}</span><br><br>
+            <span class="obj_cost-mon">50.000 {% trans "рублей" %}</span><!---->
+          </div>
+          <button class="obj_button">
+            {% trans "Оформить заказ" %}
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<div id='projects' class='block bounded center own-center uslugi_web_slider' style="width: 100vw;">
+  <div class="title">{% trans "Портфолио" %}</div>
+  <div class="owl-carousel owl-theme projects-slider"><!---->
+    {% for p in pr %}
+    <a href="/proekty/{{p.alias}}/">
+      <div class="own-center projects-slider-item-mob" {% if p.images %}style='background-image: url("{{p.images.url}}")' {% endif %}>
+        <div class="d-flex align-items-center">
+          <p>{{ p.name }}</p>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<section class="obj_order d-flex align-items-center">
+  <section class="block bounded center own-center" style="width: 100vw; background-color: rgb(0,0,0,0); margin-top: 0;">
+    <div class='frameX form-style'>
+      <div>
+        <form method="post" id="messageForm">
+          <span class="title-form">{% trans "Форма обратной связи" %}</span>
+          <input class='input-index-style fxB' type="name" id="name" name="name" placeholder='{% trans "Ваше имя" %}' required>
+          <input class='input-index-style fxB' type="tel" id="phone" name="phone" placeholder='{% trans "Ваш телефон" %}' required pattern='^[/+]?[0-9]{6,}'>
+          <input class='input-index-style fxB' type="email" id="email" name="email" placeholder='{% trans "Электронная почта" %}' >
+          <input class='input-index-style fxB' type="text" id="message" name="message" placeholder='{% trans "Ваше сообщение" %}'>
+          <input type="hidden" id="nameform" value="СЕО оптимизация">
+          <div class='pol-tb'>
+            <!--<input id='checkbox' type="checkbox" style='display: none'>
+            <label id='check' for='checkbox' class="fxB"></label>
+            <p class="text-for-checkbox">Я согласен(а) на обработку персональных
+              данных.</p>-->
+            <p class="text-for-checkbox"><input type="checkbox" required name="checkbox-politic"> {% trans "Я ознакомлен с" %} <span class="polityk-conf">{% trans "политикой конфиденциальности." %}</span></p>
+          </div>
+          <!--g-recaptcha-->
+          <input class='text badgeX' data-sitekey="6LccpQgmAAAAALGcN0HJk-P4NmWGBbEN2ayfgQkw" data-callback='onSubmit' data-action='submit' type="button" id="msgSubmit" value="{% trans "Отправить" %}" style='margin: 3vmin auto; height: 7vmin'>
+          <p class="result"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</section>
+{% include './politickonf.html' %}
+
+<div id="p3cred" class="container-fluid" style="background:none; padding: 40px 0;">
+  <div class="row">
+    <div class="col-md-12 col-12" id="logoDevFrame">
+      <a href="https://alvirity.ru/" rel="nofollow" id="logoDev">
+        <img src="/static/images/logoDev.png" width="100%">
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+{% include './mob-footer.html' %}
+{% endblock %}
+{% block scripts %}
+<script src="/static/js/main.js"></script>
+<!-- <script src="/static/js/lang.js"></script> -->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+{% endblock %}

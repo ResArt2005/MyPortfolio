@@ -1,0 +1,43 @@
+{% extends '__base2.html' %} {% block content %} {% load i18n %}
+
+<div id='bg' class='fill bgFill' style='z-index: -1; position: fixed; background-image: url("/static/assets/bg.svg")'></div>
+{% include './header.html' %}
+
+<div class="pattern-page__main-content-post">
+          <article>
+            {{ data.content|safe }}
+          </article>
+        </div>
+
+<div class='bounded own-center block slider-height-tp' id="team-tp">
+  <h1 class="title">{% trans "Мнение наших экспертов" %}</h1>
+  <div class="owl-carousel owl-theme empoyee-slider empoyee-slider-tp">
+    {% for t in ts %}
+    <div class='mbr team-fill team-fill-tp d-flex align-items-end' {% if t.photo %}style='background-image: url("{{t.photo.url}}")' {% endif %}>
+      <div class="tp-pad">
+        <div class="PC-hide mob-hide mob-style-info-tp">
+          <p class="team-title tpt">{{t.fio}}</p><br>
+          <p class="team-prof tpp">{{t.who}}</p><br><br>
+          <div class="team-text tptxt">{{t.desc|safe}}</div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+<div id="p3cred" class="container-fluid" style="background:none; padding: 40px 0;">
+  <div class="row">
+    <div class="col-md-12 col-12" id="logoDevFrame">
+      <a href="https://alvirity.ru/" rel="nofollow" id="logoDev">
+        <img src="/static/images/logoDev.png" width="100%">
+      </a>
+    </div>
+  </div>
+</div>
+{% include './mob-footer.html' %}
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

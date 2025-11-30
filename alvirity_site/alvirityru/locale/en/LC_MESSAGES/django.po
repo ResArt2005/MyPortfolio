@@ -1,0 +1,977 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-05 15:08+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\404.html:10
+msgid "Данной страницы не существует"
+msgstr "This page does not exist"
+
+#: .\templates\404.html:11
+msgid "Вернуться на главную"
+msgstr "Go back to the main page"
+
+#: .\templates\Servicepage.html:14 .\templates\Servicepage.html:110
+#: .\templates\Servicepage.html:131 .\templates\bots_dev.html:26
+#: .\templates\bots_dev.html:49 .\templates\bots_dev.html:72
+#: .\templates\bots_dev.html:107 .\templates\bots_dev.html:136
+#: .\templates\bots_dev.html:165 .\templates\mob_apps.html:22
+#: .\templates\mob_apps.html:55 .\templates\move_us.html:24
+#: .\templates\move_us.html:47 .\templates\move_us.html:83
+#: .\templates\move_us.html:112 .\templates\po_dev.html:55
+#: .\templates\service_page1.html:19 .\templates\service_page1.html:162
+#: .\templates\service_page2.html:17 .\templates\service_page2.html:158
+#: .\templates\services.html:26 .\templates\services.html:57
+#: .\templates\services2.html:26 .\templates\services2.html:67
+msgid "Стоимость от:"
+msgstr "Cost from:"
+
+#: .\templates\Servicepage.html:19 .\templates\Servicepage.html:119
+#: .\templates\Servicepage.html:140 .\templates\mob-footer.html:7
+msgid "Заказать"
+msgstr "To order"
+
+#: .\templates\Servicepage.html:159 .\templates\service_page1.html:69
+#: .\templates\service_page1.html:208 .\templates\service_page2.html:63
+#: .\templates\service_page2.html:204
+msgid "Почему выбрать нас?"
+msgstr "Why choose us?"
+
+#: .\templates\Servicepage.html:165 .\templates\service_page1.html:81
+#: .\templates\service_page1.html:220 .\templates\service_page2.html:75
+#: .\templates\service_page2.html:216
+msgid "Опыт и профессионализм"
+msgstr "Experience and professionalism"
+
+#: .\templates\Servicepage.html:166 .\templates\service_page1.html:82
+#: .\templates\service_page1.html:221 .\templates\service_page2.html:76
+#: .\templates\service_page2.html:217
+msgid "Наша команда состоит из опытных программистов и дизайнеров."
+msgstr "Our team consists of experienced programmers and designers."
+
+#: .\templates\Servicepage.html:173 .\templates\service_page1.html:94
+#: .\templates\service_page1.html:233 .\templates\service_page2.html:88
+#: .\templates\service_page2.html:229
+msgid "Качество и инновации"
+msgstr "Quality and innovation"
+
+#: .\templates\Servicepage.html:174
+msgid ""
+"Мы используем самые современные технологии и подходы для создания "
+"инновационных AR-решений."
+msgstr ""
+
+#: .\templates\Servicepage.html:181 .\templates\service_page1.html:108
+#: .\templates\service_page1.html:247 .\templates\service_page2.html:102
+#: .\templates\service_page2.html:243
+msgid "Индивидуальный подход"
+msgstr "Individual approach"
+
+#: .\templates\Servicepage.html:182
+msgid ""
+"Мы учитываем все пожелания клиента и создаём уникальные решения, идеально "
+"соответствующие его потребностям."
+msgstr ""
+"We take into account all the wishes of the client and create unique "
+"solutions that perfectly meet his needs."
+
+#: .\templates\Servicepage.html:189 .\templates\service_page1.html:123
+#: .\templates\service_page1.html:262 .\templates\service_page2.html:117
+#: .\templates\service_page2.html:258
+msgid "Полный цикл разработки"
+msgstr "Full development cycle"
+
+#: .\templates\Servicepage.html:190
+msgid ""
+"Мы предлагаем полный цикл разработки, от концепции и дизайна до внедрения и "
+"поддержки."
+msgstr ""
+"We offer a full development cycle, from concept and design to implementation "
+"and support."
+
+#: .\templates\Servicepage.html:197 .\templates\service_page1.html:137
+#: .\templates\service_page1.html:276 .\templates\service_page2.html:131
+#: .\templates\service_page2.html:272
+msgid "Поддержка и обслуживание"
+msgstr "Support and maintenance"
+
+#: .\templates\Servicepage.html:198 .\templates\service_page1.html:138
+msgid ""
+"Мы предоставляем полную поддержку и обслуживание после запуска проекта, "
+"гарантируя его стабильную работу и обновления."
+msgstr ""
+"We provide full support and maintenance after the launch of the project, "
+"ensuring its stable operation and updates."
+
+#: .\templates\Servicepage.html:210 .\templates\bots_dev.html:197
+#: .\templates\index.html:371 .\templates\mob_apps.html:71
+#: .\templates\move_us.html:144 .\templates\order.html:24
+#: .\templates\po_dev.html:86 .\templates\services.html:104
+#: .\templates\services2.html:113
+msgid "Форма обратной связи"
+msgstr "Feedback form"
+
+#: .\templates\Servicepage.html:211 .\templates\bots_dev.html:198
+#: .\templates\index.html:375 .\templates\move_us.html:145
+#: .\templates\order.html:28 .\templates\po_dev.html:87
+#: .\templates\services.html:108 .\templates\services2.html:117
+msgid "Ваше имя"
+msgstr "Your name"
+
+#: .\templates\Servicepage.html:212 .\templates\bots_dev.html:199
+#: .\templates\index.html:379 .\templates\move_us.html:146
+#: .\templates\order.html:32 .\templates\po_dev.html:88
+#: .\templates\services.html:112 .\templates\services2.html:121
+msgid "Ваш телефон"
+msgstr "Your phone number"
+
+#: .\templates\Servicepage.html:214 .\templates\bots_dev.html:200
+#: .\templates\index.html:384 .\templates\move_us.html:147
+#: .\templates\order.html:37 .\templates\po_dev.html:89
+#: .\templates\services.html:117 .\templates\services2.html:126
+msgid "Электронная почта"
+msgstr "Email"
+
+#: .\templates\Servicepage.html:217 .\templates\bots_dev.html:201
+#: .\templates\index.html:390 .\templates\move_us.html:148
+#: .\templates\order.html:43 .\templates\po_dev.html:90
+#: .\templates\services.html:123 .\templates\services2.html:132
+msgid "Ваше сообщение"
+msgstr "Your message"
+
+#: .\templates\Servicepage.html:219 .\templates\bots_dev.html:207
+#: .\templates\index.html:398 .\templates\mob_apps.html:81
+#: .\templates\move_us.html:154 .\templates\order.html:51
+#: .\templates\po_dev.html:96 .\templates\services.html:131
+#: .\templates\services2.html:140
+msgid "I am familiar with"
+msgstr "By clicking the “Submit” button, you agree to"
+
+#: .\templates\Servicepage.html:220 .\templates\bots_dev.html:207
+#: .\templates\index.html:399 .\templates\mob_apps.html:81
+#: .\templates\move_us.html:154 .\templates\order.html:52
+#: .\templates\po_dev.html:96 .\templates\services.html:132
+#: .\templates\services2.html:141
+msgid "политикой конфиденциальности."
+msgstr "the privacy Policy."
+
+#: .\templates\Servicepage.html:224 .\templates\bots_dev.html:210
+#: .\templates\index.html:411 .\templates\mob_apps.html:84
+#: .\templates\move_us.html:157 .\templates\order.html:62
+#: .\templates\po_dev.html:99 .\templates\services.html:142
+#: .\templates\services2.html:151
+msgid "Отправить"
+msgstr "Submit"
+
+#: .\templates\Servicepage.html:248 .\templates\bots_dev.html:178
+#: .\templates\move_us.html:125 .\templates\po_dev.html:68
+#: .\templates\service_page1.html:290 .\templates\service_page2.html:286
+#: .\templates\services.html:73 .\templates\services2.html:81
+msgid "Портфолио"
+msgstr "Portfolio"
+
+#: .\templates\__base2.html:14
+msgid "студия Альвирити"
+msgstr ""
+
+#: .\templates\__base2.html:16
+msgid "Проект:"
+msgstr "Project:"
+
+#: .\templates\avr\index.html:93
+msgid "Оставить заявку"
+msgstr "Submit your application"
+
+#: .\templates\avr\index.html:109
+msgid "Разработаем и реализуем для Вас самые смелые решения в приложениях для"
+msgstr ""
+"We will develop and implement the most daring solutions for you in "
+"applications for"
+
+#: .\templates\avr\index.html:111
+msgid "виртуальной"
+msgstr "virtual"
+
+#: .\templates\avr\index.html:111
+msgid "и"
+msgstr "and"
+
+#: .\templates\avr\index.html:111
+msgid "дополненной"
+msgstr "augmented "
+
+#: .\templates\avr\index.html:111
+msgid "реальности"
+msgstr "reality"
+
+#: .\templates\avr\index.html:123
+msgid "НАШИ УСЛУГИ"
+msgstr "OUR SERVICES"
+
+#: .\templates\avr\index.html:139
+msgid ""
+"VR (virtual reality) — созданная техническими средствами искусственная "
+"модель мира, с которым взаимодействует пользователь, используя шлем "
+"виртуальной реальности и устройство ввода"
+msgstr ""
+"VR (virtual reality) is an artificial model of the world created by "
+"technical means, with which the user interacts using a helmet virtual "
+"reality and an input device"
+
+#: .\templates\avr\index.html:155
+msgid ""
+"AR (augmented reality) — окружающий мир дополняется образами и информацией "
+"созданной техническими средствами, с которыми пользователь взаимодействует, "
+"используя очки или камеру смартфона"
+msgstr ""
+"AR (augmented reality) — the surrounding world is complemented by images and "
+"information created by technical means with which the user interacts, using "
+"glasses or a smartphone camera"
+
+#: .\templates\avr\index.html:171
+msgid "КАК МЫ РАБОТАЕМ"
+msgstr "HOW WE WORK"
+
+#: .\templates\avr\index.html:179
+msgid "Мы обрабатываем вашу заявку"
+msgstr "We are processing your application"
+
+#: .\templates\avr\index.html:185
+msgid ""
+"Обсуждаем с Вами проект и прописываем ТЗ на основании поставленных задач"
+msgstr ""
+"We are discussing the project with you and formulating technical "
+"specifications based on the tasks set"
+
+#: .\templates\avr\index.html:191
+msgid "Подписываем с Вами договор"
+msgstr "We are signing a contract with you"
+
+#: .\templates\avr\index.html:197
+msgid "Отрисовываем прототип и дизайн проекта"
+msgstr "We draw the prototype and design of the project"
+
+#: .\templates\avr\index.html:203
+msgid "Создаем 3D контент"
+msgstr "Creating 3D content"
+
+#: .\templates\avr\index.html:209
+msgid "Разрабатываем клиентскую и серверную часть проекта"
+msgstr "We are developing the client and server side of the project"
+
+#: .\templates\avr\index.html:215
+msgid "Создаем приложение"
+msgstr "Creating an application"
+
+#: .\templates\avr\index.html:221
+msgid "Тестируем приложение"
+msgstr "Testing the application"
+
+#: .\templates\avr\index.html:227
+msgid "Публикация приложения в магазины"
+msgstr "Test and Publish the app in the store"
+
+#: .\templates\avr\index.html:233
+msgid "Осуществляем поддержку приложения после его реализации"
+msgstr "We provide support for the application after its implementation"
+
+#: .\templates\avr\index.html:283
+msgid "КОМАНДА"
+msgstr "TEAM"
+
+#: .\templates\avr\index.html:305
+msgid "Воробьев Алексей"
+msgstr "Vorobyov Alexey"
+
+#: .\templates\avr\index.html:307
+msgid "Руководитель Компании"
+msgstr "The Head of the Company"
+
+#: .\templates\avr\index.html:327
+msgid "Бутрим Иван"
+msgstr "Butrim Ivan"
+
+#: .\templates\avr\index.html:329
+msgid "Дизайнер"
+msgstr "Designer"
+
+#: .\templates\avr\index.html:349
+msgid "ИСПОЛЬЗУЕМЫЕ"
+msgstr "USED"
+
+#: .\templates\avr\index.html:349
+msgid "НАМИ ТЕХНОЛОГИИ"
+msgstr "US TECHNOLOGIES"
+
+#: .\templates\avr\index.html:397
+msgid "ПАРТНЕРЫ"
+msgstr "PARTNERS"
+
+#: .\templates\avr\index.html:491
+msgid "Резидент технопарка в сфере высоких технологий «Жигулёвская долина»"
+msgstr ""
+"Resident of the technopark in the field of high technologies «Zhiguli Valley»"
+
+#: .\templates\avr\index.html:495
+msgid "КОНТАКТЫ"
+msgstr "CONTACTS"
+
+#: .\templates\avr\index.html:501
+msgid "Телефон:"
+msgstr "Telephone:"
+
+#: .\templates\avr\index.html:509
+msgid "Адрес:"
+msgstr "Address:"
+
+#: .\templates\avr\index.html:511
+msgid "г. Тольятти, ш. Южное, зд 163а, к 2/4, офис А316"
+msgstr "Togliatti, Yuzhnoye sh., zd 163a, k 2/4, office A316"
+
+#: .\templates\avr\index.html:571
+msgid "ИНФО"
+msgstr "INFO"
+
+#: .\templates\avr\index.html:571
+msgid "ПРОЕКТЫ"
+msgstr "PROJECTS"
+
+#: .\templates\avr\index.html:579
+msgid "Реализованные проекты"
+msgstr "Completed projects"
+
+#: .\templates\avr\index.html:583
+msgid ""
+"Симулятор аппаратно-программного комплекса в виртуальной реальности для "
+"обучения сотрудников на предприятии для завода \"КуйбышевАзот\"."
+msgstr ""
+"Simulator of a hardware and software complex in virtual reality for training "
+"of employees at the enterprise for the KuibyshevAzot plant."
+
+#: .\templates\avr\index.html:585
+msgid "Видео-визитка в дополненной реальности."
+msgstr "Video business card in augmented reality."
+
+#: .\templates\avr\index.html:587
+msgid ""
+"WizcARd — это инновационный сервис, который позволяет создавать "
+"интерактивные проекты в цифровой и в дополненной реальности:"
+msgstr ""
+"WizcARd is an innovative service that allows you to create interactive "
+"projects in digital and augmented reality:"
+
+#: .\templates\avr\index.html:589
+msgid ""
+" Другое: кастомные решения с учетом индивидуальных предпочтений клиента."
+msgstr ""
+"Other: custom solutions tailored to the individual preferences of the client."
+
+#: .\templates\avr\index.html:593
+msgid "Текущие проекты"
+msgstr "Current projects"
+
+#: .\templates\avr\index.html:599
+msgid ""
+"AR-приложение «Мираж» с интеллектуальными персонажами на интерактивных "
+"локациях."
+msgstr ""
+"The Mirage AR application with intelligent characters in interactive "
+"locations."
+
+#: .\templates\avr\index.html:601
+msgid ""
+"Симулятор конструирования и управления беспилотными летательными аппаратами "
+"в виртуальной реальности."
+msgstr ""
+"Simulator of the design and control of unmanned aerial vehicles in virtual "
+"reality."
+
+#: .\templates\avr\index.html:613
+msgid "RU"
+msgstr "EN"
+
+#: .\templates\blog.html:32
+msgid "Дата публикации:"
+msgstr "Date of publication:"
+
+#: .\templates\bots_dev.html:9
+msgid "Разработка чат бота"
+msgstr "Chatbot development"
+
+#: .\templates\bots_dev.html:10
+msgid ""
+"Разработаем для Вас качественного бота, который автоматизирует  бизнес-"
+"процессы вашей компании. Интеграция с различными сервисами нейронных сетей и "
+"платежными системами."
+msgstr ""
+"We will develop for you a high-quality bot that automates the business "
+"processes of your company. Integration with various neural network services "
+"and payment systems."
+
+#: .\templates\bots_dev.html:20 .\templates\bots_dev.html:97
+msgid "Сложный бот"
+msgstr "A complex bot"
+
+#: .\templates\bots_dev.html:27 .\templates\bots_dev.html:50
+#: .\templates\bots_dev.html:73 .\templates\bots_dev.html:108
+#: .\templates\bots_dev.html:137 .\templates\bots_dev.html:166
+#: .\templates\mob_apps.html:23 .\templates\mob_apps.html:56
+#: .\templates\move_us.html:25 .\templates\move_us.html:48
+#: .\templates\move_us.html:84 .\templates\move_us.html:113
+#: .\templates\service_page1.html:20 .\templates\service_page1.html:163
+#: .\templates\service_page2.html:18 .\templates\service_page2.html:159
+msgid "рублей"
+msgstr "rubles"
+
+#: .\templates\bots_dev.html:31 .\templates\bots_dev.html:101
+msgid ""
+"Консультирует клиента по самым сложным вопросам, требующим проверки в "
+"сторонней системе (например, сообщает баланс на счете, подсчитывает "
+"возможность выдачи кредита)."
+msgstr ""
+"Advises the client on the most difficult issues that require verification in "
+"a third-party system (for example, reports the account balance, calculates "
+"the possibility of issuing a loan)."
+
+#: .\templates\bots_dev.html:35 .\templates\bots_dev.html:58
+#: .\templates\bots_dev.html:81 .\templates\bots_dev.html:111
+#: .\templates\bots_dev.html:140 .\templates\bots_dev.html:169
+#: .\templates\mob_apps.html:31 .\templates\mob_apps.html:59
+#: .\templates\move_us.html:33 .\templates\move_us.html:57
+#: .\templates\move_us.html:87 .\templates\move_us.html:116
+#: .\templates\po_dev.html:31 .\templates\po_dev.html:59
+#: .\templates\services.html:35 .\templates\services.html:61
+#: .\templates\services2.html:35 .\templates\services2.html:71
+msgid "Оформить заказ"
+msgstr "Place an order"
+
+#: .\templates\bots_dev.html:43 .\templates\bots_dev.html:126
+msgid "Продвинутый бот"
+msgstr "Advanced Bot"
+
+#: .\templates\bots_dev.html:54 .\templates\bots_dev.html:130
+#: .\templates\bots_dev.html:159
+msgid ""
+"Отвечает на разные вопросы (не только FAQ), поддерживает контекст разговора, "
+"имеет сложный сценарий."
+msgstr ""
+"Answers various questions (not just the FAQ), maintains the context of the "
+"conversation, has a complex scenario."
+
+#: .\templates\bots_dev.html:66 .\templates\bots_dev.html:155
+msgid "Простой бот"
+msgstr "A simple bot"
+
+#: .\templates\bots_dev.html:77
+msgid ""
+"Простой бот — Отвечает на основные FAQ-вопросы 24/7, при необходимости "
+"записывает вопросы и передает операторам."
+msgstr ""
+"A simple bot — Answers basic FAQ questions 24/7, if necessary records "
+"questions and transmits them to operators."
+
+#: .\templates\contacts.html:8 .\templates\index.html:447
+msgid "Свяжитесь с нами"
+msgstr "Contact us"
+
+#: .\templates\contacts.html:18 .\templates\index.html:467
+msgid "Связь с руководством:"
+msgstr "Communication with management:"
+
+#: .\templates\contacts.html:48 .\templates\index.html:527
+msgid "Мы в соцсетях:"
+msgstr "We're on social media:"
+
+#: .\templates\contacts.html:92 .\templates\index.html:615
+msgid "Главный офис:"
+msgstr "Main office:"
+
+#: .\templates\contacts.html:96 .\templates\index.html:623
+msgid "г. Тольятти, ул. Южное шоссе, д. 163А к. 2.4, офис А316"
+msgstr "Togliatti, Yuzhnoye shosse str., 163A building 2.4, office A316"
+
+#: .\templates\contacts.html:110 .\templates\index.html:651
+msgid "AR/VR лаборатория:"
+msgstr "AR/VR Lab:"
+
+#: .\templates\contacts.html:114 .\templates\index.html:659
+msgid "г. Тольятти, ул. Южное шоссе, д. 161 к. 2.1, офис С137"
+msgstr "Tolyatti, Yuzhnoye shosse str., 161 building 2.1, office C137"
+
+#: .\templates\header.html:8 .\templates\mob-footer.html:21
+msgid "АльВиРити AR/VR"
+msgstr "AlViRity AR/VR"
+
+#: .\templates\header.html:11
+msgid "English Version"
+msgstr "Русская версия"
+
+#: .\templates\header.html:24
+msgid "МЕНЮ"
+msgstr "MENU"
+
+#: .\templates\header.html:27
+msgid "Коммерческое предложение"
+msgstr "Commercial offer"
+
+#: .\templates\header.html:28 .\templates\mob-footer.html:8
+#: .\templates\mob-footer.html:18
+msgid "Команда"
+msgstr "Team"
+
+#: .\templates\header.html:29 .\templates\mob-footer.html:5
+#: .\templates\mob-footer.html:16
+msgid "Услуги"
+msgstr "Services"
+
+#: .\templates\header.html:30 .\templates\mob-footer.html:6
+#: .\templates\mob-footer.html:17 .\templates\proekt.html:28
+#: .\templates\proekty.html:43
+msgid "Проекты"
+msgstr "Projects"
+
+#: .\templates\header.html:31 .\templates\mob-footer.html:20
+msgid "Контакты"
+msgstr "Contacts"
+
+#: .\templates\header.html:32 .\templates\mob-footer.html:19
+#: .\templates\post.html:23
+msgid "Блог"
+msgstr "The blog"
+
+#: .\templates\header.html:40 .\templates\mob-footer.html:24
+msgid "Позвонить"
+msgstr "To call"
+
+#: .\templates\index.html:21
+msgid "ИНТЕРНЕТ ПРОЕКТЫ"
+msgstr "INTERNET PROJECTS"
+
+#: .\templates\index.html:25
+msgid "От идеи до реализации"
+msgstr "From idea to implementation"
+
+#: .\templates\index.html:29
+msgid ""
+"Разрабатываем и реализовываем для Вас самые смелые решения программного "
+"обеспечения в индустрии информационных технологий"
+msgstr ""
+"We develop and implement the most daring software solutions for you in the "
+"information technology industry"
+
+#: .\templates\index.html:50
+msgid "Открой для себя наши коллекции"
+msgstr "Discover our collections"
+
+#: .\templates\index.html:67
+msgid "Самые популярные услуги"
+msgstr "The most popular services"
+
+#: .\templates\index.html:127
+msgid "Подробнее"
+msgstr "More detailed"
+
+#: .\templates\index.html:167
+msgid "Резидент технопарка в сфере высоких технологий \"Жигулевская долина\""
+msgstr ""
+"Resident of the technopark in the field of high technologies \"Zhiguli "
+"valley\""
+
+#: .\templates\index.html:195 .\templates\team.html:8
+msgid "Мнение наших экспертов"
+msgstr "The opinion of our experts"
+
+#: .\templates\index.html:287
+msgid "Наши партнёры"
+msgstr "Our partners"
+
+#: .\templates\index.html:345
+msgid "ПОЛУЧИТЬ ПОДРОБНОЕ КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ"
+msgstr "GET A DETAILED COMMERCIAL OFFER"
+
+#: .\templates\index.html:919
+msgid "Наш менеджер свяжется с Вами."
+msgstr "Our manager will contact you."
+
+#: .\templates\index.html:931
+msgid "Ошибка отправки"
+msgstr "Sending error"
+
+#: .\templates\mob-footer.html:9
+msgid "Меню"
+msgstr "Menu"
+
+#: .\templates\mob-footer.html:15
+msgid "Заказать проект"
+msgstr "Order a project"
+
+#: .\templates\mob-footer.html:29
+msgid "Switch to English version"
+msgstr "Переключить на Русскую версию"
+
+#: .\templates\mob_apps.html:8
+msgid "Мобильные приложения"
+msgstr "Mobile applications"
+
+#: .\templates\mob_apps.html:9
+msgid ""
+"Мобильные приложения позволяют пользователям легко взаимодействовать с "
+"информацией и выполнять различные задачи в любое время и в любом месте."
+msgstr ""
+"Mobile apps allow users to easily interact with information and perform "
+"various tasks anytime, anywhere."
+
+#: .\templates\mob_apps.html:16 .\templates\mob_apps.html:45
+msgid "Разработка мобильного приложения"
+msgstr "Mobile application development"
+
+#: .\templates\mob_apps.html:27 .\templates\mob_apps.html:49
+msgid ""
+"Мобильное приложение — это быстрое и удобное ПО, предназначеное для работы "
+"на смартфонах, планшетах и других мобильных устройствах."
+msgstr ""
+"The mobile app is fast and user—friendly software designed to work on "
+"smartphones, tablets and other mobile devices."
+
+#: .\templates\move_us.html:9
+msgid "Продвижение товаров и услуг в интернете"
+msgstr "Promotion of goods and services on the Internet"
+
+#: .\templates\move_us.html:10
+msgid ""
+"Наша эффективная стратегия продвижения обеспечивает максимальное внимание "
+"вашему бренду, товару или услуге. Мы предлагаем комплексные решения, включая "
+"оптимизацию веб-сайта, социальные медиа, контент-маркетинг и рекламные "
+"кампании, чтобы привлечь и удержать вашу целевую аудиторию. "
+msgstr ""
+"Our effective promotion strategy ensures maximum attention to your brand, "
+"product or service. We offer comprehensive solutions including website "
+"optimization, social media, content marketing and advertising campaigns to "
+"attract and retain your target audience. "
+
+#: .\templates\move_us.html:18 .\templates\move_us.html:72
+msgid "SEO оптимизация"
+msgstr "SEO optimization"
+
+#: .\templates\move_us.html:29
+msgid ""
+"SEO-оптимизация — это комплекс мер, направленных на улучшение видимости веб-"
+"сайта в поисковых результатах. Эффективная SEO оптимизация включает в себя "
+"оптимизацию контента, работу с ключевыми словами, улучшение технических "
+"аспектов сайта и стратегии ссылочного профиля, обеспечивая повышение "
+"ранжирования и привлечение целевой аудитории."
+msgstr ""
+"SEO optimization is a set of measures aimed at improving the visibility of a "
+"website in search results. Effective SEO optimization includes optimizing "
+"content, working with keywords, improving the technical aspects of the site "
+"and the link profile strategy, ensuring increased ranking and attracting the "
+"target audience."
+
+#: .\templates\move_us.html:41 .\templates\move_us.html:101
+msgid "Контекстная реклама"
+msgstr "Contextual advertising"
+
+#: .\templates\po_dev.html:8 .\templates\po_dev.html:16
+#: .\templates\po_dev.html:45
+msgid "Разработка ПО"
+msgstr "Software development"
+
+#: .\templates\po_dev.html:9
+msgid ""
+"Индивидуальное програмное обеспечение подчеркивает имидж, автоматизирует "
+"бизнес-процессы и существенно увеличивает прибыль компании, а также экономит "
+"колосальное количество времени."
+msgstr ""
+"Individual software emphasizes the image, automates business processes and "
+"significantly increases the company's profit, as well as saves a huge amount "
+"of time."
+
+#: .\templates\po_dev.html:22
+msgid "Стоимость:"
+msgstr "Cost:"
+
+#: .\templates\po_dev.html:23 .\templates\po_dev.html:56
+msgid "по договоренности"
+msgstr "by agreement"
+
+#: .\templates\po_dev.html:27 .\templates\po_dev.html:49
+msgid ""
+"Программное обеспечение — это совокупность компьютерных программ и связанных "
+"с ними данных, которая содержит инструкции по указанию компьютеру, что и как "
+"делать."
+msgstr ""
+"Software is a collection of computer programs and related data that contains "
+"instructions for telling a computer what to do and how to do it."
+
+#: .\templates\politickonf.html:4
+msgid "Политика конфиденциальности"
+msgstr "Privacy Policy"
+
+#: .\templates\politickonf.html:8
+msgid "Цели"
+msgstr "Goals"
+
+#: .\templates\politickonf.html:10
+msgid ""
+"Настоящим в соответствии с Федеральным законом № 152-ФЗ «О персональных "
+"данных» от 27.07.2006 года Вы подтверждаете свое согласие на обработку ООО "
+"\"АльВиРити\" персональных данных: сбор, систематизацию, накопление, "
+"хранение, уточнение (обновление, изменение) Целью настоящей Политики "
+"является обеспечение защиты прав и свобод человека, и гражданина при "
+"обработке его персональных данных, в том числе защиты прав на "
+"неприкосновенность частной жизни, личную и семейную тайну."
+msgstr "Hereby, in accordance with Federal Law No. 152-FZ 'On Personal data' dated 07/27/2006, you confirm your consent to the processing of personal data by LLC 'Alvirity': collection, systematization, accumulation, storage, clarification (updating, modification) The purpose of this Policy is ensuring the protection of human and civil rights and freedoms in the processing of his personal data, including the protection of the rights to privacy, personal and family secrets."
+
+#: .\templates\politickonf.html:12
+msgid ""
+"ООО \"АльВиРити\" гарантирует конфиденциальность получаемой информации. "
+"Обработка персональных данных осуществляется в целях эффективного исполнения "
+"заказов, договоров и иных обязательств, принятых ООО \"АльВиРити\" в "
+"качестве обязательных к исполнению."
+msgstr "LLC 'Alvirity' guarantees the confidentiality of the information received. The processing of personal data is carried out in order to effectively fulfill orders, contracts and other obligations assumed by LLC 'Alvirity' in as binding."
+
+#: .\templates\politickonf.html:16
+msgid "Область применения"
+msgstr "Scope of application"
+
+#: .\templates\politickonf.html:18
+msgid ""
+"Настоящая Политика действует в отношении всей информации, содержащей "
+"персональные данные субъектов персональных данных, которую Общество и/или "
+"связанные с ним юридические лица могут получить о субъекте персональных "
+"данных при осуществления основной хозяйственной деятельности. Настоящая "
+"Политика является общедоступной. Настоящая Политика распространяется на "
+"процессы обработки персональных данных в Обществе, осуществляемые как с "
+"использованием средств автоматизации, в том числе с использованием "
+"информационно-телекоммуникационных сетей, так и без использования таких "
+"средств. Настоящее согласие распространяется на следующие Ваши персональные "
+"данные: фамилия, имя и отчество, адрес электронной почты, почтовый адрес "
+"доставки заказов, контактный телефон, платёжные реквизиты."
+msgstr ""
+"This Policy applies to all information containing "
+"personal data of personal data subjects that the Company and/or "
+"related legal entities may obtain about the subject of personal "
+"data during the conduct of their main business activities. This "
+" Policy is publicly available. This Policy applies to "
+"personal data processing processes in the Company carried out both with "
+"the use of automation tools, including the use of "
+"information and telecommunication networks, and without the use of such "
+" means. This consent applies to the following personal"
+" data: surname, first name and patronymic, e-mail address, postal address "
+"order delivery, contact phone number, payment details."
+
+#: .\templates\politickonf.html:22
+msgid "Ответственность"
+msgstr "Responsibility"
+
+#: .\templates\politickonf.html:24
+msgid ""
+"Ответственность за актуализацию настоящей Политики и текущий контроль над "
+"выполнением норм Политики возлагается на назначаемого приказом по Обществу "
+"уполномоченного сотрудника, ответственного за организацию обработки "
+"персональных данных. Контроль за выполнением требований настоящей Политики "
+"осуществляется в процессе проведения внутренних аудитов системы менеджмента "
+"качества. Срок действия согласия является неограниченным. Вы можете в любой "
+"момент отозвать настоящее согласие, направив письменное уведомления на "
+"адрес: 445043, Самарская Область, г. Тольятти, ул. Южное шоссе, д. 163A, к. "
+"2.4, офис А316 с пометкой «Отзыв согласия на обработку персональных данных»."
+msgstr ""
+"Responsibility for updating this Policy and current control over"
+" the implementation of the Policy norms is assigned to the authorized employee appointed by the order of the Company "
+" responsible for organizing the processing "
+" of personal data. Monitoring of compliance with the requirements of this Policy "
+" is carried out in the process of conducting internal audits of the quality management system. "
+" The validity period of the consent is unlimited. You can "
+" revoke this consent at any time by sending a written notification to "
+" address: 445043, Samara Region, Tolyatti, Yuzhnoye shosse str., 163A, K. "
+" 2.4, office A316 marked эWithdrawal of consent to the processing of personal dataэ."
+
+#: .\templates\politickonf.html:25
+msgid ""
+"Обращаем ваше внимание, что отзыв согласия на обработку персональных данных "
+"влечёт за собой удаление Вашей учётной записи с Интернет-сайта, а также "
+"уничтожение записей, содержащих ваши персональные данные, в системах "
+"обработки персональных данных ООО \"АльВиРити\", что может сделать "
+"невозможным пользование интернет-сервисами ООО \"АльВиРити\"."
+msgstr ""
+"Please note that the withdrawal of consent to the processing of personal data "
+"entails the deletion of your account from the Internet site, as well as "
+"destruction of records containing your personal data in the systems "
+"processing of personal data of LLC 'Alviriti', which may make "
+"impossible to use the Internet-services of LLC 'Alvirity'."
+
+
+#: .\templates\politickonf.html:26
+msgid ""
+"Гарантируем, что представленная информация является полной, точной и "
+"достоверной, а также что при представлении информации не нарушаются "
+"действующее законодательство Российской Федерации, законные права и интересы "
+"третьих лиц. Настоящее согласие действует в течение всего периода хранения "
+"персональных данных, если иное не предусмотрено законодательством Российской "
+"Федерации."
+msgstr ""
+"We guarantee that the information provided is complete, accurate and "
+"reliable, and that the presentation of information does not violate "
+"the current legislation of the Russian Federation, the legitimate rights and interests"
+" of third parties. This consent is valid for the entire period of storage of "
+"personal data, unless otherwise provided by the legislation of the Russian "
+"Federation."
+
+#: .\templates\post.html:19 .\templates\proekt.html:21
+msgid "Главная"
+msgstr "Main"
+
+#: .\templates\proekt.html:47
+msgid "Посмотреть проект"
+msgstr "View the project"
+
+#: .\templates\proekt.html:61
+msgid "Посмотреть видео-визитку"
+msgstr "Watch a video business card"
+
+#: .\templates\proekty.html:15
+msgid "Фильтры"
+msgstr "Filters"
+
+#: .\templates\proekty.html:26
+msgid "Наше Портфолио"
+msgstr "Our Portfolio"
+
+#: .\templates\proekty.html:38
+msgid "Только основные"
+msgstr "Only the basic ones"
+
+#: .\templates\proekty.html:39
+msgid "проекты"
+msgstr "projects"
+
+#: .\templates\proekty.html:58
+msgid "Поиск"
+msgstr ""
+
+#: .\templates\service_page1.html:11 .\templates\service_page1.html:154
+#: .\templates\service_page2.html:150
+msgid "Разработка VR приложения"
+msgstr "VR Application Development"
+
+#: .\templates\service_page1.html:32 .\templates\service_page1.html:171
+#: .\templates\service_page2.html:167
+msgid "Преимущества наших VR-приложений"
+msgstr "The advantages of our VR applications"
+
+#: .\templates\service_page1.html:38 .\templates\service_page1.html:177
+#: .\templates\service_page2.html:173
+msgid "Высокое качество графики"
+msgstr "High quality graphics"
+
+#: .\templates\service_page1.html:45 .\templates\service_page1.html:184
+#: .\templates\service_page2.html:180
+msgid "Кроссплатформенность"
+msgstr "Cross-platform"
+
+#: .\templates\service_page1.html:52 .\templates\service_page1.html:191
+#: .\templates\service_page2.html:187
+msgid "Интерактивность и пользовательский опыт"
+msgstr "Interactivity and user experience"
+
+#: .\templates\service_page1.html:59 .\templates\service_page1.html:198
+#: .\templates\service_page2.html:194
+msgid "Адаптация под конкретные задачи"
+msgstr "Adaptation to specific tasks"
+
+#: .\templates\service_page2.html:11
+msgid "Автоматизированная информационная система"
+msgstr "Automated information system"
+
+#: .\templates\service_page2.html:30
+msgid "Преимущества наших автоматизированных информационных систем"
+msgstr "Advantages of our automated information systems"
+
+#: .\templates\service_page2.html:36
+msgid "Оптимизация процессов"
+msgstr "Process optimization"
+
+#: .\templates\service_page2.html:37
+msgid ""
+"Наши АИС позволяют автоматизировать рутинные задачи, сокращая время и "
+"усилия, необходимые для их выполнения."
+msgstr ""
+"Our AIS allow you to automate routine tasks, reducing the time and effort "
+"required to complete them."
+
+#: .\templates\service_page2.html:42
+msgid "Масштабируемость"
+msgstr "Scalability"
+
+#: .\templates\service_page2.html:43
+msgid ""
+"Наши решения легко адаптируются под растущие потребности вашей организации, "
+"обеспечивая возможность дальнейшего расширения функционала."
+msgstr ""
+"Our solutions are easily adapted to the growing needs of your organization, "
+"providing the opportunity for further expansion of functionality."
+
+#: .\templates\service_page2.html:48
+msgid "Надежность и безопасность"
+msgstr "Reliability and safety"
+
+#: .\templates\service_page2.html:49
+msgid ""
+"Мы гарантируем высокую степень защиты данных и устойчивость системы к сбоям, "
+"что обеспечивает непрерывность бизнес-процессов."
+msgstr ""
+"We guarantee a high degree of data protection and system resilience to "
+"failures, which ensures the continuity of business processes."
+
+#: .\templates\service_page2.html:54
+msgid "Интеграция с другими системами"
+msgstr "Integration with other systems"
+
+#: .\templates\service_page2.html:55
+msgid ""
+"Мы предлагаем интеграцию с различными корпоративными системами, что "
+"позволяет централизовать управление и упростить обмен данными."
+msgstr ""
+"We offer integration with various corporate systems, which allows you to "
+"centralize management and simplify data exchange."
+
+#: .\templates\services2.html:8
+msgid "Веб-разработка"
+msgstr "Web development"
+
+#: .\templates\services2.html:9
+msgid ""
+"Качественная разработка - залог успешной работы вашего веб-проекта.<br> "
+"Сделайте заказ комплексных услуг по созданию сайта - переведите ваш бизнес "
+"на новый уровень."
+msgstr ""
+"High-quality development is the key to the success of your web project.Make "
+"an order for comprehensive website creation services - take your business to "
+"a new level."
+
+#: .\templates\uslugi.html:12
+msgid "Что мы можем предложить"
+msgstr "What can we offer"
+
+#: .\templates\uslugi.html:13
+msgid ""
+"Команда «АльВиРити» имеет опыт в сфере разработки программного обеспечения, "
+"веб-сайтов, графического дизайна, AR/VR и мобильных приложений."
+msgstr ""
+"The Alvirity team has experience in software development, websites, graphic "
+"design, AR/VR and mobile applications."

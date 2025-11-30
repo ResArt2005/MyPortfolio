@@ -1,0 +1,161 @@
+{% extends '__base2.html' %} {% block content %} {% load i18n %}
+<div id='bg' class='fill bgFill' style='z-index: -1; position: fixed; background-image: url("/static/assets/bg.svg")'></div>
+
+{% include './header.html' %}
+  <script src="/static/js/project.js"></script>
+<div id='page1'>
+  <div id='intro' style="display:none"></div>
+  <div class="proekt-title">
+    <div class="container-fluid about-page__banner">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="contacts-page__title">{% if data.seo_h1 %}{{data.seo_h1}}{% else %}{{data.name}}{% endif %}</h1>
+        </div>
+      </div>
+    </div>
+    <div class="products-page__anchor container-fluid">
+      <div class="marg-con d-md-flex justify-content-md-between">
+        <ul class="products-page__anchor-list row" itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style-type:none; padding-left: 15px;">
+          <li class="products-page__anchor-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a class="products-page__anchor-link"  href="/" itemprop="item">
+              <span itemprop="name">{% trans "Главная" %}</span>
+              <meta itemprop="position" content="1" />
+            </a>
+            <span>>></span>
+          </li>
+          <li class="products-page__anchor-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a class="products-page__anchor-link"  href="/proekty/" itemprop="item">
+              <span itemprop="name">{% trans "Проекты" %}</span>
+              <meta itemprop="position" content="2" />
+            </a>
+            <span>>></span>
+          </li>
+          <li class="products-page__anchor-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a class="products-page__anchor-link"  href="/{{url}}/{{data.alias}}/" itemprop="item">
+              <span itemprop="name">{{data.name}}</span>
+              <meta itemprop="position" content="3" />
+            </a>
+          </li>
+        </ul>
+        <div>
+          <div class="proekt-link">
+            <div class="d-flex justify-content-between"><!--Ссылка-->
+              <svg class="svg-link" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.0478 11.9564C14.1261 11.3108 14.1848 10.6651 14.1848 9.99989C14.1848 9.33468 14.1261 8.68902 14.0478 8.04337H17.3543C17.5109 8.66946 17.6087 9.32489 17.6087 9.99989C17.6087 10.6749 17.5109 11.3303 17.3543 11.9564M12.3163 17.3955C12.9033 16.3097 13.3533 15.1358 13.6663 13.9129H16.5522C15.6044 15.5449 14.1008 16.7812 12.3163 17.3955ZM12.0717 11.9564H7.49348C7.39565 11.3108 7.33696 10.6651 7.33696 9.99989C7.33696 9.33468 7.39565 8.67924 7.49348 8.04337H12.0717C12.1598 8.67924 12.2283 9.33468 12.2283 9.99989C12.2283 10.6651 12.1598 11.3108 12.0717 11.9564ZM9.78261 17.7868C8.97065 16.6129 8.31522 15.3119 7.91413 13.9129H11.6511C11.25 15.3119 10.5946 16.6129 9.78261 17.7868ZM5.86957 6.08685H3.01304C3.95105 4.45043 5.4536 3.21222 7.23913 2.60424C6.65217 3.69011 6.21196 4.86402 5.86957 6.08685ZM3.01304 13.9129H5.86957C6.21196 15.1358 6.65217 16.3097 7.23913 17.3955C5.45735 16.7809 3.95691 15.5444 3.01304 13.9129ZM2.21087 11.9564C2.05435 11.3303 1.95652 10.6749 1.95652 9.99989C1.95652 9.32489 2.05435 8.66946 2.21087 8.04337H5.51739C5.43913 8.68902 5.38043 9.33468 5.38043 9.99989C5.38043 10.6651 5.43913 11.3108 5.51739 11.9564M9.78261 2.20315C10.5946 3.37707 11.25 4.68794 11.6511 6.08685H7.91413C8.31522 4.68794 8.97065 3.37707 9.78261 2.20315ZM16.5522 6.08685H13.6663C13.3601 4.87523 12.9068 3.70566 12.3163 2.60424C14.1163 3.22055 15.613 4.46294 16.5522 6.08685ZM9.78261 0.217285C4.37283 0.217285 0 4.61946 0 9.99989C0 12.5944 1.03066 15.0826 2.86526 16.9172C3.77366 17.8256 4.85209 18.5462 6.03897 19.0378C7.22585 19.5295 8.49794 19.7825 9.78261 19.7825C12.3771 19.7825 14.8654 18.7518 16.7 16.9172C18.5346 15.0826 19.5652 12.5944 19.5652 9.99989C19.5652 8.71522 19.3122 7.44313 18.8206 6.25625C18.3289 5.06937 17.6084 3.99094 16.7 3.08254C15.7916 2.17415 14.7131 1.45356 13.5263 0.961942C12.3394 0.47032 11.0673 0.217285 9.78261 0.217285Z" />
+              </svg>
+              <a href="{{data.link}}" rel="nofollow" target="_blank" class="d-flex align-items-center"><span class="posmotret-pr">{% trans "Посмотреть проект" %}</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if data.video_link %}
+  <a class="vktube" rel="nofollow">
+    <div class="proekt-video d-flex justify-content-around"><!--Видео-->
+      <svg class="svg-video" width="31" height="26" viewBox="0 0 31 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M4.89369 0.143066C3.61497 0.143066 2.38862 0.651037 1.48443 1.55523C0.580236 2.45942 0.0722656 3.68577 0.0722656 4.96449V21.0359C0.0722656 22.3146 0.580236 23.541 1.48443 24.4452C2.38862 25.3494 3.61497 25.8574 4.89369 25.8574H26.108C27.3867 25.8574 28.6131 25.3494 29.5172 24.4452C30.4214 23.541 30.9294 22.3146 30.9294 21.0359V4.96449C30.9294 3.68577 30.4214 2.45942 29.5172 1.55523C28.6131 0.651037 27.3867 0.143066 26.108 0.143066H4.89369ZM10.358 8.18007C10.3581 7.95793 10.4158 7.73962 10.5254 7.54642C10.635 7.35321 10.7928 7.1917 10.9834 7.07762C11.174 6.96354 11.3909 6.90079 11.613 6.89549C11.8351 6.89018 12.0547 6.9425 12.2506 7.04735L21.2506 11.8688C21.4556 11.9786 21.627 12.1421 21.7465 12.3416C21.8661 12.5412 21.9292 12.7695 21.9292 13.0021C21.9292 13.2348 21.8661 13.463 21.7465 13.6626C21.627 13.8622 21.4556 14.0257 21.2506 14.1355L12.2506 18.9569C12.0545 19.0619 11.8346 19.1142 11.6123 19.1088C11.3901 19.1034 11.173 19.0404 10.9823 18.926C10.7916 18.8116 10.6339 18.6497 10.5245 18.4562C10.415 18.2626 10.3577 18.044 10.358 17.8216V8.18007Z" />
+      </svg>
+      <span class="d-flex align-items-center"><span class="posmotret-vid">{% trans "Посмотреть видео-визитку" %}</span></span>
+    </div>
+  </a>
+  <!---->
+  <div class="video-hide">
+    <div class="vk-video d-flex justify-content-center align-items-center">
+      <!-- url -->
+      <iframe class="vk-frame" src="{{data.video_link}}" allow="encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  {% endif %}
+  <div class="owl-carousel owl-theme img-slider">
+    <div class="proekt-img container">
+      <div class="row">
+        <div class="pattern-page__main-wrapper col-12 d-flex justify-content-center">
+          <div class="pattern-page__main-img">
+            {% if data.images %}
+            <img class="proekt-img-item" src="{{data.images.url}}" alt="{% if data.seo_h1 %}{{data.seo_h1}}{% else %}{{data.name}}{% endif %}"  data-toggle="modal" data-target="#imageModal">
+            {% endif %}
+          </div>
+            <!-- {% for i in images %}
+             <div class="pattern-page__main-img">
+                <img class="proekt-img-item" src="{{i.images.url}}" alt="{{data.name}}"  style="width:100%;">
+             </div>
+            {% endfor %} -->
+        </div>
+      </div>
+    </div>
+    {% for i in images%}
+    <div class="proekt-img container">
+      <div class="row">
+        <div class="pattern-page__main-wrapper col-12 d-flex justify-content-center">
+          <div class="pattern-page__main-img">
+            <img class="proekt-img-item" src="{{i.images.url}}" alt="" data-toggle="modal" data-target="#imageModal">
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="pattern-page__main-content container-fluid news-desc"><!--Текст-->
+    <article class="row">
+      <div class="col-12 pettern-text">{{data.content | safe }}</div>
+    </article>
+  </div>
+
+    {% if FAQ %}
+      <div class="pattern-page__main-content container-fluid news-desc d-flex flex-column align-items-center" style="gap:15px;">
+        <div class="block-title">{% trans "Часто задаваемые вопросы" %}</div>
+        <div class="d-flex flex-column col-12 gap20" id="FAQ">
+          {% for i in FAQ %}
+          <div class="col-12 d-flex gap10 align-items-lg-center align-items-top" >
+              <div class="d-flex flex-column col-12 FAQitem">
+                  <div class="desk-title">{{ i.name }}</div>
+                  <div class="desk-info">{{ i.desc |safe }}</div>
+              </div>
+          </div>
+          {% endfor %}
+
+            
+        </div>
+      </div>
+    {% endif %}
+
+  <div id='p3cred' class='container-fluid' style="background:none; padding: 40px 0;">
+    <div class="row">
+      <div class="col-md-12 col-12" id="logoDevFrame">
+        <a href="https://alvirity.ru/" rel="nofollow" id='logoDev'>
+          <img src="/static/images/logoDev.png" width="100%">
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="close" data-dismiss="modal" aria-label="Закрыть">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M20.4802 4.01206C19.3668 2.89629 18.044 2.01148 16.5877 1.40844C15.1315 0.805396 13.5704 0.496013 11.9942 0.498057C5.36616 0.498057 -0.00683594 5.87106 -0.00683594 12.4991C-0.00683594 15.8131 1.33716 18.8141 3.50916 20.9861C4.62249 22.1018 5.94529 22.9866 7.40158 23.5897C8.85787 24.1927 10.419 24.5021 11.9952 24.5001C18.6232 24.5001 23.9962 19.1271 23.9962 12.4991C23.9962 9.18506 22.6522 6.18406 20.4802 4.01206ZM18.9382 19.4391C18.0274 20.3522 16.9452 21.0763 15.7536 21.5699C14.5621 22.0634 13.2848 22.3167 11.9952 22.3151C6.57216 22.3151 2.17616 17.9191 2.17616 12.4961C2.17455 11.2064 2.42779 9.92908 2.92135 8.73757C3.41491 7.54607 4.13905 6.46383 5.05216 5.55306C5.96272 4.63993 7.04478 3.91577 8.23612 3.42221C9.42747 2.92864 10.7046 2.67541 11.9942 2.67706C17.4162 2.67706 21.8122 7.07306 21.8122 12.4951C21.8139 13.7846 21.5607 15.0618 21.0671 16.2531C20.5735 17.4445 19.8493 18.5265 18.9362 19.4371L18.9382 19.4391Z" fill="currentColor"/>
+            <path d="M13.5366 12.5L17.3916 8.64499C17.5817 8.43772 17.6845 8.16501 17.6784 7.88379C17.6723 7.60257 17.5578 7.33457 17.3588 7.13574C17.1599 6.9369 16.8918 6.8226 16.6106 6.81668C16.3294 6.81077 16.0567 6.9137 15.8496 7.10399L15.8506 7.10299L11.9956 10.958L8.14057 7.10299C7.93329 6.91283 7.66058 6.81008 7.37936 6.81617C7.09814 6.82227 6.83014 6.93675 6.63131 7.13572C6.43247 7.33468 6.31817 7.60275 6.31225 7.88398C6.30634 8.1652 6.40927 8.43784 6.59957 8.64499L6.59857 8.64399L10.4536 12.499L6.59857 16.354C6.4901 16.4535 6.4029 16.5739 6.3422 16.708C6.2815 16.8421 6.24856 16.9871 6.24537 17.1343C6.24218 17.2814 6.2688 17.4277 6.32363 17.5643C6.37846 17.7009 6.46037 17.825 6.56441 17.9291C6.66846 18.0332 6.7925 18.1152 6.92907 18.1701C7.06563 18.2251 7.2119 18.2518 7.35906 18.2487C7.50622 18.2456 7.65123 18.2127 7.78537 18.1521C7.9195 18.0915 8.03999 18.0044 8.13957 17.896L8.14057 17.895L11.9956 14.04L15.8506 17.895C15.9501 18.0035 16.0705 18.0907 16.2046 18.1514C16.3387 18.2121 16.4837 18.245 16.6308 18.2482C16.778 18.2514 16.9243 18.2248 17.0609 18.1699C17.1975 18.1151 17.3216 18.0332 17.4257 17.9291C17.5298 17.8251 17.6118 17.7011 17.6667 17.5645C17.7216 17.4279 17.7483 17.2817 17.7453 17.1345C17.7422 16.9873 17.7093 16.8423 17.6487 16.7082C17.5881 16.5741 17.501 16.4536 17.3926 16.354L17.3916 16.353L13.5366 12.5Z" fill="currentColor" />
+          </svg>
+        </div>
+        <img alt=" " class="modalImg">
+        <div class="nextImg"></div>
+        <div class="prevImg"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  {% include './mob-footer.html' %}
+  {% endblock %}
+  {% block scripts %}
+  <script src="/static/js/main.js"></script>
+  <script src="/static/js/lang.js"></script>
+
+
+  {% endblock %}

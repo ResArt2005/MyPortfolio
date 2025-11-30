@@ -1,0 +1,358 @@
+/* Global embedded objects */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+/* Global meta-objects */
+::-webkit-scrollbar { width: 0; height: 0; background: #0000 }
+:root {
+	--accent: #95d;
+	--accentSub: #51a;
+	--accentX: #95d4;
+	--accentFont: #fff;
+}
+::selection { color: var(--accent) }
+::-moz-selection { color: var(--accent) }
+html { scrollbar-width: none; scroll-padding-top: 10vh }
+body {
+	font: 400 2vmin;
+	z-index: -10;
+	width: 100vw;
+	height: 100vh;
+	background: #161616;
+	margin: 0;
+	overscroll-behavior-x: none;
+	overflow-x: hidden;
+	line-height: 1;
+	color: var(--accentFont)
+}
+
+/* Global meta-classes */
+.i { margin: auto }
+.n { display: inline-block; margin: 0; white-space: nowrap }
+.nil { pointer-events: none }
+.nosel {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+.bounded {
+	overflow: hidden;
+	overscroll-behavior-x: none;
+	overscroll-behavior-y: none;
+}
+.break { float: left; width: 100%; height: 1px; margin: 0; display: block }
+/* .center { position: relative; display: flex; flex-wrap: wrap; justify-content: center; text-align: center } */
+.center p { display: block; margin: auto }
+.flexH { position: relative; display: flex; flex-flow: column wrap; justify-content: center }
+.fill { position: absolute; width: 100%; height: 100%; margin: 0 }
+.text { font: inherit; color: inherit; text-decoration: none; border: none; outline: none }
+.jp { writing-mode: vertical-rl; text-orientation: upright }
+.bgFill {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.bgCont {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ref {
+	font: var(--fontRef); color: inherit;
+	text-decoration: none; cursor: pointer;
+	transition: color 0.2s
+}
+.ref:hover { color: var(--accent) }
+.quote { border-left: 0.5vmin solid var(--accent); padding-left: 1vmin }
+
+/* Local objects */
+.badge {
+	padding: 1vmin 3vmin; text-align: center;
+	border: 0.2vmin solid var(--accent);
+	border-radius: 1vmin; font: var(--fontBtn);
+	color: var(--accent); cursor: pointer; transition: 0.1s
+} 
+/* /* .badge:hover { border: 0.2vmin solid #0000; background: var(--accentSub); color: #fff } */
+.badgeX {
+	background: linear-gradient(
+	90deg, #097 0%, #7b4 100%); z-index: 1;
+	padding: 2vmin 4vmin; text-align: center;
+	border-radius: 5vmin; font: var(--fontBtn);
+	white-space: nowrap; margin: auto; cursor: pointer;
+	min-width: 25vmin; transition: filter 0.5s
+}
+.badgeX:hover { filter: hue-rotate(115deg) saturate(2) }
+#header {
+	position: relative; margin: 0;
+	width: 100vw; height: 20vmin;
+	font: var(--fontHead);
+	flex-direction: column; z-index: 10
+}
+#logo {
+	width: var(--logoW); height: 90%; transition: 0.35s;
+	margin: auto auto auto var(--topM);
+	background-image: url('../assets/logo.webp');
+}
+#logo:hover { transform: scale(1.3); filter: brightness(1.5) saturate(1.1) }
+#topmenu {
+	height: 100%; width: calc(10vmin + 16vw);
+	margin: auto; background: #95d2;
+	border-bottom: 0.2vmin solid var(--accent);
+	z-index: 11;
+}
+#topmenu p { font: var(--fontSub) }
+#topmenu a { display: none; font: 300 calc(2vmin + 0.5vw) "Montserrat" }
+#topmenu:hover {
+	position: fixed; top: 0; left: 0;
+	width: 100vw; height: 20vmin;
+	background: #000; border-radius: 0;
+	border-bottom: 0.2vmin solid var(--accent);
+}
+#topmenu:hover p { display: none; }
+#topmenu:hover a { display: block; margin: auto; animation: fadeout 0.7s forwards }
+.block {
+	display: flex; width: 80vw;
+	min-height: 40vmin;
+	margin: 10vmin auto 0 auto;
+	background-color: #0009;
+	border-radius: 3vmin; opacity: 0;
+	animation: fadeout 1.5s ease-out forwards
+}
+.block p {
+	transform-origin: 0% 0%; transform: scaleX(0);
+	animation: expandR 0.5s ease-out forwards
+}
+.frameX {
+	border-radius: 3vmin; display: flex;
+	flex-wrap: wrap; justify-content: center;
+	background: linear-gradient(180deg,
+	#3c5 0%, #d2d 50%, #57d 100%)
+}
+.frameX div {
+	width: 98%; height: 98%;
+	margin: auto; background: #111;
+	border-radius: 3vmin;
+}
+
+.slide { animation: fadeout 0.3s forwards }
+.slided { display: none }
+#proj1.slide { display: flex }
+#proj2.slide { display: flex }
+#staff1.slide { display: flex }
+#staff2.slide { display: flex }
+#page1.slide { display: block }
+#page2.slide { display: block }
+#page3.slide { display: block }
+
+.title { font: var(--fontTitle); height: 1.4em; margin: 3vmin auto auto auto; border-bottom: 0.3vmin solid var(--accent) }
+.proj { width: 100%; height: 26vmin; margin: 3vmin 0 }
+.proj div {
+	margin: auto; background-color: #222;
+	width: 23%; height: 20vmin;
+	background-size: contain; cursor: pointer;
+	background-position: center;
+	background-repeat: no-repeat;
+	font: 200 10vmin "Montserrat";
+	color: #0000; transition: 0.2s
+}
+.proj div:hover { background-position: -23vw 50%; color: #fff }
+.arrow {
+	width: 6vmin; height: 6vmin; transition: 0.1s;
+	margin: 2.6vmin auto auto auto; cursor: pointer;
+	background-image: url('../assets/arrow.png');
+	border-radius: 50%; transform: rotate(-90deg)
+}
+.arrow:hover { filter: brightness(3) }
+.svc {
+	position: relative; margin: 0.5vmin;
+	width: 19%; height: 20vmin;
+	background-color: #333
+}
+.svc div { opacity: 0; background: #427d; transition: 0.3s }
+.svc:hover div { opacity: 1 }
+.mbr {
+	position: relative; margin: 2vmin;
+	width: 28vmin; height: 58vmin;
+	background-color: #333;
+	display: inline-block; line-height: 1.1
+}
+.mbr div { opacity: 0; background: #000c; text-align: left; transition: 0.3s; padding-left: 0.5vmin }
+.mbr:hover div { opacity: 1 }
+
+.stack {
+	position: absolute; left: -24.5vmin;
+	width: 50vmin; height: 50vmin; transition: 0.5s
+}
+#stack1 { background-image: url("../assets/stack3.svg"); bottom: -60vmin }
+#stack2 { background-image: url("../assets/stack2.svg"); bottom: -56vmin }
+#stack3 { background-image: url("../assets/stack1.svg"); bottom: -49vmin }
+#offer:hover #stack2 { transform: translateY(-5vmin) }
+#offer:hover #stack3 { transform: translateY(-9vmin) }
+.fxcard {
+	width: 40vmin; height: 24vmin;
+	margin: 2vmin 2.5vmin;
+	background: #222; border-radius: 2vmin;
+	font: var(--fontSub);
+	text-align: left; line-height: 1.6
+}
+.fxcard p { padding: 1.5vmin; overflow-wrap: break-word }
+.fxA {
+	border-right: 0.5vmin solid var(--accent);
+	border-top: 0.5vmin solid var(--accent);
+	border-left: 0.5vmin solid #d4a;
+	border-bottom: 0.5vmin solid #d4a
+}
+.fxB {
+	border-right: 0.5vmin solid var(--accent);
+	border-top: 0.5vmin solid var(--accent);
+	border-left: 0.5vmin solid #4c6;
+	border-bottom: 0.5vmin solid #4c6
+}
+.fxicon {
+	display: inline-block;
+	width: 5vmin; height: 5vmin;
+	margin: 2vmin
+}
+
+input {
+	border-radius: 1vmin;
+	width: 90%; max-width: 80%;
+	height: 8vmin; background: #222;
+	display: flex; flex-wrap: wrap;
+	justify-content: center;
+	outline: none; margin: 3vmin auto;
+	font: var(--fontMain); color: #fff
+}
+#check {
+	display: inline-block; width: 3vmin;
+	border-radius: 50%; height: 3vmin;
+	transition: 0.3s;
+}
+#checkbox:checked ~#check {
+	border: none; width: 4vmin; height: 4vmin;
+	background: linear-gradient(45deg,
+	#d2d -10%, #57d 110%);
+}
+
+#p2intro { position: relative; width: 100%; height: 60vmin; background-image: url("../assets/pg2bg.webp") }
+#p2intro p {
+	position: absolute; width: 60vmin;
+	top: 5vmin; left: 10vmin;
+	font: var(--fontSub)
+}
+.p2svc {
+	position: relative; background-color: #222;
+	width: 42vmin; height: 60vmin; transition: 0.4s;
+	margin: 3vmin; border-radius: 2vmin; cursor: pointer;
+	border-left: 1vmin solid var(--accent);
+	box-shadow: 0 2vmin 0 var(--accentSub)
+}
+.p2title {
+	position: absolute; top: 8vmin; left: 5vmin;
+	width: 80%; font-weight: 600; font-size: 3.4vmin;
+	line-height: 1.3; letter-spacing: 1.15;
+	text-align: left; transition: 0.45s
+}
+.p2desc {
+	position: absolute; top: 20vmin; left: 5vmin;
+	width: 80%; font-weight: 600; font-size: 3.4vmin;
+	line-height: 1.15; text-align: left;
+	transition: 0.45s
+}
+.blackout { position: absolute; width: 100%; height: 100%; transition: 0.4s; background: #000 }
+.bubble {
+	position: absolute;
+	left: 0; top: 0;
+	width: 0; height: 0;
+	border-radius: 50%;
+	transition: 0.7s
+}
+.p2svc:hover .p2desc { opacity: 0 }
+.p2svc:hover .p2title { font-size: 5vmin }
+.p2svc:hover .blackout { opacity: 0 }
+.p2svc:hover .bubble {
+	border-radius: 0 50% 75% 50%;
+	background: var(--accentSub);
+	width: 35vmin; height: 30vmin;
+}
+.p2svc:hover { border: none; box-shadow: none }
+.ptnr {
+	width: 28vmin; height: 16vmin;
+	border-radius: 3vmin; margin: 2vmin;
+	background-color: #fff; color: #0000;
+	font-weight: 600; font-size: 3.4vmin; transition: 0.2s
+}
+.ptnr h { display: none; opacity: 0; margin: auto; transition: 0.2s }
+.ptnr:hover { background-position: 50% -30vmin; color: #000 }
+.ptnr:hover h { display: block; opacity: 1 }
+
+#p3filter {
+	width: 100%; height: 8vmin;
+	font: var(--fontSub); background: #000;
+	cursor: pointer; transition: 0.2s
+}
+#p3filter:hover { color: var(--accent) }									
+#p3t0 {
+	position: absolute; display: block;
+	top: 5vmin; left: 0; font: var(--fontTitle);
+	padding: 2vmin 6vmin 2vmin 3vmin;
+	background: var(--accent);
+	border-radius: 0 3vmin 3vmin 0;
+	max-width: 40vmin;
+	box-shadow: 1vmin 1vmin 0 var(--accentSub)
+}
+.p3b {
+	position: relative; background: #222;
+	width: 80vmin; min-height: 100vmin;
+	margin: 15vmin auto; border-radius: 3vmin;
+	border: 0.2vmin solid #333;
+	border-top: none
+}
+.p3tX {
+	display: block; text-align: left;
+	padding: 5vmin 3vmin;
+	font: var(--fontSub); font-weight: 400;
+	letter-spacing: 1.1; line-height: 1.4
+}
+.p3bh {
+	margin: 0; background: var(--accent);
+	width: 100%; min-height: 8vmin;
+	font: var(--fontSub); font-weight: 500;
+}
+.p3bi {
+	margin: 0; background-color: #333;
+	width: 100%; height: 40vmin;
+	box-shadow: 0 1vmin 5vmin #000a
+}
+.p3bf {
+	position: absolute; bottom: 0; cursor: pointer;
+	background: #444; width: 100%;
+	min-height: 6vmin; transition: 0.3s;
+	font: var(--fontSub); font-weight: 500;
+}
+.p3bf:hover { background: var(--accent) }
+#p3cred {
+	width: 100%; margin-bottom: 0; background: #222;
+	font: var(--fontSub); text-align: left;
+	letter-spacing: 0.3vmin;
+}
+#p3cred > .row{
+    height:100%;
+	align-items:center;
+}
+
+@media (max-width: 576px){
+#p3cred .p3tC{
+    text-align: center;
+    margin-top: 22px;
+}
+}
+
+/* animations */
+@keyframes fadeout { 0%{ opacity: 0 } 100%{ opacity: 1 } }
+@keyframes pop { 0%{ transform: scale(0) } }
+@keyframes expandR { 100%{ transform: scaleX(1) } }
+@keyframes fontColor { 100%{ color: var(--accentFont) } }

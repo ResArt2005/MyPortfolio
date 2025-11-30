@@ -1,0 +1,311 @@
+{% extends '__base2.html' %} {% block content %} {% load i18n %}
+
+<div id='bg' class='fill bgFill' style='z-index: -1; position: fixed; background-image: url("/static/assets/bg.svg")'>
+</div>
+{% include './header.html' %}
+<section class="mob-hide">{% comment %} Для пк версии {% endcomment %}
+  <div class="container-fluid">
+    <div class="service_obj row">
+      <div class="col-md-8 d-flex flex-column justify-content-between">
+        <div class="service_title">{% trans "Автоматизированная информационная система" %}</div><!-- Выгрузка из БД -->
+        <div class="service_text mb-3">{% trans "Автоматизированная информационная система — это комплекс программных и аппаратных средств, предназначенный для сбора, обработки,
+           хранения и передачи данных, выполняющий определенные задачи без значительного вмешательства человека. 
+           Такие системы обеспечивают эффективное управление информацией и процессами в рамках организации." %}</div><!-- Выгрузка из БД -->
+        <div style='text-align: left;'>
+          <div class="obj_cost">
+            <span class="service_st">{% trans "Стоимость от:" %}</span><br><br>
+            <span class="service_mn">500 000 {% trans "рублей" %}</span><!-- Выгрузка из БД -->
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex align-items-center">
+        <img class="obj_img_web img-fluid" src="/static/assets/screenTest.png" alt="site" title="site"><!-- Выгрузка из БД картинка для страницы услуги сайта (прямоугольная картинка) -->
+      </div>
+    </div>
+  </div>
+  <div class="feature_container mt-4">
+    <div class="row mt-3">
+      <div class="col-12">
+        <h3 class='feature_h3' style='display: inline-block;'>{% trans "Преимущества наших автоматизированных информационных систем" %}</h3><!-- Выгрузка из БД -->
+      </div>
+    </div>
+    <div class="row mt-1">
+      <div class="col-md-6 mb-1">
+        <div class="feature-block">
+          <h5 class='feature_h5'>{% trans "Оптимизация процессов" %}</h5><!-- Выгрузка из БД -->
+          <p class="feature_p">{% trans "Наши АИС позволяют автоматизировать рутинные задачи, сокращая время и усилия, необходимые для их выполнения." %}</p><!-- Выгрузка из БД -->
+        </div>
+      </div>
+      <div class="col-md-6 mb-1">
+        <div class="feature-block">
+          <h5 class='feature_h5'>{% trans "Масштабируемость" %}</h5><!-- Выгрузка из БД -->
+          <p class="feature_p">{% trans "Наши решения легко адаптируются под растущие потребности вашей организации, обеспечивая возможность дальнейшего расширения функционала." %}</p><!-- Выгрузка из БД -->
+        </div>
+      </div>
+      <div class="col-md-6 mb-1">
+        <div class="feature-block">
+          <h5 class='feature_h5'>{% trans "Надежность и безопасность" %}</h5><!-- Выгрузка из БД -->
+          <p class="feature_p">{% trans "Мы гарантируем высокую степень защиты данных и устойчивость системы к сбоям, что обеспечивает непрерывность бизнес-процессов." %}</p><!-- Выгрузка из БД -->
+        </div>
+      </div>
+      <div class="col-md-6 mb-1">
+        <div class="feature-block">
+          <h5 class='feature_h5'>{% trans "Интеграция с другими системами" %}</h5><!-- Выгрузка из БД -->
+          <p class="feature_p">{% trans "Мы предлагаем интеграцию с различными корпоративными системами, что позволяет централизовать управление и упростить обмен данными." %}</p><!-- Выгрузка из БД -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contaner-fluid feature_container mt-4">
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h3 class='feature_h3' style='display: inline-block;'>{% trans "Почему выбрать нас?" %}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 for_col">
+        <div class="container-fluid">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-1">
+              <div class="feature_list_marker d-flex align-items-center justify-content-center">1</div>
+            </div>
+            <div class="col-md-11">
+              <div class="feature_list_desc">
+                <h5 class="feature_h5">{% trans "Опыт и профессионализм" %}</h5>
+                <p class="feature_p">{% trans "Наша команда состоит из опытных программистов и дизайнеров." %}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-1">
+              <div class="feature_list_marker d-flex align-items-center justify-content-center">2</div>
+            </div>
+            <div class="col-md-11">
+              <div class="feature_list_desc">
+                <h5 class="feature_h5">{% trans "Качество и инновации" %}</h5>
+                <p class="feature_p">{% trans "Мы используем самые современные технологии и подходы для создания инновационных
+                  AR-решений." %}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-1">
+              <div class="feature_list_marker d-flex align-items-center justify-content-center">3</div>
+            </div>
+            <div class="col-md-11">
+              <div class="feature_list_desc">
+                <h5 class="feature_h5">{% trans "Индивидуальный подход" %}</h5>
+                <p class="feature_p">{% trans "Мы учитываем все пожелания клиента и создаём уникальные решения, идеально
+                  соответствующие
+                  его потребностям." %}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-1">
+              <div class="feature_list_marker d-flex align-items-center justify-content-center">3</div>
+            </div>
+            <div class="col-md-11">
+              <div class="feature_list_desc">
+                <h5 class="feature_h5">{% trans "Полный цикл разработки" %}</h5>
+                <p class="feature_p">{% trans "Мы предлагаем полный цикл разработки, от концепции и дизайна до внедрения и
+                  поддержки." %}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-1">
+              <div class="feature_list_marker d-flex align-items-center justify-content-center">5</div>
+            </div>
+            <div class="col-md-11">
+              <div class="feature_list_desc">
+                <h5 class="feature_h5">{% trans "Поддержка и обслуживание" %}</h5>
+                <p class="feature_p">{% trans "Мы предоставляем полную поддержку и обслуживание после запуска проекта, гарантируя
+                  его
+                  стабильную работу и обновления." %}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="PC-hide">{% comment %} Для мобильной версии {% endcomment %}
+  <div class="service_obj">
+    <div class="service_img col-md-3 d-flex align-items-center">
+      <img class="service_img img-fluid" src="/static/assets/screenTest.png" alt="VR" title="VR"><!-- Картинка будет такая же, как в ПК версии сайта -->
+    </div>
+    <div class="col-md-9 d-flex flex-column justify-content-between">
+      <div class="service_title">{% trans "Разработка VR приложения" %}</div><!-- Выгрузка из БД -->
+      <div class="service_text mb-3">
+        {% trans "Виртуальная реальность (VR) — это технология, создающая искусственный мир, который пользователь может
+        исследовать и с которым может взаимодействовать при помощи VR-шлемов и контроллеров. Эта технология позволяет
+        погрузиться в полностью цифровую среду, создавая эффект присутствия." %}
+      </div><!-- Выгрузка из БД -->
+      <div style='text-align: center;'>
+        <div class="obj_cost">
+          <span class="service_st">{% trans "Стоимость от:" %}</span><br><br>
+          <span class="service_mn">500 000 {% trans "рублей" %}</span><!-- Выгрузка из БД -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="feature_container mt-5 mt-2">
+    <div class="row mt-3">
+      <div class="col-12">
+        <h3 class='feature_h3' style='display: inline-block;'>{% trans "Преимущества наших VR-приложений" %}</h3><!-- Выгрузка из БД -->
+      </div>
+    </div>
+    <div class="row mt-1">
+      <div class="col-md-6 mb-1">
+        <div class="feature-block">
+          <h5 class='feature_h5'>{% trans "Высокое качество графики" %}</h5><!-- Выгрузка из БД -->
+          <p class="feature_p">{% trans "Мы используем самые современные технологии и инструменты для создания качественной
+            графики, обеспечивающей максимальное погружение пользователя в виртуальный мир." %}</p><!-- Выгрузка из БД -->
+        </div>
+      </div>
+      <div class="col-md-6 mb-1">
+        <div class="feature-block">
+          <h5 class='feature_h5'>{% trans "Кроссплатформенность" %}</h5><!-- Выгрузка из БД -->
+          <p class="feature_p">{% trans "Мы создаём приложения, совместимые с различными VR-устройствами, включая Oculus Rift, HTC
+            Vive, PlayStation VR и другие." %}</p><!-- Выгрузка из БД -->
+        </div>
+      </div>
+      <div class="col-md-6 mb-1">
+        <div class="feature-block">
+          <h5 class='feature_h5'>{% trans "Интерактивность и пользовательский опыт" %}</h5><!-- Выгрузка из БД -->
+          <p class="feature_p">{% trans "Наши VR-приложения разрабатываются с учётом лучших практик UX/UI дизайна, что делает
+            взаимодействие с приложением интуитивно понятным и приятным." %}</p><!-- Выгрузка из БД -->
+        </div>
+      </div>
+      <div class="col-md-6 mb-1">
+        <div class="feature-block">
+          <h5 class='feature_h5'>{% trans "Адаптация под конкретные задачи" %}</h5><!-- Выгрузка из БД -->
+          <p class="feature_p">{% trans "Мы разрабатываем VR-приложения для различных сфер деятельности: от развлечений и
+            образования до медицины и архитектуры." %}</p><!-- Выгрузка из БД -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contaner-fluid feature_container mt-4">
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h3 class='feature_h3' style='display: inline-block; white-space: nowrap;'>{% trans "Почему выбрать нас?" %}</h3>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 for_col">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-3">
+              <div class="feature_list_marker d-flex align-items-center justify-content-center">1</div>
+            </div>
+            <div class="col-9">
+              <div class="feature_list_desc">
+                <h5 class="feature_h5">{% trans "Опыт и профессионализм" %}</h5>
+                <p class="feature_p">{% trans "Наша команда состоит из опытных программистов и дизайнеров." %}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-3">
+              <div class="feature_list_marker d-flex align-items-center justify-content-center">2</div>
+            </div>
+            <div class="col-9">
+              <div class="feature_list_desc">
+                <h5 class="feature_h5">{% trans "Качество и инновации" %}</h5>
+                <p class="feature_p">{% trans "Мы используем самые современные технологии и подходы для создания инновационных
+                  AR-решений." %}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-3">
+              <div class="feature_list_marker d-flex align-items-center justify-content-center">3</div>
+            </div>
+            <div class="col-9">
+              <div class="feature_list_desc">
+                <h5 class="feature_h5">{% trans "Индивидуальный подход" %}</h5>
+                <p class="feature_p">{% trans "Мы учитываем все пожелания клиента и создаём уникальные решения, идеально
+                  соответствующие
+                  его потребностям." %}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-3">
+              <div class="feature_list_marker d-flex align-items-center justify-content-center">3</div>
+            </div>
+            <div class="col-9">
+              <div class="feature_list_desc">
+                <h5 class="feature_h5">{% trans "Полный цикл разработки" %}</h5>
+                <p class="feature_p">{% trans "Мы предлагаем полный цикл разработки, от концепции и дизайна до внедрения и
+                  поддержки." %}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-3">
+              <div class="feature_list_marker d-flex align-items-center justify-content-center">5</div>
+            </div>
+            <div class="col-9">
+              <div class="feature_list_desc">
+                <h5 class="feature_h5">{% trans "Поддержка и обслуживание" %}</h5>
+                <p class="feature_p">{% trans "Мы предоставляем полную поддержку и обслуживание после запуска проекта, гарантируя
+                  его
+                  стабильную работу и обновления." %}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% if pr %}
+<div id='projects' class='block bounded center own-center'>
+  <div class="title">{% trans "Портфолио" %}</div>
+  <div class="owl-carousel owl-theme projects-slider"><!---->
+    {% for p in pr %}
+    <a href="/proekty/{{p.alias}}/" >
+      <div class="center own-center projects-slider-item-mob" {% if p.images %}
+        style='background-image: url("{{p.images.url}}")' {% endif %}>
+        <p class="d-flex align-items-center justify-content-center">{{ p.name }}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<div id="p3cred" class="container-fluid" style="background:none; padding: 40px 0;">
+  <div class="row">
+    <div class="col-md-12 col-12" id="logoDevFrame">
+      <a href="https://alvirity.ru/" id="logoDev" rel="nofollow">
+        <img src="/static/images/logoDev.png" width="100%">
+      </a>
+    </div>
+  </div>
+</div>
+{% include './mob-footer.html' %}
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

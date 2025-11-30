@@ -1,0 +1,32 @@
+{% load i18n %}
+<section class="PC-hide" style="height: 10vh; width: 100vw;"></section>
+<section class="PC-hide menu-mob">
+<div class="d-flex justify-content-center">
+        <div class="item-men"><a  href="/uslugi/"><img src="/static/assets/uslugi-men{% if ss == 'uslugi'%}-f{% endif %}.svg" alt="{% trans "Услуги" %}"></a></div>
+        <div class="item-men"><a  href="/proekty/"><img src="/static/assets/projects-men{% if ss == 'proekty'%}-f{% endif %}.svg" alt="{% trans "Проекты" %}"></a></div>
+        <div class="item-men"><a  href="/order/"><img src="/static/assets/order-men{% if ss == 'order'%}-f{% endif %}.svg" alt="{% trans "Заказать" %}"></a></div>
+        <div class="item-men"><a  href="/team/"><img src="/static/assets/team-men{% if ss == 'team'%}-f{% endif %}.svg" alt="{% trans "Команда" %}"></a></div>
+        <div class="item-men menu-button"><a><img src="/static/assets/menu-men.svg" alt="{% trans "Меню" %}"></a></div>
+    </div>
+</section>
+<div class="PC-hide pelena"></div>
+<section class="PC-hide full-menu">
+        <div class="cross-close-main"><img src="/static/assets/cross-right.svg" alt=""></div>
+        <div class="item-main-menu"><a  href="/order/">{% trans "Заказать проект" %}</a></div>
+        <div class="item-main-menu"><a  href="/uslugi/">{% trans "Услуги" %}</a></div>
+        <div class="item-main-menu"><a  href="/proekty/">{% trans "Проекты" %}</a></div>
+        <div class="item-main-menu"><a  href="/team/">{% trans "Команда" %}</a></div>
+        <div class="item-main-menu"><a  href="/blog/">{% trans "Блог" %}</a></div>
+        <div class="item-main-menu"><a  href="/contacts/">{% trans "Контакты" %}</a></div>
+        <!--<div class="item-main-menu"><a  href="/avr/">{% trans "АльВиРити AR/VR" %}</a></div>-->
+        <div class="item-main-menu">
+          <p>+ 7 (927) 788 - 88 - 82</p>
+          <a href="tel:89277888882" rel="nofollow"><button class="call-btn-menu"><span>{% trans "Позвонить" %}</span></button></a>
+        </div>
+        <div class="item-main-menu">
+                <a class="d-flex justify-content-center" rel="nofollow" href='{{lang}}'>
+                        <div class=""><img src="/static/assets/britain-flag.png" alt=""></div>
+                        <div class="" style="margin-left: 0.5rem;">{% trans "Switch to English version" %}</div>
+                </a>
+        </div>
+</section>

@@ -1,0 +1,145 @@
+{% extends '__base2.html' %} {% block content %} {% load i18n %}
+
+<div id='bg' class='fill bgFill' style='z-index: -1; position: fixed; background-image: url("/static/assets/bg.svg")'></div>
+{% include './header.html' %}
+
+
+<div class="connectblock" style="text-align: center;">
+  <span class='title-form'>{% trans "Свяжитесь с нами" %}</span>
+
+  <div class='own-center' style='width: 100%; margin: 3vmin 0'>
+
+    <div class='fxcard fxA'>
+
+      <div class='fxicon bgCont' style='background-image: url("/static/assets/fx1.svg")'></div>
+
+      <p>
+
+        <span class="title-com">{% trans "Связь с руководством:" %}</span><br>
+
+        <a href="tel:+79277888882" rel="nofollow">
+
+          <span class='ref'>+7 (927) 788-88-82</span>
+
+        </a><br>
+
+        <a href="https://t.me/+79277888882" rel="nofollow">
+
+          <span class='ref'>t.me/asvorobyov</span>
+
+        </a><br>
+
+        <a href="https://wa.me/79277888882" rel="nofollow">
+
+          <span class='ref'>wa.me/79277888882</span>
+
+        </a>
+
+      </p>
+
+    </div>
+
+    <div class='fxcard fxB'>
+
+      <div class='fxicon bgCont bgCont-spec' style='background-image: url("/static/assets/fx2.svg")'></div>
+
+      <p>
+
+        <span class="title-com">{% trans "Мы в соцсетях:" %}</span><br>
+
+        <a href="https://vk.com/alvirity" rel="nofollow">
+
+          <span class='ref'>vk.com/alvirity</span><br>
+
+        </a>
+
+        <a href="https://t.me/generatorofthefuture" rel="nofollow">
+
+          <span class='ref' style="white-space: nowrap">t.me/generatorofthefuture</span>
+
+        </a>
+        <a href="https://t.me/Alvirity_AI_BOT" rel="nofollow">
+          <span class="ref">t.me/Alvirity_AI_BOT</span>
+        </a>
+
+          <a href="https://t.me/zhiguli_ai" class="d-block" rel="nofollow">
+
+            <span class="ref">t.me/zhiguli_ai</span>
+
+          </a>
+      </p>
+
+    </div>
+
+    <div class='fxcard fxA'>
+
+      <div class='fxicon bgCont' style='background-image: url("/static/assets/fx3.svg")'></div>
+
+      <p>
+
+        <span class="title-com">E-mail:</span><br>
+
+        <a href="mailto: AVorobyovS@ya.ru" rel="nofollow">
+
+          <span class='ref'>AVorobyovS@ya.ru</span>
+
+        </a>
+
+      </p>
+
+    </div>
+    <div class="break"></div>
+    <div class='fxcard fxcard-dop fxB'>
+
+      <div class='fxicon bgCont' style='background-image: url("/static/assets/fx4.svg")'></div>
+
+      <p>
+
+        <span class="title-com">{% trans "Главный офис:" %}</span><br>
+
+        <a href="https://goo.gl/maps/qCFrD4rxLQt4912z9" rel="nofollow">
+
+          <span class='ref'>{% trans "г. Тольятти, ул. Южное шоссе, д. 163А к. 2.4, офис А316" %}</span>
+
+        </a>
+
+      </p>
+
+    </div>
+
+    <div class='fxcard fxcard-dop fxB'>
+
+      <div class='fxicon bgCont' style='background-image: url("/static/assets/fx4.svg")'></div>
+
+      <p>
+
+        <span class="title-com">{% trans "AR/VR лаборатория:" %}</span><br>
+
+        <a href="https://goo.gl/maps/qCFrD4rxLQt4912z9" rel="nofollow">
+
+          <span class='ref'>{% trans "г. Тольятти, ул. Южное шоссе, д. 161 к. 2.1, офис С137" %}</span>
+
+        </a>
+
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div id="p3cred" class="container-fluid" style="background:none; padding: 40px 0;">
+  <div class="row">
+    <div class="col-md-12 col-12" id="logoDevFrame">
+      <a href="https://alvirity.ru/" id="logoDev" rel="nofollow">
+        <img src="/static/images/logoDev.png" width="100%">
+      </a>
+    </div>
+  </div>
+</div>
+{% include './mob-footer.html' %}
+{% endblock %}
+{% block scripts %}
+{% endblock %}

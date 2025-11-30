@@ -1,0 +1,369 @@
+{% extends '__base2.html' %} {% block content %} {% load i18n %}
+<link rel="stylesheet" href="/static/css/uslugi.css">
+<script src="/static/js/uslugi.js"></script>
+<div id='bg' class='fill bgFill' style='z-index: -1; position: fixed; background-image: url("/static/assets/bg.svg")'></div>
+
+{% include './header.html' %}
+
+<div class="uslugi-body">
+    <div class="col-lg-9 col-12 d-flex core-info ">
+        <div class="col-auto d-flex flex-column info-block">
+            <div class="title-name"><h1>{% if data.seo_h1 %}{{data.seo_h1}} {% else %}{{data.name}}{% endif %}</h1></div> 
+            <img class="d-block d-lg-none" loading="lazy" src="{{data.imagesm.url}}" alt="{% if data.seo_h1 %}{{data.seo_h1}}{% else %}{{data.name}}{% endif %}">
+            <div class="block-desk">{{data.short_text|safe}}</div>
+            <div class="block-price">
+                <div class="price-title">{% trans "Стоимость от:" %} </div>
+                <div class="price-info">{{data.price}}</div>
+            </div>
+            <a class="newButt uslugbut1 " href='#contacts' rel="nofollow">
+
+              <span>{% trans "Заказать" %}</span>
+    
+            </a>
+        </div>
+        <img class="d-none d-lg-block" loading="lazy" src="{{data.images.url}}" alt="{% if data.seo_h1 %}{{data.seo_h1}}{% else %}{{data.name}}{% endif %}">
+    </div>
+    {% if data.slidertext %}
+    <div class="block-uslugi d-flex flex-column col-lg-9 col-12 block-slider">
+      <div class="block-title">{{data.slidertext}}</div>
+      <div id="carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          {% for i in slid %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %} col-12 flex-column flex-lg-row align-items-center">
+            <div class='col-lg-8 col-12 d-flex flex-column order-2 order-lg-1'>
+              <div class='desk-title'>
+                {{i.name}} 
+              </div>
+              <div class="desk-info ">{{i.desc}}</div>
+            </div>
+            {% if i.images %}
+            <div class='col-lg-4 col-12 d-flex align-items-center justify-content-center order-1 order-lg-2 slide-image'>
+              <img src='{{i.images.url}}' alt='{% if data.seo_h1 %}{{data.seo_h1}}{% else %}{{data.name}}{% endif %}'>
+            </div>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        {% if slid.count > 1 %}
+        <button class="carousel-control-prev" type="button" data-target="#carousel" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0ZM19.4439 27.1165C19.7384 27.1165 20.0208 26.9997 20.2292 26.7916C20.4373 26.5832 20.5542 26.3008 20.5542 26.0063C20.5542 25.7118 20.4373 25.4293 20.2292 25.221L15.8286 20.8204H26.8522C27.1469 20.8204 27.4296 20.7034 27.638 20.495C27.8464 20.2866 27.9634 20.0039 27.9634 19.7092C27.9634 19.4145 27.8464 19.1318 27.638 18.9234C27.4296 18.715 27.1469 18.598 26.8522 18.598H15.8286L20.2292 14.1974C20.4257 13.9868 20.5328 13.7081 20.5278 13.4201C20.5228 13.1321 20.4062 12.8572 20.2025 12.6535C19.9988 12.4498 19.724 12.3332 19.4359 12.3282C19.1479 12.3233 18.8692 12.4303 18.6586 12.6269L12.3615 18.9239C12.1534 19.1323 12.0366 19.4147 12.0366 19.7092C12.0366 20.0037 12.1534 20.2861 12.3615 20.4945L18.6586 26.7916C18.867 26.9997 19.1494 27.1165 19.4439 27.1165Z" fill="white" fill-opacity="0.5"/>
+            </svg>
+          </span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carousel" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0ZM19.4439 27.1165C19.7384 27.1165 20.0208 26.9997 20.2292 26.7916C20.4373 26.5832 20.5542 26.3008 20.5542 26.0063C20.5542 25.7118 20.4373 25.4293 20.2292 25.221L15.8286 20.8204H26.8522C27.1469 20.8204 27.4296 20.7034 27.638 20.495C27.8464 20.2866 27.9634 20.0039 27.9634 19.7092C27.9634 19.4145 27.8464 19.1318 27.638 18.9234C27.4296 18.715 27.1469 18.598 26.8522 18.598H15.8286L20.2292 14.1974C20.4257 13.9868 20.5328 13.7081 20.5278 13.4201C20.5228 13.1321 20.4062 12.8572 20.2025 12.6535C19.9988 12.4498 19.724 12.3332 19.4359 12.3282C19.1479 12.3233 18.8692 12.4303 18.6586 12.6269L12.3615 18.9239C12.1534 19.1323 12.0366 19.4147 12.0366 19.7092C12.0366 20.0037 12.1534 20.2861 12.3615 20.4945L18.6586 26.7916C18.867 26.9997 19.1494 27.1165 19.4439 27.1165Z" fill="white" fill-opacity="0.5"/>
+            </svg>
+          </span>
+        </button>
+        
+        <div class="carousel-indicators">
+          {% for i in slid %}
+          
+          <button type="button" data-target="#carousel" data-slide-to="{{forloop.counter0}}"{% if forloop.first %} class="active" aria-current="true"{% endif %} aria-label="Slide {{forloop.counter}}"></button>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="block-uslugi d-flex flex-column col-lg-9 col-12">
+        <div class="block-title">{{data.advantagestext}}</div>
+        <div class="gridblock col-12">
+            {% for i in adv %}
+                <div class="d-flex flex-column gap5">
+                    <div class="desk-title">{{i.name}}</div>
+                    <div class="desk-info">{{i.short_text|safe}}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% if data.title_plan  %}
+    <div class="block-uslugi d-flex flex-column col-12 align-items-center">
+      <div class="block-title">{{data.title_plan}}</div>
+      <div class='col-12 d-flex plan-container'>
+        {% for i in plan %}
+        <div class='plan-block'>
+          <div class='plan-number'>{{forloop.counter}}</div>
+          <div class="desk-title">{{i.name}}</div>
+          <div class="desk-info">{{i.desc}}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if tarif %}
+    <div class='col-12 d-flex justify-content-center tarif-container carousel slide' data-ride="carousel" id="carouseltarif">
+     
+        {% for i in tarif %}
+          <div class='tarif-block d-lg-flex d-none'>
+            <div class='d-flex flex-column gap20'>
+              <div class='tarif-title'>{{i.name}}</div>
+              <div class='text-center'>{{i.desc}}</div>
+              <div class="block-price align-items-center">
+                <div class="price-title">{% trans "Стоимость от:" %} </div>
+                <div class="price-info">{{i.price}}</div>
+              </div>
+              <div>
+                {{i.short_text|safe}}
+              </div>
+            </div>
+            <a class="newButt uslugbut2" rel="nofollow" href='#contacts'>
+
+              <span>{% trans "Заказать" %}</span>
+
+            </a>
+          </div>
+        {% endfor %}
+      <div class="carousel-inner d-block d-lg-none">
+          {% for i in tarif %}
+          <div class='tarif-block carousel-item {% if forloop.first %}active{% endif %}'>
+            <div class='d-flex flex-column gap20'>
+              <div class='tarif-title'>{{i.name}}</div>
+              <div class='text-center'>{{i.desc}}</div>
+              <div class="block-price align-items-center">
+                <div class="price-title">{% trans "Стоимость от:" %} </div>
+                <div class="price-info">{{i.price}}</div>
+              </div>
+              <div>
+                {{i.short_text|safe}}
+              </div>
+            </div>
+            <a class="newButt uslugbut2" rel="nofollow" href='#contacts'>
+
+              <span>{% trans "Заказать" %}</span>
+
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+      {% if tarif.count > 1 %}
+      
+      <div class="carousel-indicators d-flex d-lg-none">
+        {% for i in tarif %}
+        
+        <button type="button" data-target="#carouseltarif" data-slide-to="{{forloop.counter0}}"{% if forloop.first %} class="active" aria-current="true"{% endif %} aria-label="Slide {{forloop.counter}}"></button>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="block-uslugi d-flex flex-column col-lg-9 col-12 align-items-center">
+        <div class="block-title">{% trans "Почему выбрать нас?" %}</div>
+        <div class="d-flex flex-column col-12 gap20">
+
+            <div class="col-12 d-flex gap10 align-items-lg-center align-items-top">
+                <div class="num-block">1</div>
+                <div class="d-flex flex-column">
+                    <div class="desk-title">{% trans "Опыт и профессионализм" %}</div>
+                    <div class="desk-info">{% trans "Наша команда состоит из опытных программистов и дизайнеров." %}</div>
+                </div>
+            </div>
+
+            <div class="col-12 d-flex gap10 align-items-lg-center align-items-top">
+                <div class="num-block">2</div>
+                <div class="d-flex flex-column">
+                    <div class="desk-title">{% trans "Качество и инновации" %}</div>
+                    <div class="desk-info">{% trans "Мы используем самые современные технологии и подходы для создания инновационных AR-решений." %}</div>
+                </div>
+            </div>
+
+            <div class="col-12 d-flex gap10 align-items-lg-center align-items-top">
+                <div class="num-block">3</div>
+                <div class="d-flex flex-column">
+                    <div class="desk-title">{% trans "Индивидуальный подход" %}</div>
+                    <div class="desk-info">{% trans "Мы учитываем все пожелания клиента и создаём уникальные решения, идеально соответствующие его потребностям." %}</div>
+                </div>
+            </div>
+
+            <div class="col-12 d-flex gap10 align-items-lg-center align-items-top">
+                <div class="num-block">4</div>
+                <div class="d-flex flex-column">
+                    <div class="desk-title">{% trans "Полный цикл разработки" %}</div>
+                    <div class="desk-info">{% trans "Мы предлагаем полный цикл разработки, от концепции и дизайна до внедрения и поддержки." %}</div>
+                </div>
+            </div>
+
+            <div class="col-12 d-flex gap10 align-items-lg-center align-items-top">
+                <div class="num-block">5</div>
+                <div class="d-flex flex-column">
+                    <div class="desk-title">{% trans "Поддержка и обслуживание" %}</div>
+                    <div class="desk-info">{% trans "Мы предоставляем полную поддержку и обслуживание после запуска проекта, гарантируя его стабильную работу и обновления." %}</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    {% if FAQ %}
+      <div class="block-uslugi d-flex flex-column col-lg-9 col-12 align-items-center">
+        <div class="block-title">{% trans "Часто задаваемые вопросы" %}</div>
+        <div class="d-flex flex-column col-12 gap20" id="FAQ">
+          {% for i in FAQ %}
+          <div class="col-12 d-flex gap10 align-items-lg-center align-items-top" >
+              <div class="d-flex flex-column col-12 FAQitem">
+                  <div class="desk-title">{{ i.name }}</div>
+                  <div class="desk-info">{{ i.desc |safe }}</div>
+              </div>
+          </div>
+          {% endfor %}
+
+            
+        </div>
+      </div>
+    {% endif %}
+</div>
+<div id='contacts' class='block bounded own-center' style="background-color: rgb(0,0,0,0);">
+  <div class='frameX form-style'>
+    <div>
+      <a name="messageForm" rel="nofollow"></a>
+      <form method="post" id="messageForm">
+        <input type="hidden" value="{{ c.csrf_token }}" name="csrfmiddlewaretoken" />
+        <span class="title-form">{% trans "Форма обратной связи" %}</span>
+        <input class='input-index-style fxB' type="name" id="name" name="name" placeholder='{% trans "Ваше имя"%}' required>
+        <input class='input-index-style fxB' type="tel" id="phone" name="phone" placeholder='{% trans "Ваш телефон" %}' required>
+        <input class='input-index-style fxB' type="email" id="email" name="email"  required placeholder='{% trans "Электронная почта" %}'>
+        <input type="hidden" id="nameform" value="{% if data.seo_h1 %}{{data.seo_h1}} {% else %}{{data.name}}{% endif %}">
+        <textarea class='input-index-style fxB' type="text" id="message" name="message"
+          placeholder='{% trans "Ваше сообщение" %}'></textarea>
+        <div class='pol-tb'>
+          <p class="text-for-checkbox"><input type="checkbox" required name="checkbox-politic"> {% trans 'Я ознакомлен с' %} <span
+              class="polityk-conf">{% trans "политикой конфиденциальности." %}</span></p>
+        </div>
+        <!--g-recaptcha -->
+        <div class="newButt sendButt" id="customButton">
+          <span>{% trans "Отправить" %}</span>
+        </div>
+        <button type='submit' class='d-none' id='msgSubmit'></button>
+
+        <script>
+
+          document.getElementById('customButton').addEventListener('click', function () {
+
+            // Триггерим событие click для кнопки msgSubmit
+
+            document.getElementById('msgSubmit').click();
+
+          });
+
+        </script>
+      </form>
+    </div>
+  </div>
+</div>
+{% include './politickonf.html' %}
+
+{% if pr %}
+<div id='projects' class='block bounded center own-center'>
+  <div class="title">{% trans "Портфолио" %}</div>
+  <div class="owl-carousel owl-theme projects-slider slider-customcenter"><!---->
+    {% for p in pr %}
+    <a href="/proekty/{{p.alias}}/" >
+      <div class="center own-center projects-slider-item-mob" {% if p.images%}style='background-image: url("{{p.images.url}}")' {% endif %}>
+      </div>
+      <div class='porfolio-desc'>
+        <div class="desk-title">{{p.name}}</div>
+        <div class="desk-info">{{p.short_desc|safe}}</div>
+        <div class="newButt uslugbut1 " >
+          <span>{% trans "Подробнее" %}</span>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% if team %}
+<div id='team' class='block bounded center own-center'>
+  <div class="title">{% trans "КОМАНДА" %}</div>
+  <div class="owl-carousel owl-theme projects-slider slider-loop"><!---->
+    {% for t in team %}
+    <div class=' team-fill team-fill-tp d-flex align-items-end ' {% if t.photo %}style='background-image: url("{{t.photo.url}}")' {% endif %}>
+      <div class="team-info">
+          <p class="team-title">{{t.fio}}</p>
+          <p class="team-prof">{{t.who}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+
+<div id="p3cred" class="container-fluid" style="background:none; padding: 40px 0;">
+  <div class="row">
+    <div class="col-md-12 col-12" id="logoDevFrame">
+      <a href="https://alvirity.ru/" rel="nofollow" id="logoDev">
+        <img src="/static/images/logoDev.png" width="100%">
+      </a>
+    </div>
+  </div>
+</div>
+  {% include './mob-footer.html' %}
+  {% endblock %}
+  {% block scripts %}
+  <script src="/static/js/main.js"></script>
+  <!-- <script src="/static/js/lang.js"></script> -->
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+
+  {% endblock %}
+  <script>
+    $('.projects-slider').owlCarousel({
+
+      dots: false,
+    
+      center: true,
+    
+      loop: true,
+    
+      nav: false,
+    
+      items: 1.65,
+    
+      margin: 20,
+    
+      responsive: {
+    
+        767: {
+    
+          items: 1.65
+    
+        },
+    
+        768: {
+    
+          items: 3
+    
+        },
+    
+        1024: {
+    
+          items: 3
+    
+        },
+    
+        1200: {
+    
+          items: 5
+    
+        },
+    
+        3000: {
+    
+          items: 6
+    
+        }
+    
+      }
+    
+    });
+  </script>

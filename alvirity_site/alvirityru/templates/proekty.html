@@ -1,0 +1,127 @@
+{% extends '__base2.html' %} {% block content %} {% load i18n %}
+
+
+<div id='bg' class='fill bgFill' style='z-index: -1; position: fixed; background-image: url("/static/assets/bg.svg")'>
+</div>
+
+{% include './header.html' %}
+<section>
+  <form id="filter" method="post" action="/proekty/">
+    <!---->
+    <div class="PC-hide mob-menu-pelena"></div>
+    <div class="PC-hide mob-menu">
+      <div class="d-flex bd-highlight mb-3 mob-menu-block">
+        <div class="p-2 bd-highlight PC-hide"><img src="/static/assets/filters-mob.svg" alt=""></div>
+        <div class="p-2 bd-highlight d-flex align-items-center PC-hide">{% trans "Фильтры" %}</div>
+        <div class="ml-auto p-2 bd-highlight PC-hide"><a><img class="cross-close-mob" src="/static/assets/cross-mop.svg" alt=""></a></div>
+      </div>
+    </div>
+    <!---->
+    <div class="section-proekty container-fluid">
+      <div class="row">
+        <div class="col col-lg-3 col-md-4">
+          <!---->
+          <div class="menu-proekty-style mob-hide switch-mob">
+            <div class="mob-hide">
+              <h1 id="p3t0" class="nosel">{% trans "Наше Портфолио" %}</h1>
+            </div>
+            <div class="block-option">
+              <input type="hidden" value="{{ c.csrf_token }}" name="csrfmiddlewaretoken" />
+              <div class="block-switch d-flex justify-content-md-start align-items-md-center">
+                <div class="d-flex align-items-center">
+                  <label class="checkbox-google">
+                    <input id="checkboxgoogle" name="checkboxgoogle" type="checkbox" {% if checkboxgoogle %} checked {% endif %}>
+                    <span class="checkbox-google-switch"></span>
+                  </label>
+                </div>
+                <div>
+                  <label for="checkboxgoogle" class="nosel menu-text">{% trans "Только основные" %}
+                    {% trans "проекты" %}</label>
+                </div>
+              </div>
+              <div class="proekty-landings">
+                <div class="PC-hide">{% trans "Проекты" %}<br></div>
+                {% for d in dtr %}
+                <div style="padding-top: 1vmin;">
+                  <input class="proekty-menu-checkbox" type="checkbox" id="type_s{{d.id}}" name="type_s" value="{{d.id}}" {% if d.id in type_s %} checked {% endif %}>
+                  <label for="type_s{{d.id}}" class="nosel menu-text">{{d.name}}</label>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div class="col-lg-9 col-md-8">
+          <div class="d-flex justify-content-start">
+            <a class="PC-hide mob-menu-open" rel="nofollow"><img src="/static/assets/menu-button-mob.svg" alt="button"></a>
+            <input name="search-pr" class="search-proecty-style" type="text" {% if search_pr %} value="{{search_pr}}" {% endif %} placeholder="{% trans "Поиск" %}">
+          </div>
+          <input type="submit" style="display:none">
+          <div class="container-fluid">
+            <div class="row pr_list">
+              {% for p in pr %}
+              <a class="projects-p col-12 col-md-6 col-xl-3" href="/proekty/{{p.alias}}/">
+                <div class="projects-item pr-item">
+                      <div class="pr-image" >
+                        {% if p.images %} <img src='{{p.images.url}}' alt=''> {% endif %}
+                        {% comment %}
+                        <div class='fill center own-center pr-image-body'>
+                          <div class="d-flex align-items-center">
+                            {{p.short_desc|safe}}
+                          </div>
+                        </div>
+                        {% endcomment  %}
+                      </div>
+                    <div class="d-flex align-items-center project-info flex-column" style="min-height: 6vmin; height: auto;">
+                        {% comment %}
+                        <div class="pr-title d-flex align-items-center">{{p.name}}</div>
+                        <div class="pr-type">{{p.get_template_display}}</div>
+                        <div>
+                          {% if p.link %}
+                          <a target="_blank" rel="nofollow" href="{{p.link}}" class="pr-link">{{p.link}}</a>
+                          {% else %}
+                          <a target="_blank" rel="nofollow" href="#" class="pr-link"></a>
+                          {% endif %}
+                        </div>
+                        {% endcomment  %}
+                        <div class='text-container'>
+                          <span class='pr-title colorpurp'>{{p.name}}</span><br><br>
+                          <div class='desk-info'>{{p.short_desc|safe}}</div>
+                        </div>
+                        <div class="newButt uslugbut ">
+                          <span>{% trans "Подробнее" %}</span>
+                        </div>
+                    </div>
+                </div>
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
+<div id="p3cred" class="container-fluid" style="background:none; padding: 40px 0;">
+  <div class="row">
+    <div class="col-md-12 col-12" id="logoDevFrame">
+      <a href="https://alvirity.ru/" rel="nofollow" id="logoDev">
+        <img src="/static/images/logoDev.png" width="100%">
+      </a>
+    </div>
+  </div>
+</div>
+{% include './mob-footer.html' %}
+{% endblock %}
+{% block scripts %}
+
+<script>
+  $('#filter input').on('change', function () {
+    $('#filter').submit();
+  })
+  $('#filter input.search-proecty-style').on('focusout', function () {
+    $('#filter').submit();
+  })
+</script>
+{% endblock %}

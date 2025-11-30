@@ -1,0 +1,58 @@
+{% extends '__base2.html' %} {% block content %} {% load i18n %}
+
+<div id='bg' class='fill bgFill' style='z-index: -1; position: fixed; background-image: url("/static/assets/bg.svg")'>
+</div>
+
+{% include './header.html' %}
+
+<div id="page1" class="slide">
+  <div id='intro' style="display:none"></div>
+  <div id="p2intro" class="bgFill d-flex align-items-center align-items-md-start">
+    <div id="p2t0">
+      <h1 class="us-title">{% trans "Что мы можем предложить" %}</h1><br><br>
+      <span class="us-title-des">{% trans "Команда «АльВиРити» имеет опыт в сфере разработки программного обеспечения, веб-сайтов, графического дизайна, AR/VR и мобильных приложений." %}</span>
+    </div>
+  </div>
+  <div class="center own-center bounded mob-hide" style="width: 100%; margin: 0 0 5vmin 0">
+    {% for s in services %}
+    <a href="/{{s.alias}}/">
+      <div class="p2svc bounded bgFill" {% if s.img_back %}style='background-image: url("{{s.img_back.url}}")'{% endif %}>
+        <div class="blackout"></div>
+        <div class="bubble"></div>
+        <p id="p2t1" class="p2title">{{s.name}}</p>
+        <div id="p2t2" class="p2desc">{{s.short_text | safe}}</div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+  <div class="PC-hide uslugi-box">
+    {% for s in services %}
+      <a href="/{{s.alias}}/" >
+        <div class="p2svc_m d-flex align-items-center">
+          <div>
+            <p class="p2title_m">{{s.name}}</p>
+            <div class="p2desc_m">{{s.short_text | safe}}</div>
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+<div id="p3cred" class="container-fluid" style="background:none; padding: 40px 0;">
+  <div class="row">
+    <div class="col-md-12 col-12" id="logoDevFrame">
+      <a href="https://alvirity.ru/" rel="nofollow" id="logoDev">
+        <img src="/static/images/logoDev.png" width="100%">
+      </a>
+    </div>
+  </div>
+</div>
+{% include './mob-footer.html' %}
+{% endblock %}
+{% block scripts %}
+<script src="/static/js/main.js"></script>
+<!-- <script src="/static/js/lang.js"></script> -->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+{% endblock %}
